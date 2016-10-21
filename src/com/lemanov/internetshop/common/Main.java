@@ -20,24 +20,10 @@ public class Main {
 //		System.out.println(g2.toString());
 //		System.out.println(g3.toString());
 		
-		DaoFactory dao = DaoFactory.getInstance();
-		Connection con = dao.getConnection();
+		ShopManager sh = new ShopManager();
+		sh.createAccount("Ara", "111d", "Arara", "ara@gmail.com");
 		
-		Statement st = con.createStatement();
-		String sql1 = "update customers set login='Bongg' where id=22;";
-		String sql2 = "select * from customers;";
-		ResultSet rs = st.executeQuery(sql1);
-		
-		String a = null;
-		String b = null;
-		
-		while (rs.next()) {
-			a = rs.getString(1);
-			b = rs.getString(2);
-		}
-		
-		System.out.println(a + " " + b);
-		
+		System.out.println(Customer.customers.toString());
 
 	}
 

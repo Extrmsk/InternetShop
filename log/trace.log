@@ -57,3 +57,56 @@
 2016-10-20 07:35:42 TRACE DaoFactory:47 - Driver manager get connection
 2016-10-20 07:36:19 TRACE DaoFactory:47 - Driver manager get connection
 2016-10-20 07:36:41 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-21 20:45:58 DEBUG ShopManager:29 - Create customer Belka
+2016-10-21 20:45:58 INFO  CustomerDao:16 - Creating new customer with login=Belka
+2016-10-21 20:45:58 TRACE CustomerDao:24 - Open connection
+2016-10-21 20:45:58 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-21 20:45:58 TRACE CustomerDao:27 - Create prepared statement
+2016-10-21 20:45:58 TRACE CustomerDao:35 - Get result set
+2016-10-21 20:45:58 TRACE CustomerDao:38 - Create cutsomer to return
+2016-10-21 20:45:58 TRACE CustomerDao:49 - result set closed
+2016-10-21 20:45:58 TRACE CustomerDao:57 - statement closed
+2016-10-21 20:45:58 WARN  CustomerDao:63 - Cannot create user
+org.postgresql.util.PSQLException: The column name passwd was not found in this ResultSet.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2592)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2468)
+	at com.lemanov.internetshop.dao.CustomerDao.create(CustomerDao.java:39)
+	at com.lemanov.internetshop.domain.ShopManager.createAccount(ShopManager.java:30)
+	at com.lemanov.internetshop.common.Main.main(Main.java:24)
+2016-10-21 20:45:58 TRACE CustomerDao:68 - Connection closed
+2016-10-21 20:52:43 DEBUG ShopManager:29 - Create customer Alfons
+2016-10-21 20:52:43 INFO  CustomerDao:16 - Creating new customer with login=Alfons
+2016-10-21 20:52:43 TRACE CustomerDao:24 - Open connection
+2016-10-21 20:52:43 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-21 20:52:43 TRACE CustomerDao:27 - Create prepared statement
+2016-10-21 20:52:43 TRACE CustomerDao:35 - Get result set
+2016-10-21 20:52:43 TRACE CustomerDao:38 - Create cutsomer to return
+2016-10-21 20:52:43 INFO  CustomerDao:45 - Customer with login=Alfons created!
+2016-10-21 20:52:43 TRACE CustomerDao:49 - result set closed
+2016-10-21 20:52:43 TRACE CustomerDao:57 - statement closed
+2016-10-21 20:52:43 TRACE CustomerDao:68 - Connection closed
+2016-10-21 20:52:43 TRACE CustomerDao:73 - Returning customer
+2016-10-21 21:00:41 DEBUG ShopManager:29 - Create customer Givi
+2016-10-21 21:00:41 INFO  CustomerDao:16 - Creating new customer with login=Givi
+2016-10-21 21:00:41 TRACE CustomerDao:24 - Open connection
+2016-10-21 21:00:41 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-21 21:00:41 TRACE CustomerDao:27 - Create prepared statement
+2016-10-21 21:00:41 TRACE CustomerDao:35 - Get result set
+2016-10-21 21:00:41 TRACE CustomerDao:38 - Create cutsomer to return
+2016-10-21 21:00:41 INFO  CustomerDao:45 - Customer with login=Givi created!
+2016-10-21 21:00:41 TRACE CustomerDao:49 - result set closed
+2016-10-21 21:00:41 TRACE CustomerDao:57 - statement closed
+2016-10-21 21:00:41 TRACE CustomerDao:68 - Connection closed
+2016-10-21 21:00:41 TRACE CustomerDao:73 - Returning customer
+2016-10-21 21:02:24 DEBUG ShopManager:29 - Create customer Ara
+2016-10-21 21:02:24 INFO  CustomerDao:16 - Creating new customer with login=Ara
+2016-10-21 21:02:24 TRACE CustomerDao:24 - Open connection
+2016-10-21 21:02:24 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-21 21:02:24 TRACE CustomerDao:27 - Create prepared statement
+2016-10-21 21:02:24 TRACE CustomerDao:35 - Get result set
+2016-10-21 21:02:24 TRACE CustomerDao:38 - Create cutsomer to return
+2016-10-21 21:02:24 INFO  CustomerDao:45 - Customer with login=Ara created!
+2016-10-21 21:02:24 TRACE CustomerDao:49 - result set closed
+2016-10-21 21:02:24 TRACE CustomerDao:57 - statement closed
+2016-10-21 21:02:24 TRACE CustomerDao:68 - Connection closed
+2016-10-21 21:02:24 TRACE CustomerDao:73 - Returning customer
