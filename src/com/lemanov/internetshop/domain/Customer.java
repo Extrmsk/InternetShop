@@ -15,17 +15,13 @@ public class Customer {
 	private String phone;
 	private String creditCardInfo = "";
 	
-	public static List<Customer> customers = new ArrayList<Customer>(); // TODO remove
-	
 	private static Logger log = Logger.getLogger(Customer.class.getName());
 	
-	public Customer(String name, String login, String passwd, String email) {
+	public Customer(String login, String passwd, String name, String email) {
 		this.name = name;
 		this.login = login;
 		this.passwd = passwd;
 		this.email = email;
-		customers.add(this); //TODO remove
-		System.out.println("customer is created");
 	}
 
 	public int getId() {

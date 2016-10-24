@@ -110,3 +110,406 @@ org.postgresql.util.PSQLException: The column name passwd was not found in this 
 2016-10-21 21:02:24 TRACE CustomerDao:57 - statement closed
 2016-10-21 21:02:24 TRACE CustomerDao:68 - Connection closed
 2016-10-21 21:02:24 TRACE CustomerDao:73 - Returning customer
+2016-10-24 13:45:19 DEBUG ShopManager:29 - Create customer Ara
+2016-10-24 13:45:19 INFO  CustomerDao:16 - Creating new customer with login=Ara
+2016-10-24 13:45:19 TRACE CustomerDao:24 - Open connection
+2016-10-24 13:45:19 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 13:45:19 TRACE CustomerDao:27 - Create prepared statement
+2016-10-24 13:45:19 TRACE CustomerDao:57 - statement closed
+2016-10-24 13:45:19 WARN  CustomerDao:63 - Cannot create user
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "login_name"
+  Detail: Key (login)=(Ara) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2458)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2158)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:291)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:432)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:358)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:171)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:160)
+	at com.lemanov.internetshop.dao.CustomerDao.create(CustomerDao.java:33)
+	at com.lemanov.internetshop.domain.ShopManager.createAccount(ShopManager.java:30)
+	at com.lemanov.internetshop.common.Main.main(Main.java:24)
+2016-10-24 13:45:20 TRACE CustomerDao:68 - Connection closed
+2016-10-24 14:22:28 DEBUG ShopManager:29 - Create customer Arress2
+2016-10-24 14:22:28 INFO  CustomerDao:16 - Creating new customer with login=Arress2
+2016-10-24 14:22:28 TRACE CustomerDao:24 - Open connection
+2016-10-24 14:22:28 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 14:22:28 TRACE CustomerDao:27 - Create prepared statement
+2016-10-24 14:22:28 TRACE CustomerDao:35 - Get result set
+2016-10-24 14:22:28 TRACE CustomerDao:38 - Create cutsomer to return
+2016-10-24 14:22:28 INFO  CustomerDao:45 - Customer with login=Arress2 created!
+2016-10-24 14:22:28 TRACE CustomerDao:49 - result set closed
+2016-10-24 14:22:28 TRACE CustomerDao:57 - statement closed
+2016-10-24 14:22:28 TRACE CustomerDao:68 - Connection closed
+2016-10-24 14:22:28 TRACE CustomerDao:73 - Returning customer
+2016-10-24 14:33:57 INFO  CustomerDao:78 - Searching customer with login = Belka
+2016-10-24 14:33:57 TRACE CustomerDao:86 - Open connection
+2016-10-24 14:33:57 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 14:33:57 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 14:33:57 TRACE CustomerDao:93 - Get result set
+2016-10-24 14:33:57 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 14:33:57 TRACE CustomerDao:107 - result set closed
+2016-10-24 14:33:57 TRACE CustomerDao:115 - statement closed
+2016-10-24 14:33:57 TRACE CustomerDao:125 - Connection closed
+2016-10-24 14:33:57 TRACE CustomerDao:133 - Customer Belka found
+2016-10-24 14:33:57 TRACE CustomerDao:135 - Returning customer
+2016-10-24 14:35:26 INFO  CustomerDao:78 - Searching customer with login = Belka2
+2016-10-24 14:35:26 TRACE CustomerDao:86 - Open connection
+2016-10-24 14:35:26 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 14:35:26 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 14:35:26 TRACE CustomerDao:93 - Get result set
+2016-10-24 14:35:26 TRACE CustomerDao:107 - result set closed
+2016-10-24 14:35:26 TRACE CustomerDao:115 - statement closed
+2016-10-24 14:35:26 TRACE CustomerDao:125 - Connection closed
+2016-10-24 14:35:26 DEBUG CustomerDao:131 - Customer not found
+2016-10-24 14:35:26 TRACE CustomerDao:135 - Returning customer
+2016-10-24 14:36:40 INFO  CustomerDao:78 - Searching customer with login = Volk
+2016-10-24 14:36:40 TRACE CustomerDao:86 - Open connection
+2016-10-24 14:36:40 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 14:36:40 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 14:36:40 TRACE CustomerDao:93 - Get result set
+2016-10-24 14:36:40 TRACE CustomerDao:107 - result set closed
+2016-10-24 14:36:40 TRACE CustomerDao:115 - statement closed
+2016-10-24 14:36:40 TRACE CustomerDao:125 - Connection closed
+2016-10-24 14:36:40 DEBUG CustomerDao:131 - CUSTOMER NOT FOUND
+2016-10-24 14:36:40 TRACE CustomerDao:135 - Returning customer
+2016-10-24 15:00:42 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:00:42 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:00:42 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:00:42 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:00:42 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:00:42 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:00:42 TRACE CustomerDao:176 - result set closed
+2016-10-24 15:00:42 TRACE CustomerDao:184 - statement closed
+2016-10-24 15:00:42 TRACE CustomerDao:195 - Connection closed
+2016-10-24 15:04:19 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:04:19 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:04:19 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:04:19 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:04:19 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:04:19 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:04:19 TRACE CustomerDao:176 - result set closed
+2016-10-24 15:04:19 TRACE CustomerDao:184 - statement closed
+2016-10-24 15:04:19 TRACE CustomerDao:195 - Connection closed
+2016-10-24 15:07:45 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:07:45 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:07:45 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:07:45 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:07:45 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:10:08 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:10:56 TRACE CustomerDao:176 - result set closed
+2016-10-24 15:10:56 TRACE CustomerDao:184 - statement closed
+2016-10-24 15:10:56 TRACE CustomerDao:195 - Connection closed
+2016-10-24 15:11:40 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:11:40 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:11:40 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:11:40 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:11:40 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:11:40 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:11:40 TRACE CustomerDao:176 - result set closed
+2016-10-24 15:11:40 TRACE CustomerDao:184 - statement closed
+2016-10-24 15:11:40 TRACE CustomerDao:195 - Connection closed
+2016-10-24 15:12:19 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:12:19 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:12:19 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:12:19 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:12:19 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:12:19 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:12:19 TRACE CustomerDao:176 - result set closed
+2016-10-24 15:12:19 TRACE CustomerDao:184 - statement closed
+2016-10-24 15:12:19 TRACE CustomerDao:195 - Connection closed
+2016-10-24 15:17:52 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:17:52 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:17:52 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:17:52 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:17:52 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:17:52 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:17:52 TRACE CustomerDao:176 - result set closed
+2016-10-24 15:17:52 TRACE CustomerDao:184 - statement closed
+2016-10-24 15:17:52 TRACE CustomerDao:195 - Connection closed
+2016-10-24 15:21:56 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:21:56 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:21:56 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:21:56 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:21:56 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:21:56 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:21:56 TRACE CustomerDao:178 - result set closed
+2016-10-24 15:21:56 TRACE CustomerDao:186 - statement closed
+2016-10-24 15:21:56 TRACE CustomerDao:197 - Connection closed
+2016-10-24 15:25:16 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:25:16 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:25:16 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:25:16 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:25:16 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:25:16 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:25:16 TRACE CustomerDao:167 - ResultSet get:
+2016-10-24 15:25:16 TRACE CustomerDao:180 - result set closed
+2016-10-24 15:25:16 TRACE CustomerDao:188 - statement closed
+2016-10-24 15:25:16 TRACE CustomerDao:199 - Connection closed
+2016-10-24 15:28:52 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:28:52 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:28:52 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:28:52 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:28:52 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:28:52 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:28:52 TRACE CustomerDao:167 - ResultSet get:
+2016-10-24 15:28:52 TRACE CustomerDao:180 - result set closed
+2016-10-24 15:28:52 TRACE CustomerDao:188 - statement closed
+2016-10-24 15:28:52 TRACE CustomerDao:199 - Connection closed
+2016-10-24 15:31:31 INFO  CustomerDao:16 - Creating new customer with login=Boxx
+2016-10-24 15:31:31 TRACE CustomerDao:24 - Open connection
+2016-10-24 15:31:31 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:31:31 TRACE CustomerDao:27 - Create prepared statement
+2016-10-24 15:31:31 TRACE CustomerDao:35 - Get result set
+2016-10-24 15:31:31 TRACE CustomerDao:38 - Create cutsomer to return
+2016-10-24 15:31:31 TRACE CustomerDao:39 - ResultSet getString(login)=Boxx
+2016-10-24 15:31:31 INFO  CustomerDao:46 - Customer with login=Boxx created!
+2016-10-24 15:31:31 TRACE CustomerDao:50 - result set closed
+2016-10-24 15:31:31 TRACE CustomerDao:58 - statement closed
+2016-10-24 15:31:31 TRACE CustomerDao:69 - Connection closed
+2016-10-24 15:31:31 TRACE CustomerDao:74 - Returning customer
+2016-10-24 15:35:55 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:35:55 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:35:55 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:35:55 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:35:55 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:35:55 TRACE CustomerDao:169 - Create customer to return
+2016-10-24 15:35:55 TRACE CustomerDao:170 - ResultSet get:
+2016-10-24 15:35:55 TRACE CustomerDao:183 - result set closed
+2016-10-24 15:35:55 TRACE CustomerDao:191 - statement closed
+2016-10-24 15:35:55 TRACE CustomerDao:202 - Connection closed
+2016-10-24 15:36:26 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:36:26 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:36:26 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:36:26 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:36:26 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:36:26 TRACE CustomerDao:169 - Create customer to return
+2016-10-24 15:36:26 TRACE CustomerDao:170 - ResultSet get:
+2016-10-24 15:36:26 TRACE CustomerDao:183 - result set closed
+2016-10-24 15:36:26 TRACE CustomerDao:191 - statement closed
+2016-10-24 15:36:26 TRACE CustomerDao:202 - Connection closed
+2016-10-24 15:38:08 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:38:08 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:38:08 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:38:08 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:38:08 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:38:08 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:38:08 TRACE CustomerDao:167 - ResultSet get:
+2016-10-24 15:38:08 TRACE CustomerDao:180 - result set closed
+2016-10-24 15:38:08 TRACE CustomerDao:188 - statement closed
+2016-10-24 15:38:08 TRACE CustomerDao:199 - Connection closed
+2016-10-24 15:41:56 INFO  CustomerDao:16 - Creating new customer with login=Box2
+2016-10-24 15:41:56 TRACE CustomerDao:24 - Open connection
+2016-10-24 15:41:56 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:41:56 TRACE CustomerDao:27 - Create prepared statement
+2016-10-24 15:41:56 TRACE CustomerDao:35 - Get result set
+2016-10-24 15:41:56 TRACE CustomerDao:38 - Create cutsomer to return
+2016-10-24 15:41:56 TRACE CustomerDao:39 - login=Box2
+2016-10-24 15:41:56 INFO  CustomerDao:46 - Customer with login=Box2 created!
+2016-10-24 15:41:56 TRACE CustomerDao:50 - result set closed
+2016-10-24 15:41:56 TRACE CustomerDao:58 - statement closed
+2016-10-24 15:41:56 TRACE CustomerDao:69 - Connection closed
+2016-10-24 15:41:56 TRACE CustomerDao:74 - Returning customer
+2016-10-24 15:44:29 INFO  CustomerDao:141 - Update data for login=Ara
+2016-10-24 15:44:29 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:44:29 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:44:29 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:44:29 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:44:29 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:44:29 TRACE CustomerDao:167 - ResultSet get:
+2016-10-24 15:44:29 TRACE CustomerDao:168 - login=999
+2016-10-24 15:44:29 TRACE CustomerDao:171 - Coustructor is done
+2016-10-24 15:44:29 TRACE CustomerDao:176 - Return object for Arais created
+2016-10-24 15:44:29 TRACE CustomerDao:180 - result set closed
+2016-10-24 15:44:29 TRACE CustomerDao:188 - statement closed
+2016-10-24 15:44:29 TRACE CustomerDao:199 - Connection closed
+2016-10-24 15:44:29 TRACE CustomerDao:204 - Customer Ara has updated info
+2016-10-24 15:44:29 TRACE CustomerDao:205 - Returning updated customer
+2016-10-24 15:49:58 INFO  CustomerDao:141 - Update data for login=Arress2
+2016-10-24 15:49:58 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:49:58 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:49:58 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:49:58 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:49:58 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:49:58 TRACE CustomerDao:169 - Coustructor is done
+2016-10-24 15:49:58 TRACE CustomerDao:174 - Return object for Arress2 is created
+2016-10-24 15:49:58 TRACE CustomerDao:178 - result set closed
+2016-10-24 15:49:58 TRACE CustomerDao:186 - statement closed
+2016-10-24 15:49:58 TRACE CustomerDao:197 - Connection closed
+2016-10-24 15:49:58 TRACE CustomerDao:202 - Customer Arress2 has updated info
+2016-10-24 15:49:58 TRACE CustomerDao:203 - Returning updated customer
+2016-10-24 15:52:09 INFO  CustomerDao:141 - Update data for login=Arress2
+2016-10-24 15:52:09 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:52:09 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:52:09 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:52:09 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:52:09 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:52:09 TRACE CustomerDao:169 - Coustructor is done
+2016-10-24 15:52:09 TRACE CustomerDao:174 - Return object for Arress2 is created
+2016-10-24 15:52:09 TRACE CustomerDao:178 - result set closed
+2016-10-24 15:52:09 TRACE CustomerDao:186 - statement closed
+2016-10-24 15:52:09 TRACE CustomerDao:197 - Connection closed
+2016-10-24 15:52:09 TRACE CustomerDao:202 - Customer Arress2 has updated info
+2016-10-24 15:52:09 TRACE CustomerDao:203 - Returning updated customer
+2016-10-24 15:52:52 INFO  CustomerDao:141 - Update data for login=Arress2
+2016-10-24 15:52:52 TRACE CustomerDao:149 - Open connection
+2016-10-24 15:52:52 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 15:52:52 TRACE CustomerDao:152 - Create prepared statement
+2016-10-24 15:52:52 TRACE CustomerDao:163 - Get result set
+2016-10-24 15:52:52 TRACE CustomerDao:166 - Create customer to return
+2016-10-24 15:52:52 TRACE CustomerDao:169 - Coustructor is done
+2016-10-24 15:52:52 TRACE CustomerDao:174 - Return object for Arress2 is created
+2016-10-24 15:52:52 TRACE CustomerDao:178 - result set closed
+2016-10-24 15:52:52 TRACE CustomerDao:186 - statement closed
+2016-10-24 15:52:52 TRACE CustomerDao:197 - Connection closed
+2016-10-24 15:52:52 TRACE CustomerDao:202 - Customer Arress2 has updated info
+2016-10-24 15:52:52 TRACE CustomerDao:203 - Returning updated customer
+2016-10-24 16:22:23 TRACE ShopManager:34 - Trying to authenticate as Admin
+2016-10-24 16:22:23 DEBUG ShopManager:35 - Reading customer from DB
+2016-10-24 16:22:23 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:22:23 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:22:23 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:22:23 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:22:23 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:22:23 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:22:23 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:22:23 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:22:23 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:22:23 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:22:23 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:22:23 INFO  ShopManager:50 - Customer Admin successfully logged
+2016-10-24 16:28:19 TRACE ShopManager:35 - Trying to authenticate as Admin
+2016-10-24 16:28:19 DEBUG ShopManager:36 - Reading customer from DB
+2016-10-24 16:28:19 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:28:19 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:28:19 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:28:19 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:28:19 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:28:19 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:28:19 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:28:19 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:28:19 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:28:19 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:28:19 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:28:19 INFO  ShopManager:51 - Customer Admin successfully logged
+2016-10-24 16:28:19 TRACE ShopManager:67 - Logging out customer Admin
+2016-10-24 16:28:43 TRACE ShopManager:35 - Trying to authenticate as Admin
+2016-10-24 16:28:43 DEBUG ShopManager:36 - Reading customer from DB
+2016-10-24 16:28:43 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:28:43 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:28:43 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:28:43 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:28:43 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:28:43 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:28:43 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:28:43 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:28:43 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:28:43 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:28:43 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:28:43 WARN  ShopManager:54 - Authentication for customer=Admin failed. Wrong password
+2016-10-24 16:28:43 TRACE ShopManager:67 - Logging out customer Egor
+2016-10-24 16:31:17 TRACE ShopManager:35 - Trying to authenticate as Admin
+2016-10-24 16:31:17 DEBUG ShopManager:36 - Reading customer from DB
+2016-10-24 16:31:17 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:31:17 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:31:17 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:31:17 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:31:17 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:31:17 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:31:17 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:31:17 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:31:17 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:31:17 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:31:17 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:31:17 INFO  ShopManager:51 - Customer Admin successfully logged
+2016-10-24 16:32:23 TRACE ShopManager:35 - Trying to authenticate as Admin
+2016-10-24 16:32:23 DEBUG ShopManager:36 - Reading customer from DB
+2016-10-24 16:32:23 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:32:23 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:32:23 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:32:23 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:32:23 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:32:23 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:32:23 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:32:23 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:32:23 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:32:23 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:32:23 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:32:23 INFO  ShopManager:51 - Customer Admin successfully logged
+2016-10-24 16:32:23 TRACE ShopManager:67 - Logging out customer Admin
+2016-10-24 16:32:51 TRACE ShopManager:35 - Trying to authenticate as Admin
+2016-10-24 16:32:51 DEBUG ShopManager:36 - Reading customer from DB
+2016-10-24 16:32:51 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:32:51 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:32:51 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:32:51 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:32:51 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:32:51 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:32:51 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:32:51 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:32:51 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:32:51 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:32:51 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:32:51 WARN  ShopManager:54 - Authentication for customer=Admin failed. Wrong password
+2016-10-24 16:36:01 TRACE ShopManager:35 - Trying to authenticate as Admin
+2016-10-24 16:36:01 DEBUG ShopManager:36 - Reading customer from DB
+2016-10-24 16:36:01 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:36:01 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:36:01 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:36:01 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:36:01 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:36:01 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:36:01 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:36:01 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:36:01 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:36:01 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:36:01 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:36:01 WARN  ShopManager:54 - Authentication for customer=Admin failed. Wrong password
+2016-10-24 16:36:01 TRACE ShopManager:72 - You have already logout
+2016-10-24 16:37:18 TRACE ShopManager:35 - Trying to authenticate as Admin
+2016-10-24 16:37:18 DEBUG ShopManager:36 - Reading customer from DB
+2016-10-24 16:37:18 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:37:18 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:37:18 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:37:18 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:37:18 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:37:18 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:37:18 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:37:18 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:37:18 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:37:18 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:37:18 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:37:18 INFO  ShopManager:51 - Customer Admin successfully logged
+2016-10-24 16:37:18 TRACE ShopManager:68 - Logging out customer Admin
+2016-10-24 16:37:18 TRACE ShopManager:72 - You have already logout
+2016-10-24 16:38:34 TRACE ShopManager:35 - Trying to authenticate as Admin
+2016-10-24 16:38:34 DEBUG ShopManager:36 - Reading customer from DB
+2016-10-24 16:38:34 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:38:34 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:38:34 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:38:34 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:38:34 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:38:34 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:38:34 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:38:34 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:38:34 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:38:34 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:38:34 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:38:34 INFO  ShopManager:51 - Customer Admin successfully logged
+2016-10-24 16:38:34 TRACE ShopManager:68 - Logging out customer Admin
+2016-10-24 16:38:58 TRACE ShopManager:35 - Trying to authenticate as Admin
+2016-10-24 16:38:58 DEBUG ShopManager:36 - Reading customer from DB
+2016-10-24 16:38:58 INFO  CustomerDao:78 - Searching customer with login = Admin
+2016-10-24 16:38:58 TRACE CustomerDao:86 - Open connection
+2016-10-24 16:38:58 TRACE DaoFactory:47 - Driver manager get connection
+2016-10-24 16:38:58 TRACE CustomerDao:89 - Create prepared statement
+2016-10-24 16:38:58 TRACE CustomerDao:93 - Get result set
+2016-10-24 16:38:58 TRACE CustomerDao:96 - Create customer to return
+2016-10-24 16:38:58 TRACE CustomerDao:107 - result set closed
+2016-10-24 16:38:58 TRACE CustomerDao:115 - statement closed
+2016-10-24 16:38:58 TRACE CustomerDao:125 - Connection closed
+2016-10-24 16:38:58 TRACE CustomerDao:133 - Customer Admin found
+2016-10-24 16:38:58 TRACE CustomerDao:135 - Returning customer
+2016-10-24 16:38:58 INFO  ShopManager:51 - Customer Admin successfully logged
+2016-10-24 16:38:58 TRACE ShopManager:68 - Logging out customer Admin
+2016-10-24 16:38:58 TRACE ShopManager:72 - You have already logout

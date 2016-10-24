@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.lemanov.internetshop.dao.CustomerDao;
 import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.dao.DaoFactory;
 import com.lemanov.internetshop.domain.*;
@@ -21,9 +22,21 @@ public class Main {
 //		System.out.println(g3.toString());
 		
 		ShopManager sh = new ShopManager();
-		sh.createAccount("Ara", "111d", "Arara", "ara@gmail.com");
+		System.out.println(sh.isLoggedIn());
+		sh.autorisation("Admin", "123");
+		System.out.println(sh.isLoggedIn());
+		sh.logOut();
+		System.out.println(sh.isLoggedIn());
+		sh.logOut();
 		
-		System.out.println(Customer.customers.toString());
+//		CustomerDao cd = new CustomerDao();
+//		cd.create("Box2", "123000", "Box2Name", "box@mail.ru");
+//		Customer x = cd.update("Arress2", "45454545", "", "", "", "", "");
+//		System.out.println(x.toString());
+		
+		
+		
+//		System.out.println(Customer.customers.toString());
 
 	}
 
