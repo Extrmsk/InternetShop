@@ -25,6 +25,7 @@ public class DaoFactory {
 			password = prop.getProperty("password");
 			url = prop.getProperty("url");
 			driver = prop.getProperty("driver");
+			log.trace("---------- DaoFactory is initialized ------------");
 		} catch (IOException e) {
 			throw new NoDBPropertiesException("Can't read file", e);
 		}

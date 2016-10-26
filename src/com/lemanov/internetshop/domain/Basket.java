@@ -21,8 +21,15 @@ public class Basket {
 	}
 
 	public void addItem(Goods goods, int amount) {
-		orderLines.add(new OrderLine(goods, amount));
-		log.debug("Added " + amount + goods.getName() + " to basket " + id);
+		OrderLine ol = getExistGoodsLine(goods);
+		if (ol != null) {
+			ol.increaseAmount(amount);
+			log.debug("Increasing existing OrderLine on value=" + amount);
+		} else {
+			orderLines.add(new OrderLine(goods, amount));
+			log.debug("Added " + amount + " " + goods.getName() + " to basket " + id);
+		}
+		goods.reduceAmount(amount);
 	}
 	
 	public void removeItem(Goods goods) {
@@ -38,6 +45,15 @@ public class Basket {
 				log.trace("Goods " + goods.getName() + " removed from basket " + id);
 			}
 		}
+	}
+	
+	private OrderLine getExistGoodsLine(Goods goods) {
+		for (OrderLine od : orderLines) {
+			if (od.getItem().equals(goods)) {
+				return od;
+			}
+		}
+		return null;
 	}
 	
 	public int getPrice() {

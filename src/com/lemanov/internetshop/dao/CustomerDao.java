@@ -166,7 +166,6 @@ public class CustomerDao {
 					log.trace("Create customer to return");
 					customer = new Customer(resSet.getString("login"), resSet.getString("password"),
 							resSet.getString("name"), resSet.getString("email"));
-					log.trace("Coustructor is done");
 					customer.setAddress(resSet.getString("address"));
 					customer.setPhone(resSet.getString("phone"));
 					customer.setCreditCardInfo(resSet.getString("credit_card"));

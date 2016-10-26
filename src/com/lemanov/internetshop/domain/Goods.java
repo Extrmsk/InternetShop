@@ -7,13 +7,15 @@ public class Goods {
 	private String name;
 	private int price;
 	private int groupID;
+	private int amount;
 	
 	Logger log = Logger.getLogger(Goods.class.getName());
 	
-	public Goods(String name, int price, int groupID) {
+	public Goods(String name, int price, int amount, int groupID) {
 		this.name = name;
 		this.price = price;
 		this.groupID = groupID;
+		this.amount = amount;
 		log.trace("Created goods: name=" + name);
 	}
 
@@ -72,6 +74,27 @@ public class Goods {
 	@Override
 	public String toString() {
 		return "Goods [id=" + id + ", name=" + name + ", price=" + price + ", groupID=" + groupID + "]";
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+	
+	public void setAmount(int newAmount) {
+		if (newAmount <= 0) {
+			log.debug("amount <= 0");
+			throw new IllegalArgumentException();
+		}
+		this.amount = newAmount;
+		log.trace("New amount for " + name + " is " + amount);
+	}
+	
+	public void increaseAmount(int value) {
+		this.amount += value;
+	}
+	
+	public void reduceAmount(int value) {
+		this.amount -= value;
 	}
 	
 	

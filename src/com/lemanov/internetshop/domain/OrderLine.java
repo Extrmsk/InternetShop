@@ -12,7 +12,7 @@ public class OrderLine {
 	public OrderLine(Goods goods, int amount) {
 		this.goods = goods;
 		this.amount = amount;
-		log.trace("Order line for item=" + goods.getName() + ", amount=" + amount + "is created");
+		log.trace("Order line for item=" + goods.getName() + ", amount=" + amount + " is created");
 	}
 	
 	public Goods getItem() {
@@ -32,8 +32,23 @@ public class OrderLine {
 		log.trace("Amount setted to: " + amount);
 	}
 	
+	public void increaseAmount(int incValue) {
+		this.amount += incValue;
+	}
+	
+	public void reduceAmount(int redValue) {
+		this.amount -= redValue;
+	}
+	
 	public int getPrice() {
 		return goods.getPrice() * amount;
 	}
+
+	@Override
+	public String toString() {
+		return "OrderLine [goods=" + goods.getName() + ", amount=" + amount + "]";
+	}
+	
+	
 
 }
