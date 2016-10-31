@@ -177,6 +177,7 @@ public class ShopManager {
 		}
 		log.trace("Remove from basket: goods item=" + goods.getName());
 		curBasket.removeItem(goods);
+		goodsManager.updateGoodsAmountFromDao(goods);
 	}
 	
 	public int getPrice() {

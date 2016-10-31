@@ -172,5 +172,9 @@ public class GoodsDao {
 			}
 		}
 	}
+	
+	public Goods getGoodsByID(int id) {
+		return (new Goods("qwe", 1, 2, 3)); //TODO delete
+	}
 
 }
