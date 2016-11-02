@@ -23,6 +23,8 @@ public class ShopManager {
 	private static Logger log = Logger.getLogger(ShopManager.class.getName());
 	
 	public ShopManager() {
+		id = ++counter;
+		log.info("Create new ShopManager id=" + id);
 //		daoFactory = DaoFactory.getInstance();
 		customerDao = new CustomerDao();
 		goodsManager = new GoodsManager();
@@ -33,7 +35,7 @@ public class ShopManager {
 		return customerDao.create(login, passwd, name, email);
 	}
 	
-	public Customer autorisation(String login, String passwd) {
+	public Customer autorisation(String login, String passwd) throws DAOException  {
 
 		log.trace("Trying to authenticate as " + login);
 		log.debug("Reading customer from DB");
@@ -184,8 +186,21 @@ public class ShopManager {
 		return curBasket.getPrice();
 	}
 	
+	public String getCurCustomerName() throws AutorizationException {
+		if (curCustomer == null) {
+			log.trace("Not logged in");
+			throw new AutorizationException("Autorisation required");
+		}
+		log.trace("return customer name=" + curCustomer.getName());
+		return curCustomer.getName();
+	}
+	
 	public Basket getBasket() { //TODO delete
 		return curBasket;
 	}
 
+	public int getID() {
+		return id;
+	}
+	
 }
