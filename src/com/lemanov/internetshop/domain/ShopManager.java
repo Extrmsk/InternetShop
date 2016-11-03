@@ -24,7 +24,7 @@ public class ShopManager {
 	
 	public ShopManager() {
 		id = ++counter;
-		log.info("Create new ShopManager id=" + id);
+		log.info("***************** Create new ShopManager id=" + id + " *****************");
 //		daoFactory = DaoFactory.getInstance();
 		customerDao = new CustomerDao();
 		goodsManager = new GoodsManager();
@@ -35,7 +35,7 @@ public class ShopManager {
 		return customerDao.create(login, passwd, name, email);
 	}
 	
-	public Customer autorisation(String login, String passwd) throws DAOException  {
+	public Customer authorization(String login, String passwd) throws DAOException  {
 
 		log.trace("Trying to authenticate as " + login);
 		log.debug("Reading customer from DB");
@@ -147,6 +147,11 @@ public class ShopManager {
 		return goodsManager.findGoodsByName(name);
 	}
 	
+	public List<Goods> getAllGoods() throws DAOException {
+		log.trace("Get all goods");
+		return goodsManager.getAllGoods();
+	}
+	
 	
 	
 	
@@ -200,6 +205,8 @@ public class ShopManager {
 	}
 
 	public int getID() {
+		long treadID = Thread.currentThread().getId();
+		log.trace("Return shopManager id=" + id + " / Thread id=" + treadID);
 		return id;
 	}
 	

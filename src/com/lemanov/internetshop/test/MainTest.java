@@ -25,7 +25,7 @@ public class MainTest {
 		
 		ShopManager sh = new ShopManager();
 		System.out.println("Login status = " + sh.isLoggedIn());
-		sh.autorisation("User1", "234");
+		sh.authorization("User1", "234");
 		System.out.println("Login status = " + sh.isLoggedIn());
 		
 		Goods g = (sh.findGoodsByName("Nokian")).get(0);

@@ -25,7 +25,8 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/InternetShop/register.jsp">Register</a></li>
+					<!-- <li><a href="user/catalog.jsp">Catalog</a></li> -->
+					<li><a href="register.jsp">Register</a></li>
 				</ul>
 			</div>
 		</div>

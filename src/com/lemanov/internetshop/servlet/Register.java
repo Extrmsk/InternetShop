@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.domain.ShopManager;
 
@@ -16,6 +18,7 @@ import com.lemanov.internetshop.domain.ShopManager;
 @WebServlet("/register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static Logger log = Logger.getLogger(Register.class.getName());
        
     public Register() {
         super();
@@ -24,7 +27,7 @@ public class Register extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("Servlet " + this.getClass().getSimpleName() + " is running");
-
+		log.info(this.getClass().getSimpleName() + " servlet is running");
 		if ((request.getParameter("login") == null) || request.getParameter("passwd") == null
 				|| request.getParameter("name") == null || request.getParameter("email") == null
 				|| request.getParameter("login").isEmpty() || request.getParameter("passwd").isEmpty()

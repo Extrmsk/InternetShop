@@ -41,4 +41,9 @@ public class GoodsManager {
 		//fuckfuckfuck
 	}
 
+	public List<Goods> getAllGoods() throws DAOException {
+		log.debug("Get all goods");
+		return goodsDao.getAll();
+	}
+
 }

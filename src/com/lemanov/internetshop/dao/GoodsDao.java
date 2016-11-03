@@ -177,4 +177,60 @@ public class GoodsDao {
 		return (new Goods("qwe", 1, 2, 3)); //TODO delete
 	}
 
+	public List<Goods> getAll() throws DAOException {
+		List<Goods> goodsList = new ArrayList<>();
+		String sql = "select * from goods;";
+		
+		Goods tempGoods = null;
+		Connection conn = null;
+		PreparedStatement prst = null;
+		ResultSet resSet = null;
+		try {
+			log.trace("Open connection");
+			conn = daoFactory.getConnection();
+			try {
+				log.trace("Create prepared statement");
+				prst = conn.prepareStatement(sql); //only read. Without keys
+				try {
+					log.trace("Get result set");
+					resSet = prst.executeQuery();
+					while (resSet.next()) {
+						log.trace("Create goods to add to the set");
+						tempGoods = new Goods(resSet.getString("goods_name"),
+								resSet.getInt("price"), resSet.getInt("amount"),
+								resSet.getInt("group_id"));
+						tempGoods.setId(resSet.getInt("id"));
+						goodsList.add(tempGoods);
+						log.trace("Goods item " + tempGoods.getName() + " added to set");
+					}
+				} finally {
+					try {
+						resSet.close();
+						log.trace("result set closed");
+					} catch (SQLException e) {
+						log.warn("Cannot close result set", e);
+					}
+				}
+			} finally {
+				try {
+					prst.close();
+					log.trace("statement closed");
+				} catch (SQLException e) {
+					log.warn("Cannot close statement", e);
+				}
+			}
+		} catch (SQLException e) {
+			throw new DAOException("Cannot get all goods", e);
+		} finally {
+			try {
+				conn.close();
+				log.trace("Connection closed");
+			} catch (SQLException e) {
+				log.warn("Cannot close connection", e);
+			}
+		}
+		log.trace("Returning all goods");
+		return goodsList;
+	}
+
 }
