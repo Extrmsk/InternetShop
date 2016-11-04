@@ -34,7 +34,7 @@
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
 					<div class="alert alert-dismissable alert-danger">
-						<strong>Error! Authorization required.</strong>
+						<strong>Error! Authorization required. Wrong login or password.</strong>
 					</div>
 					<p></p>
 					<a href="index.jsp"><button type="submit"

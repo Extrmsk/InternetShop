@@ -55,14 +55,16 @@ public class Login extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("shopManagerID", shopManager.getID());
 		log.info("Open session id=" + session.getId());
-//		try {
-//			session.setAttribute("username", shopManager.getCurCustomerName());
-//		} catch (AutorizationException e) {
-//			e.printStackTrace();
-//		}
+		
+		try {
+			session.setAttribute("userName", shopManager.getCurCustomerName());
+		} catch (AutorizationException e) {
+			e.printStackTrace();
+		}
 		
 		if (login.equals("Admin")) {
-			getServletContext().getRequestDispatcher("/admin/adminlogin.jsp").forward(request, response);
+//			getServletContext().getRequestDispatcher("/admin/catalogadmin.jsp").forward(request, response);
+			response.sendRedirect("catalogAdmin");
 		} else {
 			getServletContext().getRequestDispatcher("/user/catalog.jsp").forward(request, response);
 		}

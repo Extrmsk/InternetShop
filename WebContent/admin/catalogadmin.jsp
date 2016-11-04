@@ -1,10 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <%@page import="com.lemanov.internetshop.domain.GoodsManager"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.ForEach"%>
 <%@page import="com.lemanov.internetshop.domain.ShopManagerHandler"%>
 <%@page import="com.lemanov.internetshop.domain.ShopManager"%>
 <%@page import="com.lemanov.internetshop.domain.Goods" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -15,7 +15,7 @@
 <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-<title>Customer shop page</title>
+<title>Admin's catalog page</title>
 </head>
 <body>
 
@@ -34,8 +34,8 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
 					<li class="active"><a>Catalog</a></li>
-					<li><a href="orders.jsp">Orders</a></li>
-					<li><a href="shoppingcart.jsp">Basket</a></li>
+					<li><a href="./admin/editgoods.jsp">Add Goods</a></li>
+					<li><a href="./admin/editgroup.jsp">Add Group</a></li>
 					<li><a href="logout">Logout</a></li>
 				</ul>
 			</div>
@@ -50,20 +50,26 @@
 					<table class="table">
 						<thead>
 							<tr>
+								<th>ID</th>
 								<th>Goods name</th>
 								<th>Price</th>
 								<th>Amount</th>
+								<th>Group ID</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
 							<c:forEach items="${sessionScope.goodsList}" var="goodsItem">
 								<tr>
+									<td>${goodsItem.id}</td>
 									<td>${goodsItem.name}</td>
 									<td>${goodsItem.price}</td>
-									<td>${goodsItem.amount }</td>
-									<td><a href="./addToBasket?id=${goodsItem.id}"><img
-											src="./img/cart.png" height="50" /></a></td>
+									<td>${goodsItem.amount}</td>
+									<td>${goodsItem.groupID}</td>
+									<td><a href="./deleteGoodsItem?deleteID=${goodsItem.id}"><img
+											src="./img/delete.png" height="50" /></a></td>
+									<td><a href="./admin/editgoods.jsp?editID=${goodsItem.id}"><img
+											src="./img/edit.png" height="50" /></a></td>
 								</tr>
 							</c:forEach>
 						</tbody>

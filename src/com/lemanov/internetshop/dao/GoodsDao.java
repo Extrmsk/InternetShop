@@ -233,4 +233,38 @@ public class GoodsDao {
 		return goodsList;
 	}
 
+	public void delGoodsItemByID(int delID) throws DAOException {
+		String sql = "delete from goods where id = ?;";
+		
+		Connection conn = null;
+		PreparedStatement prst = null;
+		try {
+			log.trace("Open connection");
+			conn = daoFactory.getConnection();
+			try {
+				log.trace("Create prepared statement");
+				prst = conn.prepareStatement(sql);
+				prst.setInt(1, delID);
+				prst.executeUpdate();
+				log.trace("Ttem id=" + delID + " is deleted");
+			} finally {
+				try {
+					prst.close();
+					log.trace("statement closed");
+				} catch (SQLException e) {
+					log.warn("Cannot close statement", e);
+				}
+			}
+		} catch (SQLException e) {
+			throw new DAOException("Can not delete item", e);
+		} finally {
+			try {
+				conn.close();
+				log.trace("Connection closed");
+			} catch (SQLException e) {
+				log.warn("Cannot close connection", e);
+			}
+		}
+	}
+
 }

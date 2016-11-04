@@ -46,4 +46,9 @@ public class GoodsManager {
 		return goodsDao.getAll();
 	}
 
+	public void delGoodsItemByID(int delID) throws DAOException {
+		log.debug("Delete goodsItem by id=" + delID);
+		goodsDao.delGoodsItemByID(delID);
+	}
+
 }

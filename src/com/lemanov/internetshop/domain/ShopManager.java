@@ -57,7 +57,7 @@ public class ShopManager {
 			return tempCustomer;
 		} else {
 			log.warn("Authentication for customer=" + login + " failed. Wrong password");
-			return null;
+			throw new IllegalArgumentException("Wrong password!");
 		}
 	}
 	
@@ -208,6 +208,11 @@ public class ShopManager {
 		long treadID = Thread.currentThread().getId();
 		log.trace("Return shopManager id=" + id + " / Thread id=" + treadID);
 		return id;
+	}
+
+	public void delGoodsItemByID(int delID) throws DAOException {
+		log.trace("Delete goodsItem id=" + delID);
+		goodsManager.delGoodsItemByID(delID);
 	}
 	
 }
