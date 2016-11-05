@@ -97,8 +97,4 @@ public class Goods {
 		this.amount -= value;
 	}
 	
-	
-	
-	
-	
 }
