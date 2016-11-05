@@ -173,8 +173,64 @@ public class GoodsDao {
 		}
 	}
 	
-	public Goods getGoodsByID(int id) {
-		return (new Goods("qwe", 1, 2, 3)); //TODO delete
+	public Goods getGoodsByID(int id) throws DAOException {
+		log.info("Searching goodsItem id=" + id);
+		String sql = "select * from goods where id = ?;";
+		
+		Goods tempGoods = null;
+		Connection conn = null;
+		PreparedStatement prst = null;
+		ResultSet resSet = null;
+		try {
+			log.trace("Open connection");
+			conn = daoFactory.getConnection();
+			try {
+				log.trace("Create prepared statement");
+				prst = conn.prepareStatement(sql);
+				prst.setInt(1, id);
+				try {
+					log.trace("Get result set");
+					resSet = prst.executeQuery();
+					while (resSet.next()) {
+						log.trace("Create goodsItem to return");
+						tempGoods = new Goods(resSet.getString("goods_name"),
+								resSet.getInt("price"), resSet.getInt("amount"),
+								resSet.getInt("group_id"));
+						tempGoods.setId(resSet.getInt("id"));
+					}
+				} finally {
+					try {
+						resSet.close();
+						log.trace("result set closed");
+					} catch (SQLException e) {
+						log.warn("Cannot close result set", e);
+					}
+				}
+			} finally {
+				try {
+					prst.close();
+					log.trace("statement closed");
+				} catch (SQLException e) {
+					log.warn("Cannot close statement", e);
+				}
+			}
+		} catch ( SQLException e) {
+			throw new DAOException("Cannot read user", e);
+		} finally {
+			try {
+				conn.close();
+				log.trace("Connection closed");
+			} catch (SQLException e) {
+				log.warn("Cannot close connection", e);
+			}
+		}
+		if (tempGoods == null) {
+			log.debug("GOODS ITEM NOT FOUND");
+		} else {
+			log.trace("Goods item id=" + tempGoods.getId() + " is found");
+		}
+		log.trace("Returning goodsItem");
+		return tempGoods;
 	}
 
 	public List<Goods> getAll() throws DAOException {
@@ -265,6 +321,45 @@ public class GoodsDao {
 				log.warn("Cannot close connection", e);
 			}
 		}
+	}
+
+	public void update(int editID, String name, int price, int amount, int groupID) throws DAOException {
+		String sql = "UPDATE goods SET goods_name = ?, price = ?, amount = ?, group_id = ? WHERE id = ?;";
+		
+		Connection conn = null;
+		PreparedStatement prst = null;
+		try {
+			log.trace("Open connection");
+			conn = daoFactory.getConnection();
+			try {
+				log.trace("Create prepared statement");
+				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+				prst.setString(1, name);
+				prst.setInt(2, price);
+				prst.setInt(3, amount);
+				prst.setInt(4, groupID);
+				prst.setInt(5, editID);
+				prst.executeUpdate();
+				log.trace("Goods item id=" + editID + " is fully updated");
+			} finally {
+				try {
+					prst.close();
+					log.trace("statement closed");
+				} catch (SQLException e) {
+					log.warn("Cannot close statement", e);
+				}
+			}
+		} catch (SQLException e) {
+			throw new DAOException("Cannot update goods item", e);
+		} finally {
+			try {
+				conn.close();
+				log.trace("Connection closed");
+			} catch (SQLException e) {
+				log.warn("Cannot close connection", e);
+			}
+		}
+		log.trace("Goods item id=" + editID + " has fully updated");
 	}
 
 }

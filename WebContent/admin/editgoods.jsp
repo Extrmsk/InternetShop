@@ -5,6 +5,7 @@
 <%@page import="com.lemanov.internetshop.domain.ShopManagerHandler"%>
 <%@page import="com.lemanov.internetshop.domain.ShopManager"%>
 <%@page import="com.lemanov.internetshop.domain.Goods" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,19 +18,8 @@
 <title>Edit goods</title>
 </head>
 <body>
-<%
-// 			if (session.getAttribute("shopManagerID") == null) {
-// 				response.sendRedirect("error.jsp");
-// 		        response.setHeader("Location", "error.jsp"); 
-// 		        return;
-// 			}
-// 			int shopManagerID = (Integer) session.getAttribute("shopManagerID");
-// 			ShopManager shopManager = ShopManagerHandler.getShopManagerByID(shopManagerID);
-		
-		ShopManager shopManager = new ShopManager();
-		shopManager.authorization("Admin", "123");
-	%>
-<div class="navbar navbar-default navbar-static-top">
+
+	<div class="navbar navbar-default navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -42,7 +32,7 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a><b><%=shopManager.getCurCustomerName()%>'s cabinet</b></a></li>
+					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
 					<li><a href="catalogAdmin">Catalog</a></li>
 					<li class="active"><a>Edit Goods</a></li>
 					<li><a href="editgroup.jsp">Add Group</a></li>
@@ -57,16 +47,35 @@
 			<div class="row">
 				<div class="col-md-4">Catalog choise place</div>
 				<div class="col-md-4">
-					<%
-						
-					%>
-					Edit param = ${param.editID}
-				</div>	
-				<div class="col-md-4"></div>
-
+					<form role="form" action="editGoodsSubmit" method="get">
+						<input type="hidden" name="editID" value="${param.editID}">
+						<div class="form-group">
+							<label class="control-label" for="goodsname">Goods name:</label>
+							<input class="form-control" id="goodsname" name="goodsname"
+								placeholder="Goods name" type="text" value="${param.name}">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="price">Price:</label>
+							<input class="form-control" id="price" name="price" 
+								placeholder="Price" value="${param.price}">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="amount">Amount:</label> <input
+								class="form-control" id="amount" name="amount"
+								placeholder="Amount" type="text" value="${param.amount}">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="groupID">Group ID:</label>
+							<input class="form-control" id="groupID" name="groupID"
+								placeholder="GroupID" type="text" value="${param.groupID}">
+						</div>
+						<button type="submit" class="btn btn-primary form-control">Save</button>
+					</form>
 				</div>
+				<div class="col-md-4"></div>
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 </html>

@@ -214,5 +214,15 @@ public class ShopManager {
 		log.trace("Delete goodsItem id=" + delID);
 		goodsManager.delGoodsItemByID(delID);
 	}
+
+	public Goods getGoodsByID(int editID) throws DAOException {
+		log.trace("Get goodsItem by id=" + editID);
+		return goodsManager.getGoodsByID(editID);
+	}
+
+	public void updateGoodsItem(int editID, String name, int price, int amount, int groupID) throws DAOException {
+		log.trace("Update goodsItem by id=" + editID);
+		goodsManager.updateGoodsItem(editID, name, price, amount, groupID);
+	}
 	
 }

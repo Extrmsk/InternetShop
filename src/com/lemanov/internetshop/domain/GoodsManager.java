@@ -51,4 +51,14 @@ public class GoodsManager {
 		goodsDao.delGoodsItemByID(delID);
 	}
 
+	public Goods getGoodsByID(int editID) throws DAOException {
+		log.debug("Get goodsItem by id=" + editID);
+		return goodsDao.getGoodsByID(editID);
+	}
+
+	public void updateGoodsItem(int editID, String name, int price, int amount, int groupID) throws DAOException {
+		log.debug("Update goodsItem by id=" + editID);
+		goodsDao.update(editID, name, price, amount, groupID);
+	}
+
 }

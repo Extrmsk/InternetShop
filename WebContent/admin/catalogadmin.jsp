@@ -34,7 +34,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
 					<li class="active"><a>Catalog</a></li>
-					<li><a href="./admin/editgoods.jsp">Add Goods</a></li>
+					<li><a href="./editGoodsPrepare">Add Goods</a></li>
 					<li><a href="./admin/editgroup.jsp">Add Group</a></li>
 					<li><a href="logout">Logout</a></li>
 				</ul>
@@ -68,7 +68,7 @@
 									<td>${goodsItem.groupID}</td>
 									<td><a href="./deleteGoodsItem?deleteID=${goodsItem.id}"><img
 											src="./img/delete.png" height="50" /></a></td>
-									<td><a href="./admin/editgoods.jsp?editID=${goodsItem.id}"><img
+									<td><a href="./editGoodsPrepare?editID=${goodsItem.id}"><img
 											src="./img/edit.png" height="50" /></a></td>
 								</tr>
 							</c:forEach>
