@@ -32,7 +32,7 @@ public class Register extends HttpServlet {
 				|| request.getParameter("name") == null || request.getParameter("email") == null
 				|| request.getParameter("login").isEmpty() || request.getParameter("passwd").isEmpty()
 				|| request.getParameter("name").isEmpty() || request.getParameter("email").isEmpty()) {
-			getServletContext().getRequestDispatcher("/register.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/register.jsp?error=1").forward(request, response);
 			return;
 		}
 
@@ -42,13 +42,13 @@ public class Register extends HttpServlet {
 		String email = request.getParameter("email");
 
 		try {
-			ShopManager shopManager = new ShopManager();
+			ShopManager shopManager = ShopManager.getInstance();
 			shopManager.createAccount(login, passwd, name, email);
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}
 
-		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/registersuccess.jsp").forward(request, response);
 	}
 
 }

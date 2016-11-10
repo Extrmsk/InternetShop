@@ -12,7 +12,6 @@ import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.domain.GoodsManager;
 import com.lemanov.internetshop.domain.ShopManager;
-import com.lemanov.internetshop.domain.ShopManagerHandler;
 import com.lemanov.internetshop.domain.exception.AutorizationException;
 
 /**
@@ -30,22 +29,16 @@ public class LogOut extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Servlet " + this.getClass().getSimpleName() + " is running");
 		log.info(this.getClass().getSimpleName() + " servlet is running");
+		
 		HttpSession session = request.getSession();
-		int shmanID = (int) session.getAttribute("shopManagerID");
-		ShopManager shopManager = ShopManagerHandler.getShopManagerByID(shmanID);
 		try {
-		shopManager.logOut();
-		session.invalidate();
+			int customerID = (int)session.getAttribute("userID");
+			ShopManager.getInstance().clearCustomerBasket(customerID);
+			session.invalidate();
 		} catch (Exception e) {
 			log.warn("Can't perform log out and close session", e);
 		}
 		response.sendRedirect("./logout.jsp");
-		
-		
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
 	}
 
 }

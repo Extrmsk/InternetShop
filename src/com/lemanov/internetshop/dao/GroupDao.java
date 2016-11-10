@@ -13,7 +13,7 @@ import com.lemanov.internetshop.domain.Group;
 
 public class GroupDao {
 	
-	private DaoFactory daoFactory = DaoFactory.getInstance();
+	private DaoInit daoFactory = DaoInit.getInstance();
 	private static Logger log = Logger.getLogger(GroupDao.class.getName());
 	
 	public Group addGroup(String name, int parentID) throws DAOException {

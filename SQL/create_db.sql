@@ -56,3 +56,15 @@ CREATE TABLE order_lines
   CONSTRAINT order_lines_order_id_fkey FOREIGN KEY (order_id)
       REFERENCES orders (id) MATCH SIMPLE
 );
+
+CREATE TABLE basket
+(
+customer_id integer,
+goods_id integer,
+amount integer,
+CONSTRAINT basket_customer_id_fkey FOREIGN KEY (customer_id)
+	REFERENCES customers (id) MATCH SIMPLE,
+CONSTRAINT basket_goods_id_fkey FOREIGN KEY (goods_id)
+      REFERENCES goods (id) MATCH SIMPLE ON DELETE CASCADE,
+CONSTRAINT unique_custID_goodsID UNIQUE (customer_id, goods_id)	  
+);

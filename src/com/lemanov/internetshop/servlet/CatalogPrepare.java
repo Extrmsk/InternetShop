@@ -12,17 +12,16 @@ import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.domain.ShopManager;
-import com.lemanov.internetshop.domain.ShopManagerHandler;
 
 /**
  * Servlet implementation class CatalogAdmin
  */
-@WebServlet("/catalogAdmin")
-public class CatalogAdmin extends HttpServlet {
+@WebServlet("/catalogPrepare")
+public class CatalogPrepare extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static Logger log = Logger.getLogger(CatalogAdmin.class.getName());
+	private static Logger log = Logger.getLogger(CatalogPrepare.class.getName());
        
-    public CatalogAdmin() {
+    public CatalogPrepare() {
         super();
     }
 
@@ -30,14 +29,20 @@ public class CatalogAdmin extends HttpServlet {
 		System.out.println("Servlet " + this.getClass().getSimpleName() + " is running");
 		log.info(this.getClass().getSimpleName() + " servlet is running");
 		
-		ShopManager shopManager = ShopManagerHandler.getShopManagerByID((int) request.getSession().getAttribute("shopManagerID"));
+		ShopManager shopManager = ShopManager.getInstance();
 		HttpSession session = request.getSession();
+		System.out.println("Session id=" + session.getId());
 		try {
-			session.setAttribute("goodsList", shopManager.getAllGoods());
+			request.setAttribute("goodsList", shopManager.getAllGoods());
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}
-		request.getRequestDispatcher("/admin/catalogadmin.jsp").forward(request, response);
+		String login = (String) session.getAttribute("login");
+		if (login.equals("Admin")) {
+			request.getRequestDispatcher("/admin/catalogadmin.jsp").forward(request, response);
+		} else {
+			request.getRequestDispatcher("/user/cataloguser.jsp").forward(request, response);
+		}
 	}
 
 }

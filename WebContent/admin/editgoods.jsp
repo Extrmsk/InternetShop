@@ -2,7 +2,6 @@
     pageEncoding="ISO-8859-1"%>
 <%@page import="com.lemanov.internetshop.domain.GoodsManager"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.ForEach"%>
-<%@page import="com.lemanov.internetshop.domain.ShopManagerHandler"%>
 <%@page import="com.lemanov.internetshop.domain.ShopManager"%>
 <%@page import="com.lemanov.internetshop.domain.Goods" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -33,7 +32,7 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
-					<li><a href="catalogAdmin">Catalog</a></li>
+					<li><a href="${pageContext.request.contextPath}/catalogPrepare">Catalog</a></li>
 					<li class="active"><a>Edit Goods</a></li>
 					<li><a href="editgroup.jsp">Add Group</a></li>
 					<li><a href="logout">Logout</a></li>
@@ -47,7 +46,7 @@
 			<div class="row">
 				<div class="col-md-4">Catalog choise place</div>
 				<div class="col-md-4">
-					<form role="form" action="editGoodsSubmit" method="get">
+					<form role="form" action="${pageContext.request.contextPath}/editGoodsSubmit" method="get">
 						<input type="hidden" name="editID" value="${param.editID}">
 						<div class="form-group">
 							<label class="control-label" for="goodsname">Goods name:</label>

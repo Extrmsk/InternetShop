@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 import com.lemanov.internetshop.domain.Customer;
 
 public class CustomerDao {
-	private DaoFactory daoFactory = DaoFactory.getInstance();
+	private DaoInit daoFactory = DaoInit.getInstance();
 	private static Logger log = Logger.getLogger(CustomerDao.class.getName());
 	
 	public Customer create(String login, String passwd, String name, String email) throws DAOException {

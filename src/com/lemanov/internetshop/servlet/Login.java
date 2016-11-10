@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
+import com.lemanov.internetshop.domain.Customer;
 import com.lemanov.internetshop.domain.ShopManager;
-import com.lemanov.internetshop.domain.ShopManagerHandler;
 import com.lemanov.internetshop.domain.exception.AutorizationException;
 
 /**
@@ -30,6 +30,7 @@ public class Login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Servlet " + this.getClass().getSimpleName() + " is running");
 		log.info(this.getClass().getSimpleName() + " servlet is running");
+		
 		if (request.getParameter("login") == null || request.getParameter("passwd") == null 
 				|| request.getParameter("login").isEmpty() || request.getParameter("passwd").isEmpty() ) {
 			System.out.println("null redirect");
@@ -42,32 +43,25 @@ public class Login extends HttpServlet {
 		String passwd = request.getParameter("passwd");
 		
 		ShopManager shopManager = null;
+		Customer curCustomer = null;
 		try {
-			shopManager = new ShopManager();
-			shopManager.authorization(login, passwd);
+			shopManager = ShopManager.getInstance();
+			curCustomer = shopManager.authorization(login, passwd);
 		} catch (IllegalArgumentException | DAOException e) {
+			log.warn("Login servlet: authorization deny");
 			getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
-			System.out.println("Login servlet: autorisation deny");
 			return;
 		}
 		
-		ShopManagerHandler.add(shopManager);
-		HttpSession session = request.getSession();
-		session.setAttribute("shopManagerID", shopManager.getID());
-		log.info("Open session id=" + session.getId());
+		HttpSession session = request.getSession(true);
+		log.info("session id=" + session.getId());
+		System.out.println("Session id=" + session.getId());
 		
-		try {
-			session.setAttribute("userName", shopManager.getCurCustomerName());
-		} catch (AutorizationException e) {
-			e.printStackTrace();
-		}
-		
-		if (login.equals("Admin")) {
-//			getServletContext().getRequestDispatcher("/admin/catalogadmin.jsp").forward(request, response);
-			response.sendRedirect("catalogAdmin");
-		} else {
-			getServletContext().getRequestDispatcher("/user/catalog.jsp").forward(request, response);
-		}
+		session.setAttribute("userID", curCustomer.getId());
+		session.setAttribute("userName", curCustomer.getName());
+		session.setAttribute("login", curCustomer.getLogin());
+
+		response.sendRedirect("catalogPrepare");
 	}
 
 }

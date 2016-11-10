@@ -1,6 +1,5 @@
 <%@page import="com.lemanov.internetshop.domain.GoodsManager"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.ForEach"%>
-<%@page import="com.lemanov.internetshop.domain.ShopManagerHandler"%>
 <%@page import="com.lemanov.internetshop.domain.ShopManager"%>
 <%@page import="com.lemanov.internetshop.domain.Goods" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -57,13 +56,15 @@
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${sessionScope.goodsList}" var="goodsItem">
+							<c:forEach items="${requestScope.goodsList}" var="goodsItem">
 								<tr>
 									<td>${goodsItem.name}</td>
 									<td>${goodsItem.price}</td>
 									<td>${goodsItem.amount }</td>
+									<c:if test="${goodsItem.amount > 0}">
 									<td><a href="./addToBasket?id=${goodsItem.id}"><img
 											src="./img/cart.png" height="50" /></a></td>
+									</c:if>
 								</tr>
 							</c:forEach>
 						</tbody>

@@ -8,19 +8,39 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-public class DaoFactory {
-	private static DaoFactory daoFactory;
+public class DaoInit {
+	private static DaoInit daoFactory;
 	private String user;
 	private String password;
 	private String url;
 	private String driver;
 	
-	private static Logger log = Logger.getLogger(DaoFactory.class.getName());
+	private static Logger log = Logger.getLogger(DaoInit.class.getName());
 	
-	private DaoFactory() {
+	private DaoInit() {
+		loadProperties();
+	}
+	
+	public static DaoInit getInstance() {
+		if (daoFactory == null) {
+			daoFactory = new DaoInit();
+		}
+		return daoFactory;
+	}
+
+	public Connection getConnection() throws DAOException {
+		log.trace("Driver manager get connection");
+		try {
+			return DriverManager.getConnection(url, user, password);
+		} catch (SQLException e) {
+			throw new DAOException("No connection to DB", e);
+		}
+	}
+	
+	private void loadProperties() {
 		Properties prop = new Properties();
 		try {
-			prop.load(DaoFactory.class.getResourceAsStream("/db.properties"));
+			prop.load(DaoInit.class.getResourceAsStream("/db.properties"));
 			user = prop.getProperty("user");
 			password = prop.getProperty("password");
 			url = prop.getProperty("url");
@@ -34,22 +54,6 @@ public class DaoFactory {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			log.error("Driver not found\n", e);
-		}
-	}
-	
-	public static DaoFactory getInstance() {
-		if (daoFactory == null) {
-			daoFactory = new DaoFactory();
-		}
-		return daoFactory;
-	}
-
-	public Connection getConnection() throws DAOException {
-		log.trace("Driver manager get connection");
-		try {
-			return DriverManager.getConnection(url, user, password);
-		} catch (SQLException e) {
-			throw new DAOException("No connection to DB", e);
 		}
 	}
 

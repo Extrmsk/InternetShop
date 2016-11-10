@@ -10,12 +10,11 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.lemanov.internetshop.domain.Customer;
 import com.lemanov.internetshop.domain.Goods;
 
 public class GoodsDao {
 	
-	private DaoFactory daoFactory = DaoFactory.getInstance();
+	private DaoInit daoInstance = DaoInit.getInstance();
 	private static Logger log = Logger.getLogger(GoodsDao.class.getName());
 	
 	public Goods addGoodsItem(String name, int price, int groupID, int amount) throws DAOException {
@@ -28,7 +27,7 @@ public class GoodsDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = daoInstance.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -90,7 +89,7 @@ public class GoodsDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = daoInstance.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -139,13 +138,14 @@ public class GoodsDao {
 	}
 
 	public void updateAmount(int goodsID, int newAmount) throws DAOException {
+		log.trace("Prepare to update amount goodsID=" + goodsID + " newAmount=" + newAmount);
 		String sql = "UPDATE goods SET amount = ? where id = ?;";
 		
 		Connection conn = null;
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = daoInstance.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -183,7 +183,7 @@ public class GoodsDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = daoInstance.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -243,7 +243,7 @@ public class GoodsDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = daoInstance.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql); //only read. Without keys
@@ -296,7 +296,7 @@ public class GoodsDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = daoInstance.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -330,7 +330,7 @@ public class GoodsDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = daoInstance.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);

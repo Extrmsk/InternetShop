@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+import com.lemanov.internetshop.dao.DAOException;
+import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.exception.NotEnoughGoodsException;
+
 /**
  * Servlet implementation class AddToBasket
  */
@@ -17,29 +21,28 @@ public class AddToBasket extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger log = Logger.getLogger(AddToBasket.class.getName());
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public AddToBasket() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Servlet " + this.getClass().getSimpleName() + " is GET running");
+		System.out.println("Servlet " + this.getClass().getSimpleName() + " is running");
 		log.info(this.getClass().getSimpleName() + " servlet is running");
-		String id = request.getParameter("id");
-		System.out.println("added to basket goodItem id=" + id);
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		int amount = 1;
+		int goodsID = Integer.parseInt(request.getParameter("id"));
+		ShopManager shopManager = ShopManager.getInstance();
+		int customerID = (int) request.getSession().getAttribute("userID");
+		try {
+		shopManager.addGoodsToBasket(customerID, goodsID, amount);
+		} catch (NotEnoughGoodsException | DAOException e) {
+			log.warn("Can not add goods to basket");
+		}
+		response.sendRedirect("catalogPrepare");
+		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Servlet " + this.getClass().getSimpleName() + " is POST running");
 		doGet(request, response);

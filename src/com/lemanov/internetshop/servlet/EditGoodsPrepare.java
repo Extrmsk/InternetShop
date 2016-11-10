@@ -12,7 +12,6 @@ import org.apache.log4j.Logger;
 import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.domain.Goods;
 import com.lemanov.internetshop.domain.ShopManager;
-import com.lemanov.internetshop.domain.ShopManagerHandler;
 
 @WebServlet("/editGoodsPrepare")
 public class EditGoodsPrepare extends HttpServlet {
@@ -32,7 +31,7 @@ public class EditGoodsPrepare extends HttpServlet {
 			return;
 		}
 		int editID = Integer.parseInt(request.getParameter("editID"));
-		ShopManager shopManager = ShopManagerHandler.getShopManagerByID((int) request.getSession().getAttribute("shopManagerID"));
+		ShopManager shopManager = ShopManager.getInstance();
 		
 		Goods goodsItem;
 		String url = "/admin/editgoods.jsp";

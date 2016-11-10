@@ -2,7 +2,6 @@
     pageEncoding="ISO-8859-1"%>
 <%@page import="com.lemanov.internetshop.domain.GoodsManager"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.ForEach"%>
-<%@page import="com.lemanov.internetshop.domain.ShopManagerHandler"%>
 <%@page import="com.lemanov.internetshop.domain.ShopManager"%>
 <%@page import="com.lemanov.internetshop.domain.Goods" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -34,8 +33,9 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
 					<li class="active"><a>Catalog</a></li>
+					<li><a href="./editCustomersPrepare">Edit Customers</a></li>
 					<li><a href="./editGoodsPrepare">Add Goods</a></li>
-					<li><a href="./admin/editgroup.jsp">Add Group</a></li>
+					<li><a href="./admin/editgroup.jsp">Edit Group</a></li>
 					<li><a href="logout">Logout</a></li>
 				</ul>
 			</div>
@@ -59,7 +59,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${sessionScope.goodsList}" var="goodsItem">
+							<c:forEach items="${requestScope.goodsList}" var="goodsItem">
 								<tr>
 									<td>${goodsItem.id}</td>
 									<td>${goodsItem.name}</td>

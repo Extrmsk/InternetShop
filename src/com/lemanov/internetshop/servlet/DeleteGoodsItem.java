@@ -12,7 +12,6 @@ import org.kohsuke.rngom.binary.ChoicePattern;
 
 import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.domain.ShopManager;
-import com.lemanov.internetshop.domain.ShopManagerHandler;
 
 /**
  * Servlet implementation class DeleteGoodsItem
@@ -31,14 +30,14 @@ public class DeleteGoodsItem extends HttpServlet {
 		log.info(this.getClass().getSimpleName() + " servlet is running");
 
 		int delID = Integer.parseInt(request.getParameter("deleteID"));
-		ShopManager shopManager = ShopManagerHandler.getShopManagerByID((int) request.getSession().getAttribute("shopManagerID"));
+		ShopManager shopManager = ShopManager.getInstance();
 		try {
 			shopManager.delGoodsItemByID(delID);
 			System.out.println("Good item id=" + delID + " is deleted!");
 		} catch (DAOException e1) {
 			e1.printStackTrace();
 		}
-		response.sendRedirect("catalogAdmin");
+		response.sendRedirect("catalogPrepare");
 		
 	}
 
