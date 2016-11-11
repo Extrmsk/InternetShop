@@ -11,6 +11,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.domain.Goods;
+import com.lemanov.internetshop.domain.OrderLine;
 
 public class BasketDao {
 	
@@ -256,4 +257,59 @@ public class BasketDao {
 		log.trace("Basket is removed for customerID=" + customerID);
 	}
 
+	public List<OrderLine> getAllOdrerLinesForCustomer(int customerID) throws DAOException {
+		log.trace("Prepearing to get all OrderLines for customerID=" + customerID);
+		String sql = "SELECT goods_id, amount FROM basket WHERE customer_id = ?;";
+
+		List<OrderLine> orderLines = new ArrayList<>();
+		OrderLine tempOrderLine = null;
+		Connection conn = null;
+		PreparedStatement prst = null;
+		ResultSet resSet = null;
+		try {
+			log.trace("Open connection");
+			conn = daoInstance.getConnection();
+			try {
+				log.trace("Create prepared statement");
+				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+				prst.setInt(1, customerID);
+				try {
+					log.trace("Get result set");
+					resSet = prst.executeQuery();
+					while (resSet.next()) {
+						log.trace("Create OrderLine to return");
+						tempOrderLine = new OrderLine(resSet.getInt("goods_id"), resSet.getInt("amount"));
+						orderLines.add(tempOrderLine);
+					}
+					log.info("List of orderLines is created");
+				} finally {
+					try {
+						resSet.close();
+						log.trace("result set closed");
+					} catch (SQLException e) {
+						log.warn("Cannot close result set", e);
+					}
+				}
+			} finally {
+				try {
+					prst.close();
+					log.trace("statement closed");
+				} catch (SQLException e) {
+					log.warn("Cannot close statement", e);
+				}
+			}
+		} catch (SQLException e) {
+			log.warn("Can not return OrderLine list", e);
+			throw new DAOException("Can not return OrderLine list", e);
+		} finally {
+			try {
+				conn.close();
+				log.trace("Connection closed");
+			} catch (SQLException e) {
+				log.warn("Cannot close connection", e);
+			}
+		}
+		log.trace("Returning list OrderLines");
+		return orderLines;
+	}
 }

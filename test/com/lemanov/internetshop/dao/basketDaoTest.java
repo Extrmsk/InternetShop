@@ -2,8 +2,12 @@ package com.lemanov.internetshop.dao;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
+
+import com.lemanov.internetshop.domain.OrderLine;
 
 public class basketDaoTest {
 
@@ -37,6 +41,14 @@ public class basketDaoTest {
 		assertEquals(1, basketDao.getGoodsItemAmount(customerID, goodsID));
 	}
 	
+	@Test 
+	public void testBasketAdd2() throws DAOException {
+		basketDao.deleteAll();
+		basketDao.add(customerID, goodsID, 1);
+		basketDao.add(customerID, goodsID+1, 1);
+		assertEquals(1, basketDao.getGoodsItemAmount(customerID, goodsID+1));
+	}
+	
 	@Test
 	public void testBasketUpdate() throws DAOException {
 		basketDao.deleteAll();
@@ -55,6 +67,15 @@ public class basketDaoTest {
 		int b = basketDao.getGoodsItemAmount(customerID+1, goodsID+1);
 		assertEquals(0, a);
 		assertEquals(1, b);
+	}
+	
+	@Test
+	public void testGetAllOdrerLinesForCustomer() throws DAOException {
+		basketDao.deleteAll();
+		basketDao.add(customerID, goodsID, 1);
+		basketDao.add(customerID, goodsID+1, 777);
+		List<OrderLine> ol = basketDao.getAllOdrerLinesForCustomer(customerID);
+		assertEquals(777, ol.get(1).getAmount());
 	}
 	
 	

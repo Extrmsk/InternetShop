@@ -32,8 +32,9 @@ public class LogOut extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		try {
-			int customerID = (int)session.getAttribute("userID");
-			ShopManager.getInstance().clearCustomerBasket(customerID);
+//			int customerID = (int)session.getAttribute("userID");
+//			ShopManager.getInstance().clearCustomerBasket(customerID);
+			System.out.println("invalidate session from logOut servlet");
 			session.invalidate();
 		} catch (Exception e) {
 			log.warn("Can't perform log out and close session", e);

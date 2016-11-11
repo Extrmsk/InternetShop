@@ -53,6 +53,9 @@ public class Login extends HttpServlet {
 			return;
 		}
 		
+		//warn! After add this string and add "listener" to web.xml sometimes "ide not responding" happening
+		MyHttpSessionListener l = new MyHttpSessionListener();
+		
 		HttpSession session = request.getSession(true);
 		log.info("session id=" + session.getId());
 		System.out.println("Session id=" + session.getId());
@@ -60,7 +63,7 @@ public class Login extends HttpServlet {
 		session.setAttribute("userID", curCustomer.getId());
 		session.setAttribute("userName", curCustomer.getName());
 		session.setAttribute("login", curCustomer.getLogin());
-
+		
 		response.sendRedirect("catalogPrepare");
 	}
 

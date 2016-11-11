@@ -4,51 +4,31 @@ import org.apache.log4j.Logger;
 
 public class OrderLine {
 	
-	private Goods goods;
+	private int goodsID;
 	private int amount;
 	
 	private static Logger log = Logger.getLogger(Goods.class.getName());
 	
-	public OrderLine(Goods goods, int amount) {
-		this.goods = goods;
+	public OrderLine(int goodsID, int amount) {
+		this.goodsID = goodsID;
 		this.amount = amount;
-		log.trace("Order line for item=" + goods.getName() + ", amount=" + amount + " is created");
+		log.trace("Order line for goodsID=" + goodsID + ", amount=" + amount + " is created");
 	}
-	
-	public Goods getItem() {
-		return goods;
+
+	public int getGoodsID() {
+		return goodsID;
 	}
-	
+
+	public void setGoodsID(int goodsID) {
+		this.goodsID = goodsID;
+	}
+
 	public int getAmount() {
 		return amount;
 	}
-	
+
 	public void setAmount(int amount) {
-		if (amount <= 0) {
-			log.debug("amount <= 0");
-			throw new IllegalArgumentException();
-		}
 		this.amount = amount;
-		log.trace("Amount setted to: " + amount);
 	}
 	
-	public void increaseAmount(int incValue) {
-		this.amount += incValue;
-	}
-	
-	public void reduceAmount(int redValue) {
-		this.amount -= redValue;
-	}
-	
-	public int getPrice() {
-		return goods.getPrice() * amount;
-	}
-
-	@Override
-	public String toString() {
-		return "OrderLine [goods=" + goods.getName() + ", amount=" + amount + "]";
-	}
-	
-	
-
 }

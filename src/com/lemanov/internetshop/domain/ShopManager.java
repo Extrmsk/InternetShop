@@ -1,5 +1,6 @@
 package com.lemanov.internetshop.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.naming.spi.DirStateFactory.Result;
@@ -16,8 +17,6 @@ import com.lemanov.internetshop.domain.exception.NotEnoughGoodsException;
 
 public class ShopManager {
 	private static ShopManager shopManager;
-	private Customer curCustomer;
-	private Basket curBasket;
 	private CustomerDao customerDao;
 	private GoodsManager goodsManager;
 	private GoodsDao goodsDao;
@@ -71,68 +70,10 @@ public class ShopManager {
 		}
 	}
 	
-	public boolean isLoggedIn() {
-		if (curCustomer == null) {
-			return false;
-		} 
-		return true;
-	}
-	
-	public void changePasswd(String oldPasswd, String newPasswd) throws AutorizationException, DAOException {
-		if (curCustomer == null) {
-			log.trace("Not logged in");
-			throw new AutorizationException("Need autorisation");
-		}
-		if ( oldPasswd == null || newPasswd == null || oldPasswd.isEmpty() || newPasswd.isEmpty() ) {
-			log.trace("Some field is null or empty");
-			throw new IllegalArgumentException("Passwd can't be empty");
-		}
-		if ( !curCustomer.getPasswd().equals(oldPasswd) ) {
-			log.trace("Wrong old password");
-			throw new IllegalArgumentException("Wrong old password");
-		}
-		if (curCustomer.getPasswd().equals(oldPasswd) && oldPasswd.equals(newPasswd)) {
-			log.trace("The old and the new passwords is the same");
-			throw new IllegalArgumentException("The old and the new passwords is the same");
-		}
-		log.trace("Updating cutomer " + curCustomer.getLogin() + " info");
-		customerDao.update(curCustomer.getLogin(), newPasswd, curCustomer.getName(),
-				curCustomer.getAddress(), curCustomer.getPhone(),
-				curCustomer.getEmail(), curCustomer.getCreditCardInfo());
-		log.trace("Customer " + curCustomer.getLogin() + " changed password.");
-		log.trace("Setting new customer info");
-		curCustomer = customerDao.read(curCustomer.getLogin());
-	}
-	
-	public void changeAddress(String newAddress) throws AutorizationException, DAOException {
-		if (curCustomer == null) {
-			log.trace("Not logged in");
-			throw new AutorizationException("Need autorisation");
-		}
-		log.trace("Updating cutomer " + curCustomer.getLogin() + " info");
-		customerDao.update(curCustomer.getLogin(), curCustomer.getPasswd(), curCustomer.getName(),
-				newAddress, curCustomer.getPhone(), curCustomer.getEmail(), curCustomer.getCreditCardInfo());
-		log.trace("Customer " + curCustomer.getLogin() + " changed email.");
-		log.trace("Setting new customer info");
-		curCustomer = customerDao.read(curCustomer.getLogin());
-	}
-	
 	public Goods addGoodsItem(String name, int price, int groupID, int amount) throws AutorizationException, DAOException {
 		log.debug("Adding goods item: name=" + name + ", price=" + price + ", groupId=" + groupID
 				+ ", amount=" + amount);
 		return goodsDao.addGoodsItem(name, price, groupID, amount);
-	}
-	
-	public Group addGroup(String name, int parentID) throws AutorizationException, DAOException {
-		if (curCustomer == null) {
-			log.trace("Not logged in");
-			throw new AutorizationException("Need autorisation");
-		}
-		if (!curCustomer.getLogin().equals("Admin")) {
-			log.warn("Not admin account. Adding groups is forbidden.");
-			throw new AutorizationException("Admin autorisation required");
-		}
-		return goodsManager.addGroup(name, parentID);
 	}
 	
 	// searching the match of the name expression	
@@ -178,36 +119,6 @@ public class ShopManager {
 		
 	}
 	
-	
-	
-	
-	
-	public void removeGoodsFromBasket(Goods goods) throws AutorizationException {
-		if (curCustomer == null) {
-			log.trace("Not logged in");
-			throw new AutorizationException("Autorisation required");
-		}
-		log.trace("Remove from basket: goods item=" + goods.getName());
-		curBasket.removeItem(goods);
-		goodsManager.updateGoodsAmountFromDao(goods);
-	}
-	
-	public int getPrice() {
-		return curBasket.getPrice();
-	}
-	
-	public String getCurCustomerName() throws AutorizationException {
-		if (curCustomer == null) {
-			log.trace("Not logged in");
-			throw new AutorizationException("Autorisation required");
-		}
-		log.trace("return customer name=" + curCustomer.getName());
-		return curCustomer.getName();
-	}
-	
-	public Basket getBasket() { //TODO delete
-		return curBasket;
-	}
 
 	public void delGoodsItemByID(int delID) throws DAOException {
 		log.trace("Delete goodsItem id=" + delID);
@@ -226,8 +137,14 @@ public class ShopManager {
 
 	public void clearCustomerBasket(int customerID) throws DAOException {
 		log.trace("Clear basket for customerID=" + customerID);
-		//TODO create return old amount for all goods in basket!
-		basketDao.clearCustomerBasket(customerID);
+		List<OrderLine> orderLines = new ArrayList<>();
+		orderLines = basketDao.getAllOdrerLinesForCustomer(customerID);
+		if (!orderLines.isEmpty()) {
+			for (OrderLine orderLine : orderLines) {
+				goodsDao.increaseAmount(orderLine.getGoodsID(), orderLine.getAmount());
+			}
+			basketDao.clearCustomerBasket(customerID);
+		}
 	}
 	
 }

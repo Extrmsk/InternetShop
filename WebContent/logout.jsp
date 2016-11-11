@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page session="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <meta charset="utf-8">
@@ -34,7 +35,7 @@
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
 					<div class="alert alert-dismissable alert-info">
-						<strong>Login session is over. Bye!</strong>
+						<strong>Login session is over</strong>
 					</div>
 					<p></p>
 					<a href="index.jsp"><button type="submit"

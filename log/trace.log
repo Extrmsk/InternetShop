@@ -1993,3 +1993,1186 @@ org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps yo
 2016-11-10 16:37:45 TRACE BasketDao:55 - statement closed
 2016-11-10 16:37:45 TRACE BasketDao:66 - Connection closed
 2016-11-10 16:37:45 TRACE BasketDao:71 - Returning amount
+2016-11-11 15:41:43 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-11 15:41:43 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:41:43 TRACE BasketDao:157 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:167 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:41:43 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:41:43 TRACE BasketDao:30 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:38 - Get result set
+2016-11-11 15:41:43 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:41:43 TRACE BasketDao:48 - result set closed
+2016-11-11 15:41:43 TRACE BasketDao:56 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:41:43 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:41:43 TRACE BasketDao:157 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:167 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:41:43 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:41:43 TRACE BasketDao:83 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:96 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:41:43 TRACE BasketDao:30 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:38 - Get result set
+2016-11-11 15:41:43 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:41:43 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:41:43 TRACE BasketDao:48 - result set closed
+2016-11-11 15:41:43 TRACE BasketDao:56 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:41:43 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:41:43 TRACE BasketDao:157 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:167 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:41:43 TRACE BasketDao:77 - Start add item: goodsID=10051, customerID=2, amount=1
+2016-11-11 15:41:43 TRACE BasketDao:83 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:96 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:41:43 TRACE BasketDao:157 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:167 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:41:43 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:41:43 TRACE BasketDao:83 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:96 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:188 - Start update item: goodsID=51, customerID=2, amount=10
+2016-11-11 15:41:43 TRACE BasketDao:194 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:197 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:203 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:207 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:217 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:41:43 TRACE BasketDao:30 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:38 - Get result set
+2016-11-11 15:41:43 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:41:43 INFO  BasketDao:44 - temp amount=10 is created
+2016-11-11 15:41:43 TRACE BasketDao:48 - result set closed
+2016-11-11 15:41:43 TRACE BasketDao:56 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:41:43 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:41:43 TRACE BasketDao:157 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:167 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:41:43 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:41:43 TRACE BasketDao:83 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:96 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=3, amount=1
+2016-11-11 15:41:43 TRACE BasketDao:83 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:96 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:225 - Start to remove basket for customer=2
+2016-11-11 15:41:43 TRACE BasketDao:231 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:234 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:238 - PrepStatement is executed
+2016-11-11 15:41:43 TRACE BasketDao:242 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:252 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:257 - Basket is removed for customerID=2
+2016-11-11 15:41:43 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:41:43 TRACE BasketDao:30 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:38 - Get result set
+2016-11-11 15:41:43 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:41:43 TRACE BasketDao:48 - result set closed
+2016-11-11 15:41:43 TRACE BasketDao:56 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:41:43 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=3
+2016-11-11 15:41:43 TRACE BasketDao:30 - Open connection
+2016-11-11 15:41:43 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:41:43 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:41:43 TRACE BasketDao:38 - Get result set
+2016-11-11 15:41:43 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:41:43 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:41:43 TRACE BasketDao:48 - result set closed
+2016-11-11 15:41:43 TRACE BasketDao:56 - statement closed
+2016-11-11 15:41:43 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:41:43 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:47:13 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-11 15:47:13 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:47:13 TRACE BasketDao:157 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:167 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:47:13 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:47:13 TRACE BasketDao:30 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:38 - Get result set
+2016-11-11 15:47:13 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:47:13 TRACE BasketDao:48 - result set closed
+2016-11-11 15:47:13 TRACE BasketDao:56 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:47:13 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:47:13 TRACE BasketDao:157 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:167 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:47:13 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:47:13 TRACE BasketDao:83 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:96 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:47:13 TRACE BasketDao:30 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:38 - Get result set
+2016-11-11 15:47:13 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:47:13 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:47:13 TRACE BasketDao:48 - result set closed
+2016-11-11 15:47:13 TRACE BasketDao:56 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:47:13 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:47:13 TRACE BasketDao:157 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:167 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:47:13 TRACE BasketDao:77 - Start add item: goodsID=10051, customerID=2, amount=1
+2016-11-11 15:47:13 TRACE BasketDao:83 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:96 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:47:13 TRACE BasketDao:157 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:167 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:47:13 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:47:13 TRACE BasketDao:83 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:96 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=2, amount=1
+2016-11-11 15:47:13 TRACE BasketDao:83 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:96 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:261 - Prepearing to get all OrderLines for customerID=2
+2016-11-11 15:47:13 TRACE BasketDao:270 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:273 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:277 - Get result set
+2016-11-11 15:47:13 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 15:47:13 TRACE Goods:15 - Order line for goodsID=51, amount=1 is created
+2016-11-11 15:47:13 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 15:47:13 TRACE Goods:15 - Order line for goodsID=52, amount=1 is created
+2016-11-11 15:47:13 INFO  BasketDao:284 - List of orderLines is created
+2016-11-11 15:47:13 TRACE BasketDao:288 - result set closed
+2016-11-11 15:47:13 TRACE BasketDao:296 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:307 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:312 - Returning list OrderLines
+2016-11-11 15:47:13 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:47:13 TRACE BasketDao:157 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:167 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:47:13 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:47:13 TRACE BasketDao:83 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:96 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:188 - Start update item: goodsID=51, customerID=2, amount=10
+2016-11-11 15:47:13 TRACE BasketDao:194 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:197 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:203 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:207 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:217 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:47:13 TRACE BasketDao:30 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:38 - Get result set
+2016-11-11 15:47:13 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:47:13 INFO  BasketDao:44 - temp amount=10 is created
+2016-11-11 15:47:13 TRACE BasketDao:48 - result set closed
+2016-11-11 15:47:13 TRACE BasketDao:56 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:47:13 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:47:13 TRACE BasketDao:157 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:167 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:47:13 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:47:13 TRACE BasketDao:83 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:96 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=3, amount=1
+2016-11-11 15:47:13 TRACE BasketDao:83 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:96 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:225 - Start to remove basket for customer=2
+2016-11-11 15:47:13 TRACE BasketDao:231 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:234 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:238 - PrepStatement is executed
+2016-11-11 15:47:13 TRACE BasketDao:242 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:252 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:257 - Basket is removed for customerID=2
+2016-11-11 15:47:13 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:47:13 TRACE BasketDao:30 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:38 - Get result set
+2016-11-11 15:47:13 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:47:13 TRACE BasketDao:48 - result set closed
+2016-11-11 15:47:13 TRACE BasketDao:56 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:47:13 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=3
+2016-11-11 15:47:13 TRACE BasketDao:30 - Open connection
+2016-11-11 15:47:13 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:47:13 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:47:13 TRACE BasketDao:38 - Get result set
+2016-11-11 15:47:13 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:47:13 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:47:13 TRACE BasketDao:48 - result set closed
+2016-11-11 15:47:13 TRACE BasketDao:56 - statement closed
+2016-11-11 15:47:13 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:47:13 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:51:18 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-11 15:51:18 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:51:18 TRACE BasketDao:157 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:167 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:51:18 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:51:18 TRACE BasketDao:30 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:38 - Get result set
+2016-11-11 15:51:18 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:51:18 TRACE BasketDao:48 - result set closed
+2016-11-11 15:51:18 TRACE BasketDao:56 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:51:18 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:51:18 TRACE BasketDao:157 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:167 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:51:18 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:51:18 TRACE BasketDao:83 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:96 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=2, amount=1
+2016-11-11 15:51:18 TRACE BasketDao:83 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:96 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:261 - Prepearing to get all OrderLines for customerID=2
+2016-11-11 15:51:18 TRACE BasketDao:270 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:273 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:277 - Get result set
+2016-11-11 15:51:18 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 15:51:18 TRACE Goods:15 - Order line for goodsID=51, amount=1 is created
+2016-11-11 15:51:18 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 15:51:18 TRACE Goods:15 - Order line for goodsID=52, amount=1 is created
+2016-11-11 15:51:18 INFO  BasketDao:284 - List of orderLines is created
+2016-11-11 15:51:18 TRACE BasketDao:288 - result set closed
+2016-11-11 15:51:18 TRACE BasketDao:296 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:307 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:312 - Returning list OrderLines
+2016-11-11 15:51:18 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:51:18 TRACE BasketDao:157 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:167 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:51:18 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:51:18 TRACE BasketDao:83 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:96 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:51:18 TRACE BasketDao:30 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:38 - Get result set
+2016-11-11 15:51:18 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:51:18 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:51:18 TRACE BasketDao:48 - result set closed
+2016-11-11 15:51:18 TRACE BasketDao:56 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:51:18 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:51:18 TRACE BasketDao:157 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:167 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:51:18 TRACE BasketDao:77 - Start add item: goodsID=10051, customerID=2, amount=1
+2016-11-11 15:51:18 TRACE BasketDao:83 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:96 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:51:18 TRACE BasketDao:157 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:167 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:51:18 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:51:18 TRACE BasketDao:83 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:96 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:188 - Start update item: goodsID=51, customerID=2, amount=10
+2016-11-11 15:51:18 TRACE BasketDao:194 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:197 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:203 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:207 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:217 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:51:18 TRACE BasketDao:30 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:38 - Get result set
+2016-11-11 15:51:18 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:51:18 INFO  BasketDao:44 - temp amount=10 is created
+2016-11-11 15:51:18 TRACE BasketDao:48 - result set closed
+2016-11-11 15:51:18 TRACE BasketDao:56 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:51:18 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:51:18 TRACE BasketDao:157 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:167 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:51:18 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:51:18 TRACE BasketDao:83 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:96 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=3, amount=1
+2016-11-11 15:51:18 TRACE BasketDao:83 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:96 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:225 - Start to remove basket for customer=2
+2016-11-11 15:51:18 TRACE BasketDao:231 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:234 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:238 - PrepStatement is executed
+2016-11-11 15:51:18 TRACE BasketDao:242 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:252 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:257 - Basket is removed for customerID=2
+2016-11-11 15:51:18 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:51:18 TRACE BasketDao:30 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:38 - Get result set
+2016-11-11 15:51:18 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:51:18 TRACE BasketDao:48 - result set closed
+2016-11-11 15:51:18 TRACE BasketDao:56 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:51:18 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=3
+2016-11-11 15:51:18 TRACE BasketDao:30 - Open connection
+2016-11-11 15:51:18 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:51:18 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:51:18 TRACE BasketDao:38 - Get result set
+2016-11-11 15:51:18 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:51:18 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:51:18 TRACE BasketDao:48 - result set closed
+2016-11-11 15:51:18 TRACE BasketDao:56 - statement closed
+2016-11-11 15:51:18 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:51:18 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:53:01 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-11 15:53:01 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:53:01 TRACE BasketDao:157 - Open connection
+2016-11-11 15:53:01 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:167 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:53:02 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:53:02 TRACE BasketDao:30 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:38 - Get result set
+2016-11-11 15:53:02 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:53:02 TRACE BasketDao:48 - result set closed
+2016-11-11 15:53:02 TRACE BasketDao:56 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:53:02 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:53:02 TRACE BasketDao:157 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:167 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:53:02 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:53:02 TRACE BasketDao:83 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:96 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:53:02 TRACE BasketDao:30 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:38 - Get result set
+2016-11-11 15:53:02 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:53:02 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:53:02 TRACE BasketDao:48 - result set closed
+2016-11-11 15:53:02 TRACE BasketDao:56 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:53:02 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:53:02 TRACE BasketDao:157 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:167 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:53:02 TRACE BasketDao:77 - Start add item: goodsID=10051, customerID=2, amount=1
+2016-11-11 15:53:02 TRACE BasketDao:83 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:96 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:53:02 TRACE BasketDao:157 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:167 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:53:02 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:53:02 TRACE BasketDao:83 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:96 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:188 - Start update item: goodsID=51, customerID=2, amount=10
+2016-11-11 15:53:02 TRACE BasketDao:194 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:197 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:203 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:207 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:217 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:53:02 TRACE BasketDao:30 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:38 - Get result set
+2016-11-11 15:53:02 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:53:02 INFO  BasketDao:44 - temp amount=10 is created
+2016-11-11 15:53:02 TRACE BasketDao:48 - result set closed
+2016-11-11 15:53:02 TRACE BasketDao:56 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:53:02 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:53:02 TRACE BasketDao:157 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:167 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:53:02 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:53:02 TRACE BasketDao:83 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:96 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=2, amount=1
+2016-11-11 15:53:02 TRACE BasketDao:83 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:96 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=2
+2016-11-11 15:53:02 TRACE BasketDao:30 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:38 - Get result set
+2016-11-11 15:53:02 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:53:02 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:53:02 TRACE BasketDao:48 - result set closed
+2016-11-11 15:53:02 TRACE BasketDao:56 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:53:02 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:53:02 TRACE BasketDao:157 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:167 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:53:02 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:53:02 TRACE BasketDao:83 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:96 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=3, amount=1
+2016-11-11 15:53:02 TRACE BasketDao:83 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:96 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:225 - Start to remove basket for customer=2
+2016-11-11 15:53:02 TRACE BasketDao:231 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:234 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:238 - PrepStatement is executed
+2016-11-11 15:53:02 TRACE BasketDao:242 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:252 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:257 - Basket is removed for customerID=2
+2016-11-11 15:53:02 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:53:02 TRACE BasketDao:30 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:38 - Get result set
+2016-11-11 15:53:02 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:53:02 TRACE BasketDao:48 - result set closed
+2016-11-11 15:53:02 TRACE BasketDao:56 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:53:02 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=3
+2016-11-11 15:53:02 TRACE BasketDao:30 - Open connection
+2016-11-11 15:53:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:02 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:53:02 TRACE BasketDao:38 - Get result set
+2016-11-11 15:53:02 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:53:02 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:53:02 TRACE BasketDao:48 - result set closed
+2016-11-11 15:53:02 TRACE BasketDao:56 - statement closed
+2016-11-11 15:53:02 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:53:02 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:53:29 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-11 15:53:29 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:53:29 TRACE BasketDao:157 - Open connection
+2016-11-11 15:53:29 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:29 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:53:29 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:53:29 TRACE BasketDao:167 - statement closed
+2016-11-11 15:53:29 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:53:29 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:53:29 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:53:29 TRACE BasketDao:83 - Open connection
+2016-11-11 15:53:29 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:29 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:53:29 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:53:29 TRACE BasketDao:96 - statement closed
+2016-11-11 15:53:29 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:53:29 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=2, amount=1
+2016-11-11 15:53:29 TRACE BasketDao:83 - Open connection
+2016-11-11 15:53:29 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:29 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:53:29 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:53:29 TRACE BasketDao:96 - statement closed
+2016-11-11 15:53:29 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:53:29 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=2
+2016-11-11 15:53:29 TRACE BasketDao:30 - Open connection
+2016-11-11 15:53:29 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:53:29 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:53:29 TRACE BasketDao:38 - Get result set
+2016-11-11 15:53:29 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:53:29 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:53:29 TRACE BasketDao:48 - result set closed
+2016-11-11 15:53:29 TRACE BasketDao:56 - statement closed
+2016-11-11 15:53:29 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:53:29 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:55:00 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-11 15:55:00 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:55:00 TRACE BasketDao:157 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:167 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:55:00 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:55:00 TRACE BasketDao:30 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:38 - Get result set
+2016-11-11 15:55:00 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:55:00 TRACE BasketDao:48 - result set closed
+2016-11-11 15:55:00 TRACE BasketDao:56 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:55:00 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:55:00 TRACE BasketDao:157 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:167 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:55:00 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:55:00 TRACE BasketDao:83 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:96 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=2, amount=1
+2016-11-11 15:55:00 TRACE BasketDao:83 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:96 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:261 - Prepearing to get all OrderLines for customerID=2
+2016-11-11 15:55:00 TRACE BasketDao:270 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:273 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:277 - Get result set
+2016-11-11 15:55:00 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 15:55:00 TRACE Goods:15 - Order line for goodsID=51, amount=1 is created
+2016-11-11 15:55:00 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 15:55:00 TRACE Goods:15 - Order line for goodsID=52, amount=1 is created
+2016-11-11 15:55:00 INFO  BasketDao:284 - List of orderLines is created
+2016-11-11 15:55:00 TRACE BasketDao:288 - result set closed
+2016-11-11 15:55:00 TRACE BasketDao:296 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:307 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:312 - Returning list OrderLines
+2016-11-11 15:55:00 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:55:00 TRACE BasketDao:157 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:167 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:55:00 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:55:00 TRACE BasketDao:83 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:96 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:55:00 TRACE BasketDao:30 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:38 - Get result set
+2016-11-11 15:55:00 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:55:00 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:55:00 TRACE BasketDao:48 - result set closed
+2016-11-11 15:55:00 TRACE BasketDao:56 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:55:00 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:55:00 TRACE BasketDao:157 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:167 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:55:00 TRACE BasketDao:77 - Start add item: goodsID=10051, customerID=2, amount=1
+2016-11-11 15:55:00 TRACE BasketDao:83 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:96 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:55:00 TRACE BasketDao:157 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:167 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:55:00 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:55:00 TRACE BasketDao:83 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:96 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:188 - Start update item: goodsID=51, customerID=2, amount=10
+2016-11-11 15:55:00 TRACE BasketDao:194 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:197 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:203 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:207 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:217 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:55:00 TRACE BasketDao:30 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:38 - Get result set
+2016-11-11 15:55:00 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:55:00 INFO  BasketDao:44 - temp amount=10 is created
+2016-11-11 15:55:00 TRACE BasketDao:48 - result set closed
+2016-11-11 15:55:00 TRACE BasketDao:56 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:55:00 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:55:00 TRACE BasketDao:157 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:167 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:55:00 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:55:00 TRACE BasketDao:83 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:96 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=2, amount=1
+2016-11-11 15:55:00 TRACE BasketDao:83 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:55:00 TRACE BasketDao:96 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=2
+2016-11-11 15:55:00 TRACE BasketDao:30 - Open connection
+2016-11-11 15:55:00 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:00 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:55:00 TRACE BasketDao:38 - Get result set
+2016-11-11 15:55:00 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:55:00 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:55:00 TRACE BasketDao:48 - result set closed
+2016-11-11 15:55:00 TRACE BasketDao:56 - statement closed
+2016-11-11 15:55:00 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:55:00 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:55:01 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:55:01 TRACE BasketDao:157 - Open connection
+2016-11-11 15:55:01 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:01 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:55:01 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:55:01 TRACE BasketDao:167 - statement closed
+2016-11-11 15:55:01 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:55:01 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:55:01 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:55:01 TRACE BasketDao:83 - Open connection
+2016-11-11 15:55:01 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:01 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:55:01 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:55:01 TRACE BasketDao:96 - statement closed
+2016-11-11 15:55:01 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:55:01 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=3, amount=1
+2016-11-11 15:55:01 TRACE BasketDao:83 - Open connection
+2016-11-11 15:55:01 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:01 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:55:01 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:55:01 TRACE BasketDao:96 - statement closed
+2016-11-11 15:55:01 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:55:01 TRACE BasketDao:225 - Start to remove basket for customer=2
+2016-11-11 15:55:01 TRACE BasketDao:231 - Open connection
+2016-11-11 15:55:01 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:01 TRACE BasketDao:234 - Create prepared statement
+2016-11-11 15:55:01 TRACE BasketDao:238 - PrepStatement is executed
+2016-11-11 15:55:01 TRACE BasketDao:242 - statement closed
+2016-11-11 15:55:01 TRACE BasketDao:252 - Connection closed
+2016-11-11 15:55:01 TRACE BasketDao:257 - Basket is removed for customerID=2
+2016-11-11 15:55:01 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:55:01 TRACE BasketDao:30 - Open connection
+2016-11-11 15:55:01 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:01 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:55:01 TRACE BasketDao:38 - Get result set
+2016-11-11 15:55:01 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:55:01 TRACE BasketDao:48 - result set closed
+2016-11-11 15:55:01 TRACE BasketDao:56 - statement closed
+2016-11-11 15:55:01 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:55:01 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:55:01 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=3
+2016-11-11 15:55:01 TRACE BasketDao:30 - Open connection
+2016-11-11 15:55:01 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:55:01 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:55:01 TRACE BasketDao:38 - Get result set
+2016-11-11 15:55:01 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:55:01 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:55:01 TRACE BasketDao:48 - result set closed
+2016-11-11 15:55:01 TRACE BasketDao:56 - statement closed
+2016-11-11 15:55:01 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:55:01 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:57:06 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-11 15:57:06 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:57:06 TRACE BasketDao:157 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:167 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:57:06 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:57:06 TRACE BasketDao:30 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:38 - Get result set
+2016-11-11 15:57:06 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:57:06 TRACE BasketDao:48 - result set closed
+2016-11-11 15:57:06 TRACE BasketDao:56 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:57:06 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:57:06 TRACE BasketDao:157 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:167 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:57:06 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:57:06 TRACE BasketDao:83 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:96 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=2, amount=777
+2016-11-11 15:57:06 TRACE BasketDao:83 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:96 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:261 - Prepearing to get all OrderLines for customerID=2
+2016-11-11 15:57:06 TRACE BasketDao:270 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:273 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:277 - Get result set
+2016-11-11 15:57:06 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 15:57:06 TRACE Goods:15 - Order line for goodsID=51, amount=1 is created
+2016-11-11 15:57:06 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 15:57:06 TRACE Goods:15 - Order line for goodsID=52, amount=777 is created
+2016-11-11 15:57:06 INFO  BasketDao:284 - List of orderLines is created
+2016-11-11 15:57:06 TRACE BasketDao:288 - result set closed
+2016-11-11 15:57:06 TRACE BasketDao:296 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:307 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:312 - Returning list OrderLines
+2016-11-11 15:57:06 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:57:06 TRACE BasketDao:157 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:167 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:57:06 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:57:06 TRACE BasketDao:83 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:96 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:57:06 TRACE BasketDao:30 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:38 - Get result set
+2016-11-11 15:57:06 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:57:06 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:57:06 TRACE BasketDao:48 - result set closed
+2016-11-11 15:57:06 TRACE BasketDao:56 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:57:06 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:57:06 TRACE BasketDao:157 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:167 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:57:06 TRACE BasketDao:77 - Start add item: goodsID=10051, customerID=2, amount=1
+2016-11-11 15:57:06 TRACE BasketDao:83 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:96 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:57:06 TRACE BasketDao:157 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:167 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:57:06 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:57:06 TRACE BasketDao:83 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:96 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:188 - Start update item: goodsID=51, customerID=2, amount=10
+2016-11-11 15:57:06 TRACE BasketDao:194 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:197 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:203 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:207 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:217 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:57:06 TRACE BasketDao:30 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:38 - Get result set
+2016-11-11 15:57:06 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:57:06 INFO  BasketDao:44 - temp amount=10 is created
+2016-11-11 15:57:06 TRACE BasketDao:48 - result set closed
+2016-11-11 15:57:06 TRACE BasketDao:56 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:57:06 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:57:06 TRACE BasketDao:157 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:167 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:57:06 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:57:06 TRACE BasketDao:83 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:96 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=2, amount=1
+2016-11-11 15:57:06 TRACE BasketDao:83 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:96 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=2
+2016-11-11 15:57:06 TRACE BasketDao:30 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:38 - Get result set
+2016-11-11 15:57:06 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:57:06 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:57:06 TRACE BasketDao:48 - result set closed
+2016-11-11 15:57:06 TRACE BasketDao:56 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:57:06 TRACE BasketDao:151 - Start to delete all raws
+2016-11-11 15:57:06 TRACE BasketDao:157 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:160 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:163 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:167 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:177 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:182 - Remove all rows is complete
+2016-11-11 15:57:06 TRACE BasketDao:77 - Start add item: goodsID=51, customerID=2, amount=1
+2016-11-11 15:57:06 TRACE BasketDao:83 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:96 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:77 - Start add item: goodsID=52, customerID=3, amount=1
+2016-11-11 15:57:06 TRACE BasketDao:83 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:86 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:92 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:96 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:106 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:225 - Start to remove basket for customer=2
+2016-11-11 15:57:06 TRACE BasketDao:231 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:234 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:238 - PrepStatement is executed
+2016-11-11 15:57:06 TRACE BasketDao:242 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:252 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:257 - Basket is removed for customerID=2
+2016-11-11 15:57:06 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=51, customerID=2
+2016-11-11 15:57:06 TRACE BasketDao:30 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:38 - Get result set
+2016-11-11 15:57:06 INFO  BasketDao:44 - temp amount=0 is created
+2016-11-11 15:57:06 TRACE BasketDao:48 - result set closed
+2016-11-11 15:57:06 TRACE BasketDao:56 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:72 - Returning amount
+2016-11-11 15:57:06 TRACE BasketDao:22 - Prepearing to get goods amount. GoodsID=52, customerID=3
+2016-11-11 15:57:06 TRACE BasketDao:30 - Open connection
+2016-11-11 15:57:06 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 15:57:06 TRACE BasketDao:33 - Create prepared statement
+2016-11-11 15:57:06 TRACE BasketDao:38 - Get result set
+2016-11-11 15:57:06 TRACE BasketDao:41 - Create amount to return
+2016-11-11 15:57:06 INFO  BasketDao:44 - temp amount=1 is created
+2016-11-11 15:57:06 TRACE BasketDao:48 - result set closed
+2016-11-11 15:57:06 TRACE BasketDao:56 - statement closed
+2016-11-11 15:57:06 TRACE BasketDao:67 - Connection closed
+2016-11-11 15:57:06 TRACE BasketDao:72 - Returning amount
+2016-11-11 16:11:20 INFO  ShopManager:28 - ***************** Create ShopManager *****************
+2016-11-11 16:11:20 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-11 16:11:20 TRACE ShopManager:139 - Clear basket for customerID=2
+2016-11-11 16:11:20 TRACE BasketDao:261 - Prepearing to get all OrderLines for customerID=2
+2016-11-11 16:11:20 TRACE BasketDao:270 - Open connection
+2016-11-11 16:11:20 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 16:11:20 TRACE BasketDao:273 - Create prepared statement
+2016-11-11 16:11:20 TRACE BasketDao:277 - Get result set
+2016-11-11 16:11:20 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 16:11:20 TRACE Goods:15 - Order line for goodsID=51, amount=1 is created
+2016-11-11 16:11:20 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 16:11:20 TRACE Goods:15 - Order line for goodsID=56, amount=1 is created
+2016-11-11 16:11:20 TRACE BasketDao:280 - Create OrderLine to return
+2016-11-11 16:11:20 TRACE Goods:15 - Order line for goodsID=57, amount=3 is created
+2016-11-11 16:11:20 INFO  BasketDao:284 - List of orderLines is created
+2016-11-11 16:11:20 TRACE BasketDao:288 - result set closed
+2016-11-11 16:11:20 TRACE BasketDao:296 - statement closed
+2016-11-11 16:11:20 TRACE BasketDao:307 - Connection closed
+2016-11-11 16:11:20 TRACE BasketDao:312 - Returning list OrderLines
+2016-11-11 16:11:20 TRACE GoodsDao:366 - Prepare to increase amount goodsID=51 amountDelta=1
+2016-11-11 16:11:20 TRACE GoodsDao:372 - Open connection
+2016-11-11 16:11:20 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 16:11:20 TRACE GoodsDao:375 - Create prepared statement
+2016-11-11 16:11:20 TRACE GoodsDao:380 - Amount of goods id=51 is increase on delta=1
+2016-11-11 16:11:20 TRACE GoodsDao:384 - statement closed
+2016-11-11 16:11:20 TRACE GoodsDao:394 - Connection closed
+2016-11-11 16:11:20 TRACE GoodsDao:366 - Prepare to increase amount goodsID=56 amountDelta=1
+2016-11-11 16:11:20 TRACE GoodsDao:372 - Open connection
+2016-11-11 16:11:20 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 16:11:20 TRACE GoodsDao:375 - Create prepared statement
+2016-11-11 16:11:20 TRACE GoodsDao:380 - Amount of goods id=56 is increase on delta=1
+2016-11-11 16:11:20 TRACE GoodsDao:384 - statement closed
+2016-11-11 16:11:20 TRACE GoodsDao:394 - Connection closed
+2016-11-11 16:11:20 TRACE GoodsDao:366 - Prepare to increase amount goodsID=57 amountDelta=3
+2016-11-11 16:11:20 TRACE GoodsDao:372 - Open connection
+2016-11-11 16:11:20 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 16:11:20 TRACE GoodsDao:375 - Create prepared statement
+2016-11-11 16:11:20 TRACE GoodsDao:380 - Amount of goods id=57 is increase on delta=3
+2016-11-11 16:11:20 TRACE GoodsDao:384 - statement closed
+2016-11-11 16:11:20 TRACE GoodsDao:394 - Connection closed
+2016-11-11 16:11:20 TRACE BasketDao:225 - Start to remove basket for customer=2
+2016-11-11 16:11:20 TRACE BasketDao:231 - Open connection
+2016-11-11 16:11:20 TRACE DaoInit:32 - Driver manager get connection
+2016-11-11 16:11:20 TRACE BasketDao:234 - Create prepared statement
+2016-11-11 16:11:20 TRACE BasketDao:238 - PrepStatement is executed
+2016-11-11 16:11:20 TRACE BasketDao:242 - statement closed
+2016-11-11 16:11:20 TRACE BasketDao:252 - Connection closed
+2016-11-11 16:11:20 TRACE BasketDao:257 - Basket is removed for customerID=2

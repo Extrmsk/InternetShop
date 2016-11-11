@@ -362,4 +362,39 @@ public class GoodsDao {
 		log.trace("Goods item id=" + editID + " has fully updated");
 	}
 
+	public void increaseAmount(int goodsID, int delta) throws DAOException {
+		log.trace("Prepare to increase amount goodsID=" + goodsID + " amountDelta=" + delta);
+		String sql = "UPDATE goods SET amount = amount + ? where id = ?;";
+		
+		Connection conn = null;
+		PreparedStatement prst = null;
+		try {
+			log.trace("Open connection");
+			conn = daoInstance.getConnection();
+			try {
+				log.trace("Create prepared statement");
+				prst = conn.prepareStatement(sql);
+				prst.setInt(1, delta);
+				prst.setInt(2, goodsID);
+				prst.executeUpdate();
+				log.trace("Amount of goods id=" + goodsID + " is increase on delta=" + delta);
+			} finally {
+				try {
+					prst.close();
+					log.trace("statement closed");
+				} catch (SQLException e) {
+					log.warn("Cannot close statement", e);
+				}
+			}
+		} catch (SQLException e) {
+			throw new DAOException("Cannot increase goods amount", e);
+		} finally {
+			try {
+				conn.close();
+				log.trace("Connection closed");
+			} catch (SQLException e) {
+				log.warn("Cannot close connection", e);
+			}
+		}
+	}
 }

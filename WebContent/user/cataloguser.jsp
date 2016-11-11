@@ -5,6 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -61,10 +62,15 @@
 									<td>${goodsItem.name}</td>
 									<td>${goodsItem.price}</td>
 									<td>${goodsItem.amount }</td>
-									<c:if test="${goodsItem.amount > 0}">
-									<td><a href="./addToBasket?id=${goodsItem.id}"><img
-											src="./img/cart.png" height="50" /></a></td>
-									</c:if>
+									<c:choose>
+										<c:when test="${goodsItem.amount > 0}">
+											<td><a href="./addToBasket?id=${goodsItem.id}"><img
+													src="./img/cart.png" height="50" /></a></td>
+										</c:when>
+										<c:otherwise>
+											<td><img src="./img/cart_noact.png" height="50" /></td>
+										</c:otherwise>
+									</c:choose>
 								</tr>
 							</c:forEach>
 						</tbody>
