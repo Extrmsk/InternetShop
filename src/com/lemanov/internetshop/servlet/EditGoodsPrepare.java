@@ -36,7 +36,7 @@ public class EditGoodsPrepare extends HttpServlet {
 		Goods goodsItem;
 		String url = "/admin/editgoods.jsp";
 		try {
-			goodsItem = shopManager.getGoodsByID(editID);
+			goodsItem = ShopManager.getGoodsDao().getGoodsByID(editID);
 			//TODO govno code
 			url += "?name=" + goodsItem.getName();
 			url += "&price=" + goodsItem.getPrice();

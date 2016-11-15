@@ -27,8 +27,6 @@ public class EditGoodsSubmit extends HttpServlet {
 		System.out.println("Servlet " + this.getClass().getSimpleName() + " is running");
 		log.info(this.getClass().getSimpleName() + " servlet is running");
 		
-		ShopManager shopManager = ShopManager.getInstance();
-		
 		String idStr = request.getParameter("editID");
 		String name = request.getParameter("goodsname");
 		String priceStr = request.getParameter("price");
@@ -49,8 +47,8 @@ public class EditGoodsSubmit extends HttpServlet {
 				int groupID = Integer.parseInt(groupIDStr);
 				int amount = Integer.parseInt(amountStr);
 				try {
-					shopManager.addGoodsItem(name, price, groupID, amount);
-				} catch (AutorizationException | DAOException e) {
+					ShopManager.getGoodsDao().addGoodsItem(name, price, groupID, amount);
+				} catch (DAOException e) {
 					log.warn("Can not create new goods item");
 					e.printStackTrace();
 				}
@@ -67,7 +65,7 @@ public class EditGoodsSubmit extends HttpServlet {
 			int groupID = Integer.parseInt(groupIDStr);
 			int amount = Integer.parseInt(amountStr);
 			try {
-				shopManager.updateGoodsItem(editID, name, price, amount, groupID);
+				ShopManager.getGoodsDao().updateGoodsItem(editID, name, price, amount, groupID);
 			} catch (DAOException e) {
 				e.printStackTrace();
 			}

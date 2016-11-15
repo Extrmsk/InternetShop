@@ -8,36 +8,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-import org.kohsuke.rngom.binary.ChoicePattern;
 
 import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.domain.ShopManager;
 
 /**
- * Servlet implementation class DeleteGoodsItem
+ * Servlet implementation class DelOrderLineFromBasket
  */
-@WebServlet("/deleteGoodsItem")
-public class DeleteGoodsItem extends HttpServlet {
+@WebServlet("/delOrderLineFromBasket")
+public class DelOrderLineFromBasket extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger log = Logger.getLogger(DeleteGoodsItem.class.getName());
        
-    public DeleteGoodsItem() {
+    public DelOrderLineFromBasket() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Servlet " + this.getClass().getSimpleName() + " is running");
 		log.info(this.getClass().getSimpleName() + " servlet is running");
-
-		int delID = Integer.parseInt(request.getParameter("deleteID"));
-		try {
-			ShopManager.getGoodsDao().delGoodsItemByID(delID);
-			System.out.println("Good item id=" + delID + " is deleted!");
-		} catch (DAOException e1) {
-			e1.printStackTrace();
-		}
-		response.sendRedirect("catalogPrepare");
 		
+		int goodsItemID = Integer.parseInt(request.getParameter("deleteID"));
+		int customerID = (int) request.getSession().getAttribute("userID");
+		try {
+			ShopManager.getInstance().delOrderLineForCustomer(goodsItemID, customerID);
+		} catch (DAOException e) {
+			e.printStackTrace();
+		}
+
+		response.sendRedirect("basketPrepare");
 	}
 
 }

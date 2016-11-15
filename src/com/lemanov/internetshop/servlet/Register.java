@@ -42,8 +42,7 @@ public class Register extends HttpServlet {
 		String email = request.getParameter("email");
 
 		try {
-			ShopManager shopManager = ShopManager.getInstance();
-			shopManager.createAccount(login, passwd, name, email);
+			ShopManager.getCustomerDao().create(login, passwd, name, email);
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}

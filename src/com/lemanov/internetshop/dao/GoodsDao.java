@@ -235,7 +235,7 @@ public class GoodsDao {
 
 	public List<Goods> getAll() throws DAOException {
 		List<Goods> goodsList = new ArrayList<>();
-		String sql = "select * from goods;";
+		String sql = "select * from goods ORDER BY id;";
 		
 		Goods tempGoods = null;
 		Connection conn = null;
@@ -323,7 +323,7 @@ public class GoodsDao {
 		}
 	}
 
-	public void update(int editID, String name, int price, int amount, int groupID) throws DAOException {
+	public void updateGoodsItem(int editID, String name, int price, int amount, int groupID) throws DAOException {
 		String sql = "UPDATE goods SET goods_name = ?, price = ?, amount = ?, group_id = ? WHERE id = ?;";
 		
 		Connection conn = null;

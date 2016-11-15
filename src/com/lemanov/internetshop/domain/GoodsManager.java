@@ -58,7 +58,7 @@ public class GoodsManager {
 
 	public void updateGoodsItem(int editID, String name, int price, int amount, int groupID) throws DAOException {
 		log.debug("Update goodsItem by id=" + editID);
-		goodsDao.update(editID, name, price, amount, groupID);
+//		goodsDao.update(editID, name, price, amount, groupID);
 	}
 
 }

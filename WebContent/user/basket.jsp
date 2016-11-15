@@ -15,7 +15,7 @@
 <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-<title>Customer shop page</title>
+<title>Basket user page</title>
 </head>
 <body>
 
@@ -24,8 +24,7 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target=".navbar-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="./index.jsp"> <span>OnlineShop</span><br>
 				</a>
@@ -33,9 +32,9 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
-					<li class="active"><a>Catalog</a></li>
+					<li><a href="${pageContext.request.contextPath}/catalogPrepare">Catalog</a></li>
 					<li><a href="orders.jsp">Orders</a></li>
-					<li><a href="./basketPrepare">Basket</a></li>
+					<li class="active"><a>Basket</a></li>
 					<li><a href="logout">Logout</a></li>
 				</ul>
 			</div>
@@ -51,30 +50,42 @@
 						<thead>
 							<tr>
 								<th>Goods name</th>
-								<th>Price</th>
 								<th>Amount</th>
+								<th>Price</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${requestScope.goodsList}" var="goodsItem">
+							<c:forEach items="${requestScope.orderLines}" var="orderLine">
 								<tr>
-									<td>${goodsItem.name}</td>
-									<td>${goodsItem.price}</td>
-									<td>${goodsItem.amount}</td>
-									<c:choose>
-										<c:when test="${goodsItem.amount > 0}">
-											<td><a href="./addToBasket?id=${goodsItem.id}"><img
-													src="./img/cart.png" height="50" /></a></td>
-										</c:when>
-										<c:otherwise>
-											<td><img src="./img/cart_noact.png" height="50" /></td>
-										</c:otherwise>
-									</c:choose>
+									<td>${orderLine.goodsName}</td>
+									<td>${orderLine.amount}</td>
+									<td>${orderLine.price}</td>
+									<td><a
+										href="./delOrderLineFromBasket?deleteID=${orderLine.goodsID}">
+											<img src="./img/delete.png" height="50" />
+									</a></td>
+
 								</tr>
 							</c:forEach>
 						</tbody>
 					</table>
+					<p></p>
+					<table class="table">
+						<thead>
+							<tr><td>Total price</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td>
+								<p>${requestScope.basketPrice}</p></td>
+							</tr>
+						</tbody>
+					</table>
+					<a href="./basketPrepare?action=clear"><button type="submit"
+							class="btn btn-default btn-block">Clear basket</button></a>
+					<a href="./user/createorder.jsp"><button type="submit"
+							class="btn btn-default btn-block">Create order</button></a>
 				</div>
 				<div class="col-md-1"></div>
 			</div>

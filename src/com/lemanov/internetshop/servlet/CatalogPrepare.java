@@ -29,11 +29,10 @@ public class CatalogPrepare extends HttpServlet {
 		System.out.println("Servlet " + this.getClass().getSimpleName() + " is running");
 		log.info(this.getClass().getSimpleName() + " servlet is running");
 		
-		ShopManager shopManager = ShopManager.getInstance();
 		HttpSession session = request.getSession();
 		System.out.println("Session id=" + session.getId());
 		try {
-			request.setAttribute("goodsList", shopManager.getAllGoods());
+			request.setAttribute("goodsList", ShopManager.getGoodsDao().getAll());
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}

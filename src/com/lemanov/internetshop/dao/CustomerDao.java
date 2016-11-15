@@ -203,4 +203,66 @@ public class CustomerDao {
 		return customer;
 	}
 
+	public Customer getCustomerByID(int customerID) throws DAOException {
+		log.info("Searching customer id=" + customerID);
+		String sql = "SELECT * FROM customers WHERE id=?;";
+		
+		Customer customer = null;
+		Connection conn = null;
+		PreparedStatement prst = null;
+		ResultSet resSet = null;
+		try {
+			log.trace("Open connection");
+			conn = daoFactory.getConnection();
+			try {
+				log.trace("Create prepared statement");
+				prst = conn.prepareStatement(sql);
+				prst.setInt(1, customerID);
+				try {
+					log.trace("Get result set");
+					resSet = prst.executeQuery();
+					while (resSet.next()) {
+						log.trace("Create customer to return");
+						customer = new Customer(resSet.getString("login"), resSet.getString("password"),
+								resSet.getString("name"), resSet.getString("email"));
+						customer.setAddress(resSet.getString("address"));
+						customer.setPhone(resSet.getString("phone"));
+						customer.setCreditCardInfo(resSet.getString("credit_card"));
+						customer.setId(resSet.getInt("id"));
+					}
+				} finally {
+					try {
+						resSet.close();
+						log.trace("result set closed");
+					} catch (SQLException e) {
+						log.warn("Cannot close result set", e);
+					}
+				}
+			} finally {
+				try {
+					prst.close();
+					log.trace("statement closed");
+				} catch (SQLException e) {
+					log.warn("Cannot close statement", e);
+				}
+			}
+		} catch ( SQLException e) {
+			throw new DAOException("Cannot find by customer ID", e);
+		} finally {
+			try {
+				conn.close();
+				log.trace("Connection closed");
+			} catch (SQLException e) {
+				log.warn("Cannot close connection", e);
+			}
+		}
+		if (customer == null) {
+			log.debug("CUSTOMER NOT FOUND");
+		} else {
+			log.trace("Customer id=" + customerID + " is found");
+		}
+		log.trace("Returning customer");
+		return customer;
+	}
+
 }
