@@ -8,6 +8,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.domain.Goods;
@@ -20,14 +24,18 @@ public class GoodsDao {
 	public Goods addGoodsItem(String name, int price, int groupID, int amount) throws DAOException {
 		log.trace("Get parameters: name=" + name + ", price=" + price + ", groupID=" + groupID + ", amount=" + amount);
 		String sql = "INSERT INTO goods (goods_name, price, amount, group_id) VALUES (?, ?, ?, ?);";
-
+		
+		//connect through DataSource and JNDI
+		DataSource ds = null;
 		Goods tempGoods = null;
 		Connection conn = null;
 		PreparedStatement prst = null;
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			InitialContext ic = new InitialContext();
+			ds = (DataSource) ic.lookup("java:comp/env/jdbc/Internetshop");
+			conn = ds.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -61,7 +69,7 @@ public class GoodsDao {
 					log.warn("Cannot close statement", e);
 				}
 			}
-		} catch (SQLException e) {
+		} catch (SQLException | NamingException e) {
 			log.warn("Cannot create goods item", e);
 			throw new DAOException("Cannot create goods item", e);
 		} finally {
@@ -237,13 +245,17 @@ public class GoodsDao {
 		List<Goods> goodsList = new ArrayList<>();
 		String sql = "select * from goods ORDER BY id;";
 		
+		//connect through DataSource and JNDI
+		DataSource ds = null;
 		Goods tempGoods = null;
 		Connection conn = null;
 		PreparedStatement prst = null;
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			InitialContext ic = new InitialContext();
+			ds = (DataSource) ic.lookup("java:comp/env/jdbc/Internetshop");
+			conn = ds.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql); //only read. Without keys
@@ -275,7 +287,7 @@ public class GoodsDao {
 					log.warn("Cannot close statement", e);
 				}
 			}
-		} catch (SQLException e) {
+		} catch (SQLException | NamingException e) {
 			throw new DAOException("Cannot get all goods", e);
 		} finally {
 			try {
