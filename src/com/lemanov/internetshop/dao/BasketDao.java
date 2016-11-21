@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.domain.Basket;
@@ -20,14 +22,9 @@ public class BasketDao {
 	private static Logger log = Logger.getLogger(BasketDao.class.getName());
 	private static GoodsDao goodsDao;
 	private static CustomerDao customerDao;
+	private static DataSource dataSource;
 	
-	public void setGoodsDao(GoodsDao gd) {
-		goodsDao = gd;
-	}
 	
-	public void setCustomerDao(CustomerDao cd) {
-		customerDao = cd;
-	}
 	
 	public int getGoodsItemAmount(int customerID, int goodsID) throws DAOException {
 		log.trace("Prepearing to get goods amount. GoodsID=" + goodsID + ", customerID=" + customerID);
@@ -378,6 +375,48 @@ public class BasketDao {
 			}
 		}
 		return tempBasket;
+	}
+	
+	public void moveBasketToOrderByCustID(int customerID, int orderID) throws DAOException {
+		log.trace("Move all basket to OrderLines by customerID=" + customerID);
+		String sql = "WITH output AS ("
+				+ "DELETE FROM basket WHERE customer_id = ?"
+				+ "RETURNING (?) AS order_id, goods_id, amount)"
+				+ "INSERT INTO order_lines (order_id, goods_id, amount)"
+				+ "SELECT order_id, goods_id, amount FROM output;";
+		
+		Connection conn = null;
+		PreparedStatement statement = null;
+		try {
+			conn = dataSource.getConnection();
+			statement = conn.prepareStatement(sql);
+			statement.setInt(1, customerID);
+			statement.setInt(2, orderID);
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			log.error("Cannot move basket to orderLines", e);
+			throw new DAOException("Cannot move basket to orderLines", e);
+		} finally {
+			try {
+				if (statement != null) statement.close();
+				if (conn != null) conn.close();
+			} catch (SQLException e) {
+				log.warn("Cannot close connection/statement/resultset", e);
+			}
+		}
+		log.trace("Basket for customerID=" + customerID + " is moved to orderLines. OrderID=" + orderID);
+	}
+	
+	public void setDataSource(DataSource ds) {
+		dataSource = ds;
+	}
+	
+	public void setGoodsDao(GoodsDao gd) {
+		goodsDao = gd;
+	}
+	
+	public void setCustomerDao(CustomerDao cd) {
+		customerDao = cd;
 	}
 
 }

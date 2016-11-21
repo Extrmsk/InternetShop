@@ -6,12 +6,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-/**
- * Servlet implementation class ConfirmOrder
- */
+import com.lemanov.internetshop.dao.DAOException;
+import com.lemanov.internetshop.domain.ShopManager;
+
 @WebServlet("/confirmOrder")
 public class ConfirmOrder extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -29,8 +30,16 @@ public class ConfirmOrder extends HttpServlet {
 		String address = request.getParameter("address");
 		String shipType = request.getParameter("shippingType");
 		
-		response.getWriter().println("address=" + address);
-		response.getWriter().println("shipType=" + shipType);
+		HttpSession session = request.getSession();
+		int customerID = (int) session.getAttribute("userID");
+		try {
+			ShopManager.getInstance().confirmOrder(customerID, address, shipType);
+		} catch (DAOException e) {
+			e.printStackTrace();
+		}
+//		response.getWriter().println("shipType=" + shipType);
+		
+		response.sendRedirect("ordersPrepare");
 	}
 
 }

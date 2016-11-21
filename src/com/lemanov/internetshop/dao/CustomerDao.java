@@ -5,12 +5,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import javax.sql.DataSource;
+
 import org.apache.log4j.Logger;
 import com.lemanov.internetshop.domain.Customer;
 
 public class CustomerDao {
 	private DaoInit daoFactory = DaoInit.getInstance();
 	private static Logger log = Logger.getLogger(CustomerDao.class.getName());
+	private static DataSource dataSource;
 	
 	public Customer create(String login, String passwd, String name, String email) throws DAOException {
 		log.info("Creating new customer with login=" + login);
@@ -263,6 +267,10 @@ public class CustomerDao {
 		}
 		log.trace("Returning customer");
 		return customer;
+	}
+
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
 	}
 
 }

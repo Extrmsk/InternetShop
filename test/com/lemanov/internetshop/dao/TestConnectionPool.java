@@ -25,9 +25,6 @@ public class TestConnectionPool {
 				System.out.println(rs.getString("goods_name"));
 			}
 			
-			
-			
-			
 		} catch (NamingException | SQLException e) {
 			e.printStackTrace();
 		}

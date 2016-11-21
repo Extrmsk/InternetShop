@@ -20,22 +20,24 @@ public class GoodsDao {
 	
 	private DaoInit daoInstance = DaoInit.getInstance();
 	private static Logger log = Logger.getLogger(GoodsDao.class.getName());
+	private static DataSource dataSource;
+	
+	public void setDataSource(DataSource ds) {
+		dataSource = ds;
+	}
 	
 	public Goods addGoodsItem(String name, int price, int groupID, int amount) throws DAOException {
 		log.trace("Get parameters: name=" + name + ", price=" + price + ", groupID=" + groupID + ", amount=" + amount);
 		String sql = "INSERT INTO goods (goods_name, price, amount, group_id) VALUES (?, ?, ?, ?);";
 		
 		//connect through DataSource and JNDI
-		DataSource ds = null;
 		Goods tempGoods = null;
 		Connection conn = null;
 		PreparedStatement prst = null;
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			InitialContext ic = new InitialContext();
-			ds = (DataSource) ic.lookup("java:comp/env/jdbc/Internetshop");
-			conn = ds.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -69,7 +71,7 @@ public class GoodsDao {
 					log.warn("Cannot close statement", e);
 				}
 			}
-		} catch (SQLException | NamingException e) {
+		} catch (SQLException e) {
 			log.warn("Cannot create goods item", e);
 			throw new DAOException("Cannot create goods item", e);
 		} finally {
@@ -237,7 +239,6 @@ public class GoodsDao {
 		} else {
 			log.trace("Goods item id=" + tempGoods.getId() + " is found");
 		}
-		log.trace("Returning goodsItem");
 		return tempGoods;
 	}
 
@@ -246,55 +247,32 @@ public class GoodsDao {
 		String sql = "select * from goods ORDER BY id;";
 		
 		//connect through DataSource and JNDI
-		DataSource ds = null;
 		Goods tempGoods = null;
 		Connection conn = null;
-		PreparedStatement prst = null;
+		PreparedStatement statement = null;
 		ResultSet resSet = null;
 		try {
-			log.trace("Open connection");
-			InitialContext ic = new InitialContext();
-			ds = (DataSource) ic.lookup("java:comp/env/jdbc/Internetshop");
-			conn = ds.getConnection();
-			try {
-				log.trace("Create prepared statement");
-				prst = conn.prepareStatement(sql); //only read. Without keys
-				try {
-					log.trace("Get result set");
-					resSet = prst.executeQuery();
-					while (resSet.next()) {
-						log.trace("Create goods to add to the set");
-						tempGoods = new Goods(resSet.getString("goods_name"),
-								resSet.getInt("price"), resSet.getInt("amount"),
-								resSet.getInt("group_id"));
-						tempGoods.setId(resSet.getInt("id"));
-						goodsList.add(tempGoods);
-						log.trace("Goods item " + tempGoods.getName() + " added to set");
-					}
-				} finally {
-					try {
-						resSet.close();
-						log.trace("result set closed");
-					} catch (SQLException e) {
-						log.warn("Cannot close result set", e);
-					}
-				}
-			} finally {
-				try {
-					prst.close();
-					log.trace("statement closed");
-				} catch (SQLException e) {
-					log.warn("Cannot close statement", e);
-				}
+			conn = dataSource.getConnection();
+			statement = conn.prepareStatement(sql); // only read. Without keys
+			resSet = statement.executeQuery();
+			while (resSet.next()) {
+				log.trace("Create goods to add to the set");
+				tempGoods = new Goods(resSet.getString("goods_name"), resSet.getInt("price"), resSet.getInt("amount"),
+						resSet.getInt("group_id"));
+				tempGoods.setId(resSet.getInt("id"));
+				goodsList.add(tempGoods);
+				log.trace("Goods item " + tempGoods.getName() + " added to set");
 			}
-		} catch (SQLException | NamingException e) {
+		} catch (SQLException e) {
+			log.error("Cannot get all goods", e);
 			throw new DAOException("Cannot get all goods", e);
 		} finally {
 			try {
-				conn.close();
-				log.trace("Connection closed");
+				if (resSet != null) resSet.close();
+				if (statement != null) statement.close();
+				if (conn != null) conn.close();
 			} catch (SQLException e) {
-				log.warn("Cannot close connection", e);
+				log.warn("Cannot close connection/statement/resultset", e);
 			}
 		}
 		log.trace("Returning all goods");
@@ -374,7 +352,7 @@ public class GoodsDao {
 		log.trace("Goods item id=" + editID + " has fully updated");
 	}
 
-	public void increaseAmount(int goodsID, int delta) throws DAOException {
+	public void changeAmountByDelta(int goodsID, int delta) throws DAOException {
 		log.trace("Prepare to increase amount goodsID=" + goodsID + " amountDelta=" + delta);
 		String sql = "UPDATE goods SET amount = amount + ? where id = ?;";
 		

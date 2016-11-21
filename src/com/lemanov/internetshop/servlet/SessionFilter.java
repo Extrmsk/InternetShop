@@ -17,7 +17,7 @@ public class SessionFilter implements Filter {
 	private FilterConfig filterConfig;
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
-		System.out.println("Fiter is running");
+//		System.out.println("Fiter is running");
 		HttpSession session = null;
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
@@ -26,17 +26,17 @@ public class SessionFilter implements Filter {
 			session = req.getSession(false);
 			String reqUri = req.getRequestURI();
 			if (reqUri.contains("index.jsp") || reqUri.endsWith("InternetShop/") || reqUri.contains("logout.jsp")
-					|| reqUri.contains("register") || reqUri.contains("login")) {
-				System.out.println("Filter: 1 permit URI");
+					|| reqUri.contains("register") || reqUri.contains("login") ) {
+//				System.out.println("Filter: 1 permit URI");
 				chain.doFilter(request, response);
 			} else if (session == null) {
-				System.out.println("Filter: 2 session is null. Not index.jsp");
+//				System.out.println("Filter: 2 session is null. Not index.jsp");
 				res.sendRedirect("./logout.jsp");
 			} else if (session.getAttribute("userID") == null) {
-				System.out.println("Filter: 3 Session userID=null");
+//				System.out.println("Filter: 3 Session userID=null");
 				res.sendRedirect("./logout.jsp");
 			} else {
-				System.out.println("Filter: 4 doFilter default");
+//				System.out.println("Filter: 4 doFilter default");
 				chain.doFilter(request, response);
 			}
 		} catch (IOException io) {

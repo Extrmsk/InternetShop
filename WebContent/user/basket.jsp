@@ -33,9 +33,9 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
 					<li><a href="${pageContext.request.contextPath}/catalogPrepare">Catalog</a></li>
-					<li><a href="orders.jsp">Orders</a></li>
+					<li><a href="${pageContext.request.contextPath}/ordersPrepare">Orders</a></li>
 					<li class="active"><a>Basket</a></li>
-					<li><a href="logout">Logout</a></li>
+					<li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
 				</ul>
 			</div>
 		</div>

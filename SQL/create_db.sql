@@ -54,7 +54,7 @@ CREATE TABLE order_lines
   CONSTRAINT order_lines_goods_id_fkey FOREIGN KEY (goods_id)
       REFERENCES goods (id) MATCH SIMPLE ON DELETE CASCADE,
   CONSTRAINT order_lines_order_id_fkey FOREIGN KEY (order_id)
-      REFERENCES orders (id) MATCH SIMPLE
+      REFERENCES orders (id) MATCH SIMPLE ON DELETE CASCADE
 );
 
 CREATE TABLE basket

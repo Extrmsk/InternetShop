@@ -15,7 +15,7 @@
 <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-<title>Customer shop page</title>
+<title>Orders user page</title>
 </head>
 <body>
 
@@ -24,8 +24,7 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target=".navbar-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="./index.jsp"> <span>OnlineShop</span><br>
 				</a>
@@ -33,8 +32,8 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
-					<li class="active"><a>Catalog</a></li>
-					<li><a href="${pageContext.request.contextPath}/ordersPrepare">Orders</a></li>
+					<li><a href="${pageContext.request.contextPath}/catalogPrepare">Catalog</a></li>
+					<li class="active"><a>Orders</a></li>
 					<li><a href="${pageContext.request.contextPath}/basketPrepare">Basket</a></li>
 					<li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
 				</ul>
@@ -47,34 +46,31 @@
 			<div class="row">
 				<div class="col-md-3">Catalog choise place</div>
 				<div class="col-md-7">
+					
 					<table class="table">
 						<thead>
 							<tr>
-								<th>Goods name</th>
-								<th>Price</th>
-								<th>Amount</th>
-								<th>Action</th>
+								<th>Order id</th>
+								<th>Delivery address</th>
+								<th>Shipping type</th>
+								<th>Status</th>
+								<th>Date of create</th>
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${requestScope.goodsList}" var="goodsItem">
+							<c:forEach items="${requestScope.orders}" var="orders">
 								<tr>
-									<td>${goodsItem.name}</td>
-									<td>${goodsItem.price}</td>
-									<td>${goodsItem.amount}</td>
-									<c:choose>
-										<c:when test="${goodsItem.amount > 0}">
-											<td><a href="./addToBasket?id=${goodsItem.id}"><img
-													src="./img/cart.png" height="50" /></a></td>
-										</c:when>
-										<c:otherwise>
-											<td><img src="./img/cart_noact.png" height="50" /></td>
-										</c:otherwise>
-									</c:choose>
+									<td>${orders.id}</td>
+									<td>${orders.deliveryAddress}</td>
+									<td>${orders.shipType.name()}</td>
+									<td>${orders.status.name()}</td>
+									<td>${orders.date}</td>
 								</tr>
 							</c:forEach>
 						</tbody>
 					</table>
+					<a href="${pageContext.request.contextPath}/catalogPrepare"><button type="submit"
+						class="btn btn-default btn-block">To Catalog</button></a>
 				</div>
 				<div class="col-md-1"></div>
 			</div>
