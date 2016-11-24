@@ -15,6 +15,7 @@ import com.lemanov.internetshop.dao.CustomerDao;
 import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.dao.DaoInit;
 import com.lemanov.internetshop.dao.GoodsDao;
+import com.lemanov.internetshop.dao.GroupDao;
 import com.lemanov.internetshop.dao.OrderDao;
 import com.lemanov.internetshop.domain.exception.AutorizationException;
 import com.lemanov.internetshop.domain.exception.NotEnoughGoodsException;
@@ -27,6 +28,8 @@ public class ShopManager {
 	private static OrderDao orderDao;
 	private GoodsManager goodsManager;
 	private static DataSource dataSource;
+	private static GroupDao groupDao;
+	private static Group catalog;
 	
 	private static Logger log = Logger.getLogger(ShopManager.class.getName());
 	
@@ -87,6 +90,14 @@ public class ShopManager {
 			orderDao.setCustomerDao(getCustomerDao());
 		}
 		return orderDao;
+	}
+	
+	public static GroupDao getGroupDao() {
+		if (groupDao == null) {
+			groupDao = new GroupDao();
+//			groupDao.setDataSource(dataSource);
+		}
+		return groupDao;
 	}
 	
 	
@@ -182,6 +193,34 @@ public class ShopManager {
 		
 		basketDao.moveBasketToOrderByCustID(customerID, orderID);
 		System.out.println("moveBasket is performed! Address=" + address + " ShippingType=" + shipType);
+	}
+	
+	public static Group getCatalog() {
+		if (catalog == null) {
+			getGroupDao();
+			initCatalog();
+		}
+		return catalog;
+	}
+	
+	private static void initCatalog() {
+		catalog = new Group(0, "catalog");
+		try {
+			loadChildren(catalog);
+		} catch (DAOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void loadChildren(Group parent) throws DAOException {
+		List<Group> childrens = groupDao.getChildrensList(parent.getId());
+		if(!childrens.isEmpty()) {
+			for (Group child : childrens) {
+				System.out.println("Parent " + parent.getName() + "(" + parent.getId() + ") add child " + child.getName() + "(" + child.getId() + ")");
+				parent.addChildren(child);
+				loadChildren(child);
+			}
+		}
 	}
 
 	

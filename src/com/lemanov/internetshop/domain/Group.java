@@ -1,32 +1,63 @@
 package com.lemanov.internetshop.domain;
 
-import org.apache.log4j.Logger;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Group {
 	
 	private String name;
-	private int parentID = 0;
-	private int ID;
-	private static Logger log = Logger.getLogger(Group.class.getName());
+	private int id;
+	private List<Group> childrens = new ArrayList<>();
 	
-	public Group(String name, int id, int parentID) {
+	public Group(int id, String name) {
+		this.id = id;
 		this.name = name;
-		this.ID = id;
-		this.parentID = parentID;
-		log.trace("Group " + name + " is created");
+	}
+	
+	public Group(int id, String name, Group parent) {
+		this.id = id;
+		this.name = name;
+		parent.addChildren(this);
+	}
+	
+	public void addChildren(Group child) {
+		childrens.add(child);
 	}
 
-	public int getID() {
-		return ID;
+	@Override
+	public String toString() {
+		String result = "Group " + name + "(" + id + ") has a childrens:\n";
+		for (Group child : childrens) {
+			result += child.getName() + "(" + child.getId() + ") ";
+		}
+		result += "\n" + "============== \n\n";
+		return result;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public int getParentID() {
-		return parentID;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public List<Group> getChildrens() {
+		return childrens;
+	}
+
+	public void setChildrens(List<Group> childrens) {
+		this.childrens = childrens;
 	}
 	
-
+	
+	
 }

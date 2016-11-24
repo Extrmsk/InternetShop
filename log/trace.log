@@ -3290,3 +3290,247 @@ org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps yo
 2016-11-21 15:08:33 TRACE BasketDao:124 - Connection closed
 2016-11-21 15:10:04 INFO  ShopManager:32 - *** Create ShopManager ***
 2016-11-21 15:10:04 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:40:36 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:40:36 TRACE GroupDao:80 - Get childrens for parentID=0
+2016-11-24 19:40:36 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:40:36 ERROR GroupDao:96 - Cannot get childrens
+org.postgresql.util.PSQLException: No value specified for parameter 1.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:249)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:275)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:432)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:358)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:171)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:119)
+	at com.lemanov.internetshop.dao.GroupDao.getChildrensList(GroupDao.java:90)
+	at com.lemanov.internetshop.domain.GroupTest.main(GroupTest.java:13)
+2016-11-24 19:41:57 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:41:57 TRACE GroupDao:80 - Get childrens for parentID=0
+2016-11-24 19:41:57 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:41:57 ERROR GroupDao:96 - Cannot get childrens
+org.postgresql.util.PSQLException: No value specified for parameter 1.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:249)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:275)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:432)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:358)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:171)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:119)
+	at com.lemanov.internetshop.dao.GroupDao.getChildrensList(GroupDao.java:90)
+	at com.lemanov.internetshop.domain.GroupTest.main(GroupTest.java:15)
+2016-11-24 19:42:41 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:42:41 TRACE GroupDao:80 - Get childrens for parentID=0
+2016-11-24 19:42:41 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:42:41 ERROR GroupDao:97 - Cannot get childrens
+org.postgresql.util.PSQLException: No value specified for parameter 1.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:249)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:275)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:432)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:358)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:171)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:119)
+	at com.lemanov.internetshop.dao.GroupDao.getChildrensList(GroupDao.java:90)
+	at com.lemanov.internetshop.domain.GroupTest.main(GroupTest.java:15)
+2016-11-24 19:43:16 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:43:16 TRACE GroupDao:80 - Get childrens for parentID=0
+2016-11-24 19:43:16 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:43:17 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:43:44 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:43:44 TRACE GroupDao:80 - Get childrens for parentID=6
+2016-11-24 19:43:44 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:43:44 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:43:58 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:43:58 TRACE GroupDao:80 - Get childrens for parentID=6
+2016-11-24 19:43:58 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:43:58 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:44:08 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:44:08 TRACE GroupDao:80 - Get childrens for parentID=5
+2016-11-24 19:44:08 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:44:08 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:46:28 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:57:16 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:57:16 TRACE GroupDao:80 - Get childrens for parentID=5
+2016-11-24 19:57:16 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:57:16 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:57:16 TRACE GroupDao:80 - Get childrens for parentID=15
+2016-11-24 19:57:16 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:57:16 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:57:16 TRACE GroupDao:80 - Get childrens for parentID=16
+2016-11-24 19:57:16 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:57:16 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=0
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=1
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=5
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=15
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=16
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=6
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=7
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=2
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=8
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=9
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=17
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:02 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:02 TRACE GroupDao:80 - Get childrens for parentID=18
+2016-11-24 19:58:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:03 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:03 TRACE GroupDao:80 - Get childrens for parentID=3
+2016-11-24 19:58:03 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:03 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:03 TRACE GroupDao:80 - Get childrens for parentID=10
+2016-11-24 19:58:03 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:03 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:03 TRACE GroupDao:80 - Get childrens for parentID=11
+2016-11-24 19:58:03 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:03 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:03 TRACE GroupDao:80 - Get childrens for parentID=4
+2016-11-24 19:58:03 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:03 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:03 TRACE GroupDao:80 - Get childrens for parentID=12
+2016-11-24 19:58:03 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:03 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:03 TRACE GroupDao:80 - Get childrens for parentID=13
+2016-11-24 19:58:03 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:03 TRACE GroupDao:108 - Return childrens
+2016-11-24 19:58:03 TRACE GroupDao:80 - Get childrens for parentID=14
+2016-11-24 19:58:03 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 19:58:03 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=0
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=1
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=5
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=15
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=16
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=6
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=7
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=2
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=8
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=9
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=17
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=18
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=3
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=10
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=11
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=4
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=12
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=13
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:52:14 TRACE GroupDao:80 - Get childrens for parentID=14
+2016-11-24 20:52:14 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 20:52:14 TRACE GroupDao:108 - Return childrens
+2016-11-24 20:57:56 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 20:59:18 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 20:59:43 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 21:00:35 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 21:01:04 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=0
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=1
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=5
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=15
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=16
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=6
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=7
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=2
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=8
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=9
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=17
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=18
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=3
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=10
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=11
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=4
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=12
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=13
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=14
+2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens

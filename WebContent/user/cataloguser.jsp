@@ -45,7 +45,9 @@
 	<div class="section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">Catalog choise place</div>
+				<div class="col-md-3">
+				<jsp:include page="../node.jsp"/>
+				</div>
 				<div class="col-md-7">
 					<table class="table">
 						<thead>

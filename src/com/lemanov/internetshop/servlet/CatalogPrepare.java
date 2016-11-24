@@ -1,6 +1,9 @@
 package com.lemanov.internetshop.servlet;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,6 +40,18 @@ public class CatalogPrepare extends HttpServlet {
 			e.printStackTrace();
 		}
 		String login = (String) session.getAttribute("login");
+		request.setAttribute("node", ShopManager.getCatalog());
+		request.setAttribute("level", -1);
+		String path = request.getParameter("path");
+		int[] pathItems;
+		if (path != null) {
+			pathItems = Arrays.stream(path.split(",")).mapToInt(Integer::parseInt).toArray();
+		} else {
+			pathItems = new int[0];
+		}
+		request.setAttribute("pathItems", pathItems);
+		request.setAttribute("paramsPath", path);
+		request.setAttribute("path", "");
 		if (login.equals("Admin")) {
 			request.getRequestDispatcher("/admin/catalogadmin.jsp").forward(request, response);
 		} else {

@@ -44,8 +44,7 @@
 	<div class="section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">Catalog choise place</div>
-				<div class="col-md-7">
+				<div class="col-md-12">
 					
 					<table class="table">
 						<thead>
@@ -72,7 +71,6 @@
 					<a href="${pageContext.request.contextPath}/catalogPrepare"><button type="submit"
 						class="btn btn-default btn-block">To Catalog</button></a>
 				</div>
-				<div class="col-md-1"></div>
 			</div>
 		</div>
 	</div>
