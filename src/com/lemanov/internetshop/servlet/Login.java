@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.domain.Customer;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 import com.lemanov.internetshop.domain.exception.AutorizationException;
 
 /**
@@ -42,10 +42,10 @@ public class Login extends HttpServlet {
 		String login = request.getParameter("login");
 		String passwd = request.getParameter("passwd");
 		
-		ShopManager shopManager = null;
+		Service shopManager = null;
 		Customer curCustomer = null;
 		try {
-			shopManager = ShopManager.getInstance();
+			shopManager = Service.getInstance();
 			curCustomer = shopManager.authorization(login, passwd);
 		} catch (IllegalArgumentException | DAOException e) {
 			log.warn("Login servlet: authorization deny");

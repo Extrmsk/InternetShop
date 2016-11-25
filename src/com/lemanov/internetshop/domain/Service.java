@@ -20,21 +20,20 @@ import com.lemanov.internetshop.dao.OrderDao;
 import com.lemanov.internetshop.domain.exception.AutorizationException;
 import com.lemanov.internetshop.domain.exception.NotEnoughGoodsException;
 
-public class ShopManager {
-	private static ShopManager shopManager;
+public class Service {
+	private static Service service;
 	private static GoodsDao goodsDao;
 	private static CustomerDao customerDao;
 	private static BasketDao basketDao;
 	private static OrderDao orderDao;
-	private GoodsManager goodsManager;
 	private static DataSource dataSource;
 	private static GroupDao groupDao;
-	private static Group catalog;
+	private static Catalog catalog;
 	
-	private static Logger log = Logger.getLogger(ShopManager.class.getName());
+	private static Logger log = Logger.getLogger(Service.class.getName());
 	
-	private ShopManager() {
-		log.info("*** Create ShopManager ***");
+	private Service() {
+		log.info("Create Service instance");
 		initDataSource();
 	}
 	
@@ -50,11 +49,11 @@ public class ShopManager {
 	}
 
 // instance classes logic
-	public static ShopManager getInstance() {
-		if (shopManager == null) {
-			shopManager = new ShopManager();
+	public static Service getInstance() {
+		if (service == null) {
+			service = new Service();
 		}
-		return shopManager;
+		return service;
 	}
 	
 	public static GoodsDao getGoodsDao() {
@@ -128,16 +127,6 @@ public class ShopManager {
 		}
 	}
 	
-	
-	
-	
-	// searching the match of the names expression
-	//TODO to realize!
-	public List<Goods> findGoodsByName(String name) throws DAOException {
-		log.trace("Returning goods by name=" + name);
-		return goodsManager.findGoodsByName(name);
-	}
-	
 	public void addGoodsToBasket (int customerID, int goodsID, int amount) throws NotEnoughGoodsException, DAOException {
 		getGoodsDao();
 		getBasketDao();
@@ -195,33 +184,20 @@ public class ShopManager {
 		System.out.println("moveBasket is performed! Address=" + address + " ShippingType=" + shipType);
 	}
 	
-	public static Group getCatalog() {
+	public static Catalog getCatalog() {
 		if (catalog == null) {
 			getGroupDao();
-			initCatalog();
+			try {
+				catalog = new Catalog(0, "catalog");
+				catalog.setGroupDao(groupDao);
+				catalog.loadCatalogTree();
+			} catch (DAOException e) {
+				log.warn("Cannot create catalog object", e);
+				e.printStackTrace();
+			}
 		}
 		return catalog;
 	}
 	
-	private static void initCatalog() {
-		catalog = new Group(0, "catalog");
-		try {
-			loadChildren(catalog);
-		} catch (DAOException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public static void loadChildren(Group parent) throws DAOException {
-		List<Group> childrens = groupDao.getChildrensList(parent.getId());
-		if(!childrens.isEmpty()) {
-			for (Group child : childrens) {
-				System.out.println("Parent " + parent.getName() + "(" + parent.getId() + ") add child " + child.getName() + "(" + child.getId() + ")");
-				parent.addChildren(child);
-				loadChildren(child);
-			}
-		}
-	}
-
 	
 }

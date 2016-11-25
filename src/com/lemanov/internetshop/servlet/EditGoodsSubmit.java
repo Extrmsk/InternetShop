@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
-import com.lemanov.internetshop.domain.GoodsManager;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 import com.lemanov.internetshop.domain.exception.AutorizationException;
 
 @WebServlet("/editGoodsSubmit")
@@ -47,7 +46,7 @@ public class EditGoodsSubmit extends HttpServlet {
 				int groupID = Integer.parseInt(groupIDStr);
 				int amount = Integer.parseInt(amountStr);
 				try {
-					ShopManager.getGoodsDao().addGoodsItem(name, price, groupID, amount);
+					Service.getGoodsDao().addGoodsItem(name, price, groupID, amount);
 				} catch (DAOException e) {
 					log.warn("Can not create new goods item");
 					e.printStackTrace();
@@ -65,7 +64,7 @@ public class EditGoodsSubmit extends HttpServlet {
 			int groupID = Integer.parseInt(groupIDStr);
 			int amount = Integer.parseInt(amountStr);
 			try {
-				ShopManager.getGoodsDao().updateGoodsItem(editID, name, price, amount, groupID);
+				Service.getGoodsDao().updateGoodsItem(editID, name, price, amount, groupID);
 			} catch (DAOException e) {
 				e.printStackTrace();
 			}

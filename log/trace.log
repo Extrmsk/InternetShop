@@ -3534,3 +3534,82 @@ org.postgresql.util.PSQLException: No value specified for parameter 1.
 2016-11-24 21:01:04 TRACE GroupDao:80 - Get childrens for parentID=14
 2016-11-24 21:01:04 TRACE DaoInit:32 - Driver manager get connection
 2016-11-24 21:01:04 TRACE GroupDao:108 - Return childrens
+2016-11-25 11:17:08 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:17:08 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:17:44 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:17:44 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:18:06 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:18:06 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:18:24 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:18:24 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:34:16 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:34:16 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:34:16 TRACE DaoInit:32 - Driver manager get connection
+2016-11-25 11:34:16 TRACE GoodsDao:295 - Returning goods by groupIDs
+2016-11-25 11:34:53 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:34:53 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:34:53 TRACE DaoInit:32 - Driver manager get connection
+2016-11-25 11:34:53 TRACE GoodsDao:295 - Returning goods by groupIDs
+2016-11-25 11:35:04 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:35:04 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:35:04 TRACE DaoInit:32 - Driver manager get connection
+2016-11-25 11:35:04 TRACE Goods:19 - Created goods: name=Michelin X-Ice Xi3
+2016-11-25 11:35:04 TRACE Goods:32 - Set id to 3
+2016-11-25 11:35:04 TRACE GoodsDao:281 - Adding new goods to goodsList finished
+2016-11-25 11:35:04 TRACE Goods:19 - Created goods: name=Goodyear Ultra Grip Ice 2
+2016-11-25 11:35:04 TRACE Goods:32 - Set id to 4
+2016-11-25 11:35:04 TRACE GoodsDao:281 - Adding new goods to goodsList finished
+2016-11-25 11:35:04 TRACE Goods:19 - Created goods: name=Gislaved NordFrost 100
+2016-11-25 11:35:04 TRACE Goods:32 - Set id to 5
+2016-11-25 11:35:04 TRACE GoodsDao:281 - Adding new goods to goodsList finished
+2016-11-25 11:35:04 TRACE GoodsDao:295 - Returning goods by groupIDs
+2016-11-25 11:36:09 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:36:09 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:36:09 TRACE DaoInit:32 - Driver manager get connection
+2016-11-25 11:36:09 TRACE Goods:19 - Created goods: name=Nikon D700
+2016-11-25 11:36:09 TRACE Goods:32 - Set id to 6
+2016-11-25 11:36:09 TRACE GoodsDao:281 - Adding new goods to goodsList finished
+2016-11-25 11:36:09 TRACE GoodsDao:295 - Returning goods by groupIDs
+2016-11-25 11:36:23 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:36:23 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:36:23 TRACE DaoInit:32 - Driver manager get connection
+2016-11-25 11:36:23 TRACE Goods:19 - Created goods: name=Nikon D700
+2016-11-25 11:36:23 TRACE Goods:32 - Set id to 6
+2016-11-25 11:36:23 TRACE GoodsDao:281 - Adding new goods to goodsList finished
+2016-11-25 11:36:23 TRACE Goods:19 - Created goods: name=Nike Mercurial
+2016-11-25 11:36:23 TRACE Goods:32 - Set id to 12
+2016-11-25 11:36:23 TRACE GoodsDao:281 - Adding new goods to goodsList finished
+2016-11-25 11:36:23 TRACE GoodsDao:295 - Returning goods by groupIDs
+2016-11-25 11:49:59 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:49:59 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:49:59 TRACE DaoInit:32 - Driver manager get connection
+2016-11-25 11:50:00 TRACE Goods:19 - Created goods: name=Nikon D700
+2016-11-25 11:50:00 TRACE Goods:32 - Set id to 6
+2016-11-25 11:50:00 TRACE GoodsDao:281 - Adding new goods to goodsList finished
+2016-11-25 11:50:00 TRACE Goods:19 - Created goods: name=Nike Mercurial
+2016-11-25 11:50:00 TRACE Goods:32 - Set id to 12
+2016-11-25 11:50:00 TRACE GoodsDao:281 - Adding new goods to goodsList finished
+2016-11-25 11:50:00 TRACE GoodsDao:295 - Returning goods by groupIDs
+2016-11-25 11:50:26 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:50:26 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:50:26 TRACE DaoInit:32 - Driver manager get connection
+2016-11-25 11:50:26 TRACE Goods:19 - Created goods: name=Nikon D700
+2016-11-25 11:50:26 TRACE Goods:32 - Set id to 6
+2016-11-25 11:50:26 TRACE GoodsDao:281 - Adding new goods to goodsList finished
+2016-11-25 11:50:26 TRACE GoodsDao:295 - Returning goods by groupIDs
+2016-11-25 11:50:33 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 11:50:33 TRACE GoodsDao:246 - get goods by groupIDs
+2016-11-25 11:50:33 TRACE DaoInit:32 - Driver manager get connection
+2016-11-25 11:50:33 TRACE GoodsDao:295 - Returning goods by groupIDs
+2016-11-25 12:38:58 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:40:14 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:41:35 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:42:53 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:43:23 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:43:56 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:44:59 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:45:09 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:45:18 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:47:45 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 12:47:52 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-25 14:07:55 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------

@@ -17,7 +17,7 @@ import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.domain.Basket;
 import com.lemanov.internetshop.domain.Goods;
 import com.lemanov.internetshop.domain.OrderLine;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 /**
  * Servlet implementation class BasketPrepare
@@ -39,7 +39,7 @@ public class BasketPrepare extends HttpServlet {
 		
 		if ( request.getParameter("action") != null ) {
 				try {
-					ShopManager.getInstance().clearCustomerBasket(customerID);
+					Service.getInstance().clearCustomerBasket(customerID);
 					System.out.println("Basket prepare - Basket is clear");
 				} catch (DAOException e) {
 					e.printStackTrace();
@@ -48,7 +48,7 @@ public class BasketPrepare extends HttpServlet {
 		}
 		
 		try {
-			Basket basket = ShopManager.getBasketDao().getBasketByCustomerID(customerID);
+			Basket basket = Service.getBasketDao().getBasketByCustomerID(customerID);
 			request.setAttribute("orderLines", basket.getBasketItems());
 			request.setAttribute("basketPrice", basket.getPrice());
 		} catch (DAOException e) {

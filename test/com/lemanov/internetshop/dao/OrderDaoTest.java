@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.lemanov.internetshop.domain.OrderLine;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 public class OrderDaoTest {
 
@@ -19,7 +19,7 @@ public class OrderDaoTest {
 
 	@Before
 	public void setUp() throws Exception {
-		ShopManager shop = ShopManager.getInstance();
+		Service shop = Service.getInstance();
 		basketDao = shop.getBasketDao();
 //		goodsID = 70;
 		customerID = 2;

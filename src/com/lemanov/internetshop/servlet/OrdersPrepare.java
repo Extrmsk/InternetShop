@@ -18,7 +18,7 @@ import com.lemanov.internetshop.domain.Basket;
 import com.lemanov.internetshop.domain.Goods;
 import com.lemanov.internetshop.domain.Order;
 import com.lemanov.internetshop.domain.OrderLine;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 @WebServlet("/ordersPrepare")
 public class OrdersPrepare extends HttpServlet {
@@ -36,7 +36,7 @@ public class OrdersPrepare extends HttpServlet {
 		int customerID = (int) request.getSession().getAttribute("userID");
 		List<Order> orders = null;
 		try {
-			orders = ShopManager.getOrderDao().getOrdersByCustomerID(customerID);
+			orders = Service.getOrderDao().getOrdersByCustomerID(customerID);
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}

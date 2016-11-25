@@ -1,35 +1,52 @@
 package com.lemanov.internetshop.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.lemanov.internetshop.dao.DAOException;
+import com.lemanov.internetshop.dao.GoodsDao;
 import com.lemanov.internetshop.dao.GroupDao;
 
 public class GroupTest {
 	
-	private static GroupDao groupDao = ShopManager.getGroupDao(); 
+	private static GroupDao groupDao = Service.getGroupDao(); 
+	private static GoodsDao goodsDao = Service.getGoodsDao();
+	
 
 	public static void main(String[] args) {
 		
-		Group root = new Group(0, "root");
-//		Group a = new Group(1, "a");
-//		Group b = new Group(1, "b");
-//		root.addChildren(a);
+//		List<Integer> groupIDs = new ArrayList<Integer>();
+//		groupIDs.add(8);
+//		groupIDs.add(12);
+//		
+//		int[] arr = {9};
 		
-		
+		Group a = new Group(1, "a");
+		Group b = new Group(2, "b", a);
+		Group c = new Group(3, "c", a);
+		Group d = new Group(4, "d", c);
+		Group e = new Group(5, "e", c);
+		Group f = new Group(6, "f", c);
 		
 		try {
-			loadChildren(root);
-		} catch (DAOException e) {
-			e.printStackTrace();
+			System.out.println(a.getAllTreeIDs().toString());
+		} catch (DAOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 		
-		System.out.println("===========================");
-		System.out.println(root.getChildrens().isEmpty());
-		for (Group g : root.getChildrens()) {
-			System.out.println(g.getName());
-		}
 		
+		
+//		try {
+//			List<Goods> goods = goodsDao.getGoodsByGroupIDs(arr);
+//			System.out.println("is empty: " + goods.isEmpty());
+//			System.out.println(goods.toString());
+//			
+//			
+//		} catch (DAOException e) {
+//			e.printStackTrace();
+//		}
+//		
 
 	}
 	

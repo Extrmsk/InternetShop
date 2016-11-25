@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
 import com.lemanov.internetshop.domain.Goods;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 @WebServlet("/editGoodsPrepare")
 public class EditGoodsPrepare extends HttpServlet {
@@ -31,12 +31,12 @@ public class EditGoodsPrepare extends HttpServlet {
 			return;
 		}
 		int editID = Integer.parseInt(request.getParameter("editID"));
-		ShopManager shopManager = ShopManager.getInstance();
+		Service shopManager = Service.getInstance();
 		
 		Goods goodsItem;
 		String url = "/admin/editgoods.jsp";
 		try {
-			goodsItem = ShopManager.getGoodsDao().getGoodsByID(editID);
+			goodsItem = Service.getGoodsDao().getGoodsByID(editID);
 			//TODO govno code
 			url += "?name=" + goodsItem.getName();
 			url += "&price=" + goodsItem.getPrice();

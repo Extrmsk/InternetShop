@@ -1,7 +1,7 @@
 -- ALL INSERT's only into clean DB!
 
 insert into customers (login, password, name, address, phone, email, credit_card) values 
-	('Admin', '123', 'Administrator', 'Novosibirsk', '+8 923 123 38 08', 'admin@internetshop.com', '1234 1234 1234 1234'),
+	('Admin', '123', 'Administrator', 'Novosibirsk', '+8 923 122 12 08', 'admin@internetshop.com', '1234 1234 1234 1234'),
 	('User1', '234', 'Alex', 'Bangok', '+3 105 069 89 89', 'alex@bangoknet.com', '4685 6484 1001 5470'),
 	('User2', '345', 'Mary', 'NewYork', '+2 339 320 22 00', 'mary@newyorknet.com', '0022 2200 3322 2233');
 	

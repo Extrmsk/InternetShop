@@ -6,7 +6,7 @@ import javax.servlet.http.HttpSessionListener;
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 public class MyHttpSessionListener implements HttpSessionListener {
 	
@@ -26,7 +26,7 @@ public class MyHttpSessionListener implements HttpSessionListener {
 		if (customerID > 1) {
 			try {
 				log.trace("Clear basket for cusromer id=" + customerID);
-				ShopManager.getInstance().clearCustomerBasket(customerID);
+				Service.getInstance().clearCustomerBasket(customerID);
 				
 			} catch (DAOException e) {
 				e.printStackTrace();

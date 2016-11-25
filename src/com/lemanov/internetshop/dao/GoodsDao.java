@@ -241,10 +241,64 @@ public class GoodsDao {
 		}
 		return tempGoods;
 	}
+	
+	public List<Goods> getGoodsByGroupIDs(List<Integer> groupIDs) throws DAOException {
+		log.trace("get goods by groupIDs");
+		List<Goods> goodsList = new ArrayList<>();
+		
+		if (groupIDs.isEmpty()) {
+			return goodsList;
+		}
+
+		String sql = "SELECT * FROM goods WHERE group_id IN (?";
+		if (groupIDs.size() > 1) {
+			for (int i = 1; i < groupIDs.size(); i++) {
+				sql += ",?";
+			}
+		}
+		sql += ") ORDER BY id;";
+		
+		Connection conn = null;
+		PreparedStatement statement = null;
+		ResultSet resSet = null;
+		Goods tempGoods = null;
+		try {
+			conn = daoInstance.getConnection();
+			
+			statement = conn.prepareStatement(sql);
+			int counter = 1;
+			for (int groupID : groupIDs) {
+				statement.setInt(counter++, groupID);
+			}
+			
+			resSet = statement.executeQuery();
+			while (resSet.next()) {
+				tempGoods = new Goods(resSet.getString("goods_name"),
+						resSet.getInt("price"), resSet.getInt("amount"),
+						resSet.getInt("group_id"));
+				tempGoods.setId(resSet.getInt("id"));
+				goodsList.add(tempGoods);
+				log.trace("Adding new goods to goodsList finished");
+			}
+		} catch (SQLException e) {
+			log.error("Cannot get goods by groupIDs", e);
+			throw new DAOException("Cannot get goods by groupIDs", e);
+		} finally {
+			try {
+				if (resSet != null) resSet.close();
+				if (statement != null) statement.close();
+				if (conn != null) conn.close();
+			} catch (SQLException e) {
+				log.warn("Cannot close connection/statement/resultset", e);
+			}
+		}
+		log.trace("Returning goods by groupIDs");
+		return goodsList;
+	}
 
 	public List<Goods> getAll() throws DAOException {
 		List<Goods> goodsList = new ArrayList<>();
-		String sql = "select * from goods ORDER BY id;";
+		String sql = "SELECT * FROM goods ORDER BY id;";
 		
 		//connect through DataSource and JNDI
 		Goods tempGoods = null;

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 import com.lemanov.internetshop.domain.exception.NotEnoughGoodsException;
 
 /**
@@ -31,7 +31,7 @@ public class AddToBasket extends HttpServlet {
 		
 		int amount = 1;
 		int goodsID = Integer.parseInt(request.getParameter("id"));
-		ShopManager shopManager = ShopManager.getInstance();
+		Service shopManager = Service.getInstance();
 		int customerID = (int) request.getSession().getAttribute("userID");
 		try {
 		shopManager.addGoodsToBasket(customerID, goodsID, amount);

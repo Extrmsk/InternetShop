@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 /**
  * Servlet implementation class Register
@@ -42,7 +42,7 @@ public class Register extends HttpServlet {
 		String email = request.getParameter("email");
 
 		try {
-			ShopManager.getCustomerDao().create(login, passwd, name, email);
+			Service.getCustomerDao().create(login, passwd, name, email);
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}

@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.domain.Goods;
 import com.lemanov.internetshop.domain.Group;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 public class GroupDao {
 	

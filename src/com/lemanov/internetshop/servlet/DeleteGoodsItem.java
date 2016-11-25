@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import org.kohsuke.rngom.binary.ChoicePattern;
 
 import com.lemanov.internetshop.dao.DAOException;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 /**
  * Servlet implementation class DeleteGoodsItem
@@ -31,7 +31,7 @@ public class DeleteGoodsItem extends HttpServlet {
 
 		int delID = Integer.parseInt(request.getParameter("deleteID"));
 		try {
-			ShopManager.getGoodsDao().delGoodsItemByID(delID);
+			Service.getGoodsDao().delGoodsItemByID(delID);
 			System.out.println("Good item id=" + delID + " is deleted!");
 		} catch (DAOException e1) {
 			e1.printStackTrace();

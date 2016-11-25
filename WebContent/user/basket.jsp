@@ -1,6 +1,4 @@
-<%@page import="com.lemanov.internetshop.domain.GoodsManager"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.ForEach"%>
-<%@page import="com.lemanov.internetshop.domain.ShopManager"%>
 <%@page import="com.lemanov.internetshop.domain.Goods" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>

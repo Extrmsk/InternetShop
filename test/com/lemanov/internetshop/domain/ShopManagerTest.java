@@ -9,11 +9,11 @@ import com.lemanov.internetshop.dao.DAOException;
 
 public class ShopManagerTest {
 	
-	private ShopManager shm;
+	private Service shm;
 
 	@Before
 	public void setUp() throws Exception {
-		shm = ShopManager.getInstance();
+		shm = Service.getInstance();
 	}
 
 	@Test 

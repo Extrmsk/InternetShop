@@ -4,18 +4,27 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <ul>
-	<c:set var="level" value="${level+1}" scope="request"/>
-	<c:set var="curPath" value="${path}" scope="page"/>
+	<c:set var="level" value="${level+1}" scope="request" />
+	<c:set var="curPath" value="${path}" scope="page" />
+	
+	<c:if test="${level == 0}">
+		<li><a href="catalogPrepare"><span style="font-weight: normal">All</span></a></li>
+	</c:if>
+	
 	<c:forEach var="node" items="${node.childrens}">
-	<li>
-		<c:set var="path" value="${(empty curPath)? node.id : (curPath += ',') += node.id}" scope="request" />
-		<a href="?path=${path}"><span style="font-weight:${(path == paramsPath)? 'bold' : 'normal'}"><c:out value="${node.name}" /></span></a>
-		<c:set var="node" value="${node}" scope="request" />
-		<c:if test="${fn:length(pathItems) > level && pathItems[level] == node.id}">
-		<jsp:include page="node.jsp" />
-		</c:if>
-	</li>
+		<li><c:set var="path" value="${(empty curPath)? node.id : (curPath += ',') += node.id}"	scope="request" /> 
+			<a href="?path=${path}"> 
+				<span style="font-weight:${(path == paramsPath)? 'bold' : 'normal'}">
+					<c:out value="${node.name}" />
+				</span>
+			</a> 
+			<c:set var="node" value="${node}" scope="request" /> 
+			<c:if test="${fn:length(pathItems) > level && pathItems[level] == node.id}">
+				<jsp:include page="node.jsp" />
+			</c:if>
+		</li>
 	</c:forEach>
-	<c:set var="path" value="${curPath}" scope="request"/>
-	<c:set var="level" value="${level-1}" scope="request"/>
+
+	<c:set var="path" value="${curPath}" scope="request" />
+	<c:set var="level" value="${level-1}" scope="request" />
 </ul>

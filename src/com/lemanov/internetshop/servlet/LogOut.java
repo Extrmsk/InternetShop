@@ -10,8 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-import com.lemanov.internetshop.domain.GoodsManager;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 import com.lemanov.internetshop.domain.exception.AutorizationException;
 
 /**

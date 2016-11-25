@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 @WebServlet("/confirmOrder")
 public class ConfirmOrder extends HttpServlet {
@@ -33,7 +33,7 @@ public class ConfirmOrder extends HttpServlet {
 		HttpSession session = request.getSession();
 		int customerID = (int) session.getAttribute("userID");
 		try {
-			ShopManager.getInstance().confirmOrder(customerID, address, shipType);
+			Service.getInstance().confirmOrder(customerID, address, shipType);
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}

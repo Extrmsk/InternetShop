@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.dao.DAOException;
-import com.lemanov.internetshop.domain.ShopManager;
+import com.lemanov.internetshop.domain.Service;
 
 /**
  * Servlet implementation class DelOrderLineFromBasket
@@ -31,7 +31,7 @@ public class DelOrderLineFromBasket extends HttpServlet {
 		int goodsItemID = Integer.parseInt(request.getParameter("deleteID"));
 		int customerID = (int) request.getSession().getAttribute("userID");
 		try {
-			ShopManager.getInstance().delOrderLineForCustomer(goodsItemID, customerID);
+			Service.getInstance().delOrderLineForCustomer(goodsItemID, customerID);
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}
