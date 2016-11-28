@@ -15,7 +15,7 @@ public class Group extends AbstractGroup {
 		super(id, name);
 	}
 	
-	public Group(int id, String name, Group parent) {
+	public Group(int id, String name, AbstractGroup parent) {
 		super(id, name);
 		parent.addChildren(this);
 	}

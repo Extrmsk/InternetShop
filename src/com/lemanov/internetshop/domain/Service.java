@@ -34,7 +34,6 @@ public class Service {
 	
 	private Service() {
 		log.info("Create Service instance");
-		initDataSource();
 	}
 	
 	private static void initDataSource() {
@@ -52,6 +51,14 @@ public class Service {
 	public static Service getInstance() {
 		if (service == null) {
 			service = new Service();
+			initDataSource();
+		}
+		return service;
+	}
+	
+	public static Service getInstanceForTest() {
+		if (service == null) {
+			service = new Service();
 		}
 		return service;
 	}
@@ -64,12 +71,21 @@ public class Service {
 		return goodsDao;
 	}
 	
+	public void setGoodsDao(GoodsDao gd) {
+		goodsDao = gd;
+	}
+	
+	
 	public static CustomerDao getCustomerDao() {
 		if (customerDao == null) {
 			customerDao = new CustomerDao();
 			customerDao.setDataSource(dataSource);
 		}
 		return customerDao;
+	}
+	
+	public void setCustomerDao(CustomerDao cd) {
+		customerDao = cd;
 	}
 	
 	public static BasketDao getBasketDao() {
@@ -139,10 +155,10 @@ public class Service {
 		System.out.println("amountInBasket=" + amountInBasket);
 		System.out.println("goodsID=" + goodsID + " customerID=" + customerID + " amountDelta=" + amount);
 		if (amountInBasket == 0) {
-			System.out.println("add to basket");
+			log.trace("add to basket");
 			basketDao.add(customerID, goodsID, amount);
 		} else {
-			System.out.println("update in basket");
+			log.trace("update in basket");
 			basketDao.update(customerID, goodsID, amountInBasket + amount );
 		}
 		goodsDao.updateAmount(goodsID, tempGoods.getAmount() - amount);
@@ -198,6 +214,7 @@ public class Service {
 		}
 		return catalog;
 	}
+
 	
 	
 }

@@ -32,8 +32,8 @@
 					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
 					<li><a href="${pageContext.request.contextPath}/catalogPrepare">Catalog</a></li>
 					<li class="active"><a>Edit Goods</a></li>
-					<li><a href="editgroup.jsp">Add Group</a></li>
-					<li><a href="logout">Logout</a></li>
+					<!--  <li><a href="editgroup.jsp">Add Group</a></li> -->
+					<li><a href="../logout">Logout</a></li>
 				</ul>
 			</div>
 		</div>

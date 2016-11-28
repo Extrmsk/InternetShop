@@ -31,9 +31,9 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a><b>${sessionScope.userName}'s cabinet</b></a></li>
 					<li class="active"><a>Catalog</a></li>
-					<li><a href="./editCustomersPrepare">Edit Customers</a></li>
+					<!--  <li><a href="./editCustomersPrepare">Edit Customers</a></li> -->
 					<li><a href="./editGoodsPrepare">Add Goods</a></li>
-					<li><a href="./admin/editgroup.jsp">Edit Group</a></li>
+					<!-- <li><a href="./admin/editgroup.jsp">Edit Group</a></li> -->
 					<li><a href="logout">Logout</a></li>
 				</ul>
 			</div>

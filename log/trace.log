@@ -3613,3 +3613,362 @@ org.postgresql.util.PSQLException: No value specified for parameter 1.
 2016-11-25 12:47:45 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
 2016-11-25 12:47:52 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
 2016-11-25 14:07:55 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 12:15:52 INFO  Service:36 - Create Service instance
+2016-11-28 12:15:52 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 12:15:52 TRACE Service:154 - Clear basket for customerID=2
+2016-11-28 12:15:52 TRACE BasketDao:269 - Prepearing to get all OrderLines for customerID=2
+2016-11-28 12:15:52 TRACE BasketDao:278 - Open connection
+2016-11-28 12:15:52 TRACE DaoInit:32 - Driver manager get connection
+2016-11-28 12:15:52 TRACE BasketDao:281 - Create prepared statement
+2016-11-28 12:15:52 TRACE BasketDao:285 - Get result set
+2016-11-28 12:15:52 INFO  BasketDao:293 - List of orderLines is created
+2016-11-28 12:15:52 TRACE BasketDao:297 - result set closed
+2016-11-28 12:15:52 TRACE BasketDao:305 - statement closed
+2016-11-28 12:15:52 TRACE BasketDao:316 - Connection closed
+2016-11-28 12:15:52 TRACE BasketDao:321 - Returning list OrderLines
+2016-11-28 14:49:02 INFO  Service:36 - Create Service instance
+2016-11-28 14:49:02 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 14:49:02 TRACE Service:115 - Trying to authenticate as user1
+2016-11-28 14:49:02 DEBUG Service:116 - Reading customer from DB
+2016-11-28 14:49:02 INFO  CustomerDao:82 - Searching customer with login = user1
+2016-11-28 14:49:02 TRACE CustomerDao:90 - Open connection
+2016-11-28 14:49:02 TRACE DaoInit:32 - Driver manager get connection
+2016-11-28 14:49:02 TRACE CustomerDao:93 - Create prepared statement
+2016-11-28 14:49:02 TRACE CustomerDao:97 - Get result set
+2016-11-28 14:49:03 TRACE CustomerDao:111 - result set closed
+2016-11-28 14:49:03 TRACE CustomerDao:119 - statement closed
+2016-11-28 14:49:03 TRACE CustomerDao:129 - Connection closed
+2016-11-28 14:49:03 DEBUG CustomerDao:135 - CUSTOMER NOT FOUND
+2016-11-28 14:49:03 TRACE CustomerDao:139 - Returning customer
+2016-11-28 14:49:03 WARN  Service:125 - Trying to authenticate with no existing user login=user1
+2016-11-28 14:56:56 INFO  Service:36 - Create Service instance
+2016-11-28 14:56:56 TRACE Service:119 - Trying to authenticate as user1
+2016-11-28 14:56:56 DEBUG Service:120 - Reading customer from DB
+2016-11-28 14:56:56 INFO  Service:133 - Customer user1 successfully logged
+2016-11-28 15:00:10 INFO  Service:36 - Create Service instance
+2016-11-28 15:00:10 TRACE Service:119 - Trying to authenticate as user1
+2016-11-28 15:00:10 DEBUG Service:120 - Reading customer from DB
+2016-11-28 15:00:10 INFO  Service:133 - Customer user1 successfully logged
+2016-11-28 15:00:10 TRACE Service:119 - Trying to authenticate as user1
+2016-11-28 15:00:10 DEBUG Service:120 - Reading customer from DB
+2016-11-28 15:00:10 WARN  Service:136 - Authentication for customer=user1 failed. Wrong password
+2016-11-28 15:02:55 INFO  Service:36 - Create Service instance
+2016-11-28 15:02:55 TRACE Service:119 - Trying to authenticate as user1
+2016-11-28 15:02:55 DEBUG Service:120 - Reading customer from DB
+2016-11-28 15:02:55 INFO  Service:133 - Customer user1 successfully logged
+2016-11-28 15:02:55 TRACE Service:119 - Trying to authenticate as 1
+2016-11-28 15:02:55 DEBUG Service:120 - Reading customer from DB
+2016-11-28 15:02:55 WARN  Service:129 - Trying to authenticate with no existing user login=1
+2016-11-28 15:02:55 TRACE Service:119 - Trying to authenticate as user1
+2016-11-28 15:02:55 DEBUG Service:120 - Reading customer from DB
+2016-11-28 15:02:55 WARN  Service:136 - Authentication for customer=user1 failed. Wrong password
+2016-11-28 15:03:55 INFO  Service:36 - Create Service instance
+2016-11-28 15:03:55 TRACE Service:119 - Trying to authenticate as null
+2016-11-28 15:03:55 DEBUG Service:120 - Reading customer from DB
+2016-11-28 15:03:55 WARN  Service:129 - Trying to authenticate with no existing user login=null
+2016-11-28 15:03:55 TRACE Service:119 - Trying to authenticate as user1
+2016-11-28 15:03:55 DEBUG Service:120 - Reading customer from DB
+2016-11-28 15:03:55 INFO  Service:133 - Customer user1 successfully logged
+2016-11-28 15:03:55 TRACE Service:119 - Trying to authenticate as user1
+2016-11-28 15:03:55 DEBUG Service:120 - Reading customer from DB
+2016-11-28 15:03:55 WARN  Service:136 - Authentication for customer=user1 failed. Wrong password
+2016-11-28 15:32:47 INFO  Service:36 - Create Service instance
+2016-11-28 15:32:47 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:32:47 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:32:47 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:32:47 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:32:47 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:34:50 INFO  Service:36 - Create Service instance
+2016-11-28 15:34:50 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:34:51 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:34:51 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:36:38 INFO  Service:36 - Create Service instance
+2016-11-28 15:36:38 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:36:38 TRACE Service:124 - Trying to authenticate as null
+2016-11-28 15:36:38 DEBUG Service:125 - Reading customer from DB
+2016-11-28 15:36:38 WARN  Service:134 - Trying to authenticate with no existing user login=null
+2016-11-28 15:36:38 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:36:38 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:36:38 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 15:36:38 WARN  Service:151 - Not enough goods= a in storage
+2016-11-28 15:36:38 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:36:38 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 15:36:38 DEBUG Service:125 - Reading customer from DB
+2016-11-28 15:36:38 INFO  Service:138 - Customer user1 successfully logged
+2016-11-28 15:36:38 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:36:38 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 15:36:38 DEBUG Service:125 - Reading customer from DB
+2016-11-28 15:36:38 WARN  Service:141 - Authentication for customer=user1 failed. Wrong password
+2016-11-28 15:39:00 INFO  Service:36 - Create Service instance
+2016-11-28 15:39:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:00 TRACE Service:124 - Trying to authenticate as null
+2016-11-28 15:39:00 DEBUG Service:125 - Reading customer from DB
+2016-11-28 15:39:00 WARN  Service:134 - Trying to authenticate with no existing user login=null
+2016-11-28 15:39:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:00 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 15:39:00 WARN  Service:151 - Not enough goods= a in storage
+2016-11-28 15:39:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:00 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 15:39:00 DEBUG Service:125 - Reading customer from DB
+2016-11-28 15:39:00 INFO  Service:138 - Customer user1 successfully logged
+2016-11-28 15:39:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:00 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 15:39:00 DEBUG Service:125 - Reading customer from DB
+2016-11-28 15:39:00 WARN  Service:141 - Authentication for customer=user1 failed. Wrong password
+2016-11-28 15:39:12 INFO  Service:36 - Create Service instance
+2016-11-28 15:39:12 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:12 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:12 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:12 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:12 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:27 INFO  Service:36 - Create Service instance
+2016-11-28 15:39:27 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:27 TRACE Service:124 - Trying to authenticate as null
+2016-11-28 15:39:27 DEBUG Service:125 - Reading customer from DB
+2016-11-28 15:39:27 WARN  Service:134 - Trying to authenticate with no existing user login=null
+2016-11-28 15:39:27 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:27 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:27 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 15:39:27 WARN  Service:151 - Not enough goods= a in storage
+2016-11-28 15:39:27 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:27 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 15:39:27 DEBUG Service:125 - Reading customer from DB
+2016-11-28 15:39:27 INFO  Service:138 - Customer user1 successfully logged
+2016-11-28 15:39:27 TRACE Goods:19 - Created goods: name=a
+2016-11-28 15:39:27 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 15:39:27 DEBUG Service:125 - Reading customer from DB
+2016-11-28 15:39:27 WARN  Service:141 - Authentication for customer=user1 failed. Wrong password
+2016-11-28 16:21:19 INFO  Service:36 - Create Service instance
+2016-11-28 16:21:19 TRACE Goods:19 - Created goods: name=a
+2016-11-28 16:21:19 TRACE Service:124 - Trying to authenticate as null
+2016-11-28 16:21:19 DEBUG Service:125 - Reading customer from DB
+2016-11-28 16:21:19 WARN  Service:134 - Trying to authenticate with no existing user login=null
+2016-11-28 16:21:19 TRACE Goods:19 - Created goods: name=a
+2016-11-28 16:21:19 TRACE Goods:19 - Created goods: name=a
+2016-11-28 16:21:19 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 16:21:19 WARN  Service:151 - Not enough goods= a in storage
+2016-11-28 16:21:19 TRACE Goods:19 - Created goods: name=a
+2016-11-28 16:21:19 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 16:21:19 DEBUG Service:125 - Reading customer from DB
+2016-11-28 16:21:19 INFO  Service:138 - Customer user1 successfully logged
+2016-11-28 16:21:19 TRACE Goods:19 - Created goods: name=a
+2016-11-28 16:21:19 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 16:21:19 DEBUG Service:125 - Reading customer from DB
+2016-11-28 16:21:19 WARN  Service:141 - Authentication for customer=user1 failed. Wrong password
+2016-11-28 17:02:35 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:02:51 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:05:26 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 17:05:49 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:06:02 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:06:02 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:10:53 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:10:53 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:10:53 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:15:38 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:15:38 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:15:38 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:18:38 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:18:38 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:18:38 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:18:38 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:18:59 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:18:59 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:18:59 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:18:59 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:19:30 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:19:30 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:19:30 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:19:30 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:21:23 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:21:23 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:21:23 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:21:23 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:21:56 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:21:56 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:21:56 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:21:56 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:23:20 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:23:20 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:23:20 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:23:20 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:24:03 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:24:03 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:24:03 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:24:03 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:26:44 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:26:44 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:26:44 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:26:44 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:27:33 INFO  Service:36 - Create Service instance
+2016-11-28 17:27:33 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:27:33 TRACE Service:124 - Trying to authenticate as null
+2016-11-28 17:27:33 DEBUG Service:125 - Reading customer from DB
+2016-11-28 17:27:33 WARN  Service:134 - Trying to authenticate with no existing user login=null
+2016-11-28 17:27:33 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:27:33 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:27:33 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 17:27:33 WARN  Service:151 - Not enough goods= a in storage
+2016-11-28 17:27:33 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:27:33 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 17:27:33 DEBUG Service:125 - Reading customer from DB
+2016-11-28 17:27:33 INFO  Service:138 - Customer user1 successfully logged
+2016-11-28 17:27:33 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:27:33 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 17:27:33 DEBUG Service:125 - Reading customer from DB
+2016-11-28 17:27:33 WARN  Service:141 - Authentication for customer=user1 failed. Wrong password
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 DEBUG Goods:54 - price <= 0
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 DEBUG Goods:85 - amount <= 0
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:89 - New amount for SomeName is 10
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 DEBUG Goods:54 - price <= 0
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 DEBUG Goods:67 - groupID <= 0
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 DEBUG Goods:41 - Name = null or empty
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:32 - Set id to 1
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 DEBUG Goods:28 - id <= 0
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 DEBUG Goods:41 - Name = null or empty
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:45 - Set name to NewName
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:71 - Set groupID to 1
+2016-11-28 17:31:06 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:31:06 TRACE Goods:58 - Set price to 1000
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 DEBUG Goods:54 - price <= 0
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 DEBUG Goods:85 - amount <= 0
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 TRACE Goods:89 - New amount for SomeName is 10
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 DEBUG Goods:54 - price <= 0
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 DEBUG Goods:67 - groupID <= 0
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 DEBUG Goods:41 - Name = null or empty
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 TRACE Goods:32 - Set id to 1
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 DEBUG Goods:28 - id <= 0
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 DEBUG Goods:41 - Name = null or empty
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 TRACE Goods:45 - Set name to NewName
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 TRACE Goods:71 - Set groupID to 1
+2016-11-28 17:35:33 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:35:33 TRACE Goods:58 - Set price to 1000
+2016-11-28 17:52:58 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:52:58 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:52:58 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:52:58 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 DEBUG Goods:54 - price <= 0
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 DEBUG Goods:85 - amount <= 0
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 TRACE Goods:89 - New amount for SomeName is 10
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 DEBUG Goods:54 - price <= 0
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 DEBUG Goods:67 - groupID <= 0
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 DEBUG Goods:41 - Name = null or empty
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 TRACE Goods:32 - Set id to 1
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 DEBUG Goods:28 - id <= 0
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 DEBUG Goods:41 - Name = null or empty
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 TRACE Goods:45 - Set name to NewName
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 TRACE Goods:71 - Set groupID to 1
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:52:58 TRACE Goods:58 - Set price to 1000
+2016-11-28 17:52:58 INFO  Service:36 - Create Service instance
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:52:58 TRACE Service:124 - Trying to authenticate as null
+2016-11-28 17:52:58 DEBUG Service:125 - Reading customer from DB
+2016-11-28 17:52:58 WARN  Service:134 - Trying to authenticate with no existing user login=null
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:52:58 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 17:52:58 WARN  Service:151 - Not enough goods= a in storage
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:52:58 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 17:52:58 DEBUG Service:125 - Reading customer from DB
+2016-11-28 17:52:58 INFO  Service:138 - Customer user1 successfully logged
+2016-11-28 17:52:58 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:52:58 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 17:52:58 DEBUG Service:125 - Reading customer from DB
+2016-11-28 17:52:58 WARN  Service:141 - Authentication for customer=user1 failed. Wrong password
+2016-11-28 17:54:59 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:54:59 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:54:59 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:54:59 TRACE Catalog:18 - Catalog obj is created
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 DEBUG Goods:54 - price <= 0
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 DEBUG Goods:85 - amount <= 0
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 TRACE Goods:89 - New amount for SomeName is 10
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 DEBUG Goods:54 - price <= 0
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 DEBUG Goods:67 - groupID <= 0
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 DEBUG Goods:41 - Name = null or empty
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 TRACE Goods:32 - Set id to 1
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 DEBUG Goods:28 - id <= 0
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 DEBUG Goods:41 - Name = null or empty
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 TRACE Goods:45 - Set name to NewName
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 TRACE Goods:71 - Set groupID to 1
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=SomeName
+2016-11-28 17:55:00 TRACE Goods:58 - Set price to 1000
+2016-11-28 17:55:00 INFO  Service:36 - Create Service instance
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:55:00 TRACE Service:124 - Trying to authenticate as null
+2016-11-28 17:55:00 DEBUG Service:125 - Reading customer from DB
+2016-11-28 17:55:00 WARN  Service:134 - Trying to authenticate with no existing user login=null
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:55:00 TRACE DaoInit:48 - ---------- DaoFactory is initialized ------------
+2016-11-28 17:55:00 WARN  Service:151 - Not enough goods= a in storage
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:55:00 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 17:55:00 DEBUG Service:125 - Reading customer from DB
+2016-11-28 17:55:00 INFO  Service:138 - Customer user1 successfully logged
+2016-11-28 17:55:00 TRACE Goods:19 - Created goods: name=a
+2016-11-28 17:55:00 TRACE Service:124 - Trying to authenticate as user1
+2016-11-28 17:55:00 DEBUG Service:125 - Reading customer from DB
+2016-11-28 17:55:00 WARN  Service:141 - Authentication for customer=user1 failed. Wrong password

@@ -25,24 +25,21 @@ public class SessionFilter implements Filter {
 		try {
 			session = req.getSession(false);
 			String reqUri = req.getRequestURI();
+			
 			if (reqUri.contains("index.jsp") || reqUri.endsWith("InternetShop/") || reqUri.contains("logout.jsp")
 					|| reqUri.contains("register") || reqUri.contains("login") ) {
-//				System.out.println("Filter: 1 permit URI");
 				chain.doFilter(request, response);
 			} else if (session == null) {
-//				System.out.println("Filter: 2 session is null. Not index.jsp");
 				res.sendRedirect("./logout.jsp");
 			} else if (session.getAttribute("userID") == null) {
-//				System.out.println("Filter: 3 Session userID=null");
 				res.sendRedirect("./logout.jsp");
 			} else {
-//				System.out.println("Filter: 4 doFilter default");
 				chain.doFilter(request, response);
 			}
 		} catch (IOException io) {
-			System.out.println("IOException raised in SimpleFilter");
+			System.out.println("IOException raised in SessionFilter");
 		} catch (ServletException se) {
-			System.out.println("ServletException raised in SimpleFilter");
+			System.out.println("ServletException raised in SessionFilter");
 		}
 	}
 
