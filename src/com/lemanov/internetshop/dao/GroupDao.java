@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.apache.log4j.Logger;
 
 import com.lemanov.internetshop.domain.Goods;
@@ -16,8 +18,8 @@ import com.lemanov.internetshop.domain.Service;
 
 public class GroupDao {
 	
-	private DaoInit daoFactory = DaoInit.getInstance();
 	private static Logger log = Logger.getLogger(GroupDao.class.getName());
+	private static DataSource dataSource;
 	
 	public Group addGroup(String name, int parentID) throws DAOException {
 		log.trace("Get parameters: name=" + name + ",parentID=" + parentID);
@@ -29,7 +31,7 @@ public class GroupDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -41,8 +43,6 @@ public class GroupDao {
 					resSet = prst.getGeneratedKeys();
 					resSet.next();
 					log.trace("Create group to return");
-//					tempGroup = new Group(resSet.getString("group_name"), resSet.getInt("group_parent_id"),
-//							resSet.getInt("id"));
 					log.info("Group item " + name + " is created");
 				} finally {
 					try {
@@ -71,7 +71,6 @@ public class GroupDao {
 				log.warn("Cannot close connection", e);
 			}
 		}
-//		log.trace("Group is created: id=" + tempGroup.getID() + ", name=" + tempGroup.getName() + ", parentID=" + tempGroup.getParentID());
 		log.trace("Returning group");
 		return tempGroup;
 	}
@@ -85,7 +84,7 @@ public class GroupDao {
 		PreparedStatement statement = null;
 		ResultSet resSet = null;
 		try {
-			conn = daoFactory.getConnection();
+			conn = dataSource.getConnection();
 			statement = conn.prepareStatement(sql); // only read. Without keys
 			statement.setInt(1, parentID);
 			resSet = statement.executeQuery();
@@ -109,15 +108,7 @@ public class GroupDao {
 		return tempChildrens;
 	}
 	
-	public Group getCatalog() {
-		Group Auto = new Group(1, "Auto");
-		Group Tires = new Group(5, "Tires", Auto);
-		Group Oils = new Group(6, "Oils", Auto);
-		Group Parts = new Group(7, "Parts", Auto);
-		Group Winter = new Group(15, "Winter", Tires);
-		Group Summer = new Group(16, "Summer", Tires);
-		Group Winter22 = new Group(17, "Winter22", Summer);
-		Group Summer22 = new Group(18, "Summer22", Summer);
-		return Auto;
+	public static void setDataSource(DataSource dataSource) {
+		GroupDao.dataSource = dataSource;
 	}
 }

@@ -18,13 +18,8 @@ import com.lemanov.internetshop.domain.Goods;
 
 public class GoodsDao {
 	
-	private DaoInit daoInstance = DaoInit.getInstance();
 	private static Logger log = Logger.getLogger(GoodsDao.class.getName());
 	private static DataSource dataSource;
-	
-	public void setDataSource(DataSource ds) {
-		dataSource = ds;
-	}
 	
 	public Goods addGoodsItem(String name, int price, int groupID, int amount) throws DAOException {
 		log.trace("Get parameters: name=" + name + ", price=" + price + ", groupID=" + groupID + ", amount=" + amount);
@@ -99,7 +94,7 @@ public class GoodsDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -155,7 +150,7 @@ public class GoodsDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -193,7 +188,7 @@ public class GoodsDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -263,7 +258,7 @@ public class GoodsDao {
 		ResultSet resSet = null;
 		Goods tempGoods = null;
 		try {
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			
 			statement = conn.prepareStatement(sql);
 			int counter = 1;
@@ -306,6 +301,7 @@ public class GoodsDao {
 		PreparedStatement statement = null;
 		ResultSet resSet = null;
 		try {
+			System.out.println("Check injection dataSource - isDataSouse=null : " + (dataSource == null));
 			conn = dataSource.getConnection();
 			statement = conn.prepareStatement(sql); // only read. Without keys
 			resSet = statement.executeQuery();
@@ -340,7 +336,7 @@ public class GoodsDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -374,7 +370,7 @@ public class GoodsDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -414,7 +410,7 @@ public class GoodsDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -440,5 +436,9 @@ public class GoodsDao {
 				log.warn("Cannot close connection", e);
 			}
 		}
+	}
+	
+	public void setDataSource(DataSource ds) {
+		dataSource = ds;
 	}
 }

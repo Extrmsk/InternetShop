@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 import com.lemanov.internetshop.domain.Customer;
 
 public class CustomerDao {
-	private DaoInit daoFactory = DaoInit.getInstance();
+	
 	private static Logger log = Logger.getLogger(CustomerDao.class.getName());
 	private static DataSource dataSource;
 	
@@ -26,7 +26,7 @@ public class CustomerDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -88,7 +88,7 @@ public class CustomerDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -151,7 +151,7 @@ public class CustomerDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -217,7 +217,7 @@ public class CustomerDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoFactory.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);

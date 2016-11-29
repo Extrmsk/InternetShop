@@ -18,13 +18,10 @@ import com.lemanov.internetshop.domain.OrderLine;
 
 public class BasketDao {
 	
-	private DaoInit daoInstance = DaoInit.getInstance();
 	private static Logger log = Logger.getLogger(BasketDao.class.getName());
 	private static GoodsDao goodsDao;
 	private static CustomerDao customerDao;
 	private static DataSource dataSource;
-	
-	
 	
 	public int getGoodsItemAmount(int customerID, int goodsID) throws DAOException {
 		log.trace("Prepearing to get goods amount. GoodsID=" + goodsID + ", customerID=" + customerID);
@@ -36,7 +33,7 @@ public class BasketDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -89,7 +86,7 @@ public class BasketDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -126,7 +123,7 @@ public class BasketDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -163,7 +160,7 @@ public class BasketDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -200,7 +197,7 @@ public class BasketDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -237,7 +234,7 @@ public class BasketDao {
 		PreparedStatement prst = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql);
@@ -276,7 +273,7 @@ public class BasketDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -334,7 +331,7 @@ public class BasketDao {
 		
 		try {
 			log.trace("Open connection");
-			conn = daoInstance.getConnection();
+			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd">
+
+	<bean id="logicDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/Internetshop" />
+	</bean>
+	<bean id="plainJDBC" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/internetshop" />
+		<property name="username" value="postgres" />
+		<property name="password" value="87654321" />
+	</bean>
+	
+	 <bean id="goodsDaoBean" class="com.lemanov.internetshop.dao.GoodsDao">
+    	<property name="dataSource" ref="logicDataSource" />
+    </bean>
+    <bean id="customerDaoBean" class="com.lemanov.internetshop.dao.CustomerDao">
+    	<property name="dataSource" ref="logicDataSource" />
+    </bean>
+    <bean id="basketDaoBean" class="com.lemanov.internetshop.dao.BasketDao">
+    	<property name="dataSource" ref="logicDataSource" />
+    </bean>
+    <bean id="groupDaoBean" class="com.lemanov.internetshop.dao.GroupDao">
+    	<property name="dataSource" ref="logicDataSource" />
+    </bean>
+    <bean id="orderDaoBean" class="com.lemanov.internetshop.dao.OrderDao">
+    	<property name="dataSource" ref="logicDataSource" />
+    </bean>
+
+</beans>

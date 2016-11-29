@@ -19,18 +19,9 @@ import com.lemanov.internetshop.domain.ShippingType;
 
 public class OrderDao {
 	
-	private DaoInit daoInstance = DaoInit.getInstance();
 	private static Logger log = Logger.getLogger(OrderDao.class.getName());
 	private static DataSource dataSource;
 	private static CustomerDao customerDao;
-	
-	public void setDataSource(DataSource ds) {
-		dataSource = ds;
-	}
-	
-	public void setCustomerDao(CustomerDao cd) {
-		customerDao = cd;
-	}
 	
 	public Order addOrder(int customerID, String address, ShippingType shipType, OrderStatus status) throws DAOException {
 		log.trace("Creating new order customerID=" + customerID);
@@ -113,6 +104,14 @@ public class OrderDao {
 		}
 		log.info("Return all orders for customerID=" + customerID);
 		return tempOrders;
+	}
+	
+	public void setDataSource(DataSource ds) {
+		dataSource = ds;
+	}
+	
+	public void setCustomerDao(CustomerDao cd) {
+		customerDao = cd;
 	}
 
 }

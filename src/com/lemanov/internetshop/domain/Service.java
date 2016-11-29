@@ -9,11 +9,12 @@ import javax.naming.spi.DirStateFactory.Result;
 import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.lemanov.internetshop.dao.BasketDao;
 import com.lemanov.internetshop.dao.CustomerDao;
 import com.lemanov.internetshop.dao.DAOException;
-import com.lemanov.internetshop.dao.DaoInit;
 import com.lemanov.internetshop.dao.GoodsDao;
 import com.lemanov.internetshop.dao.GroupDao;
 import com.lemanov.internetshop.dao.OrderDao;
@@ -22,11 +23,11 @@ import com.lemanov.internetshop.domain.exception.NotEnoughGoodsException;
 
 public class Service {
 	private static Service service;
+	private static ApplicationContext context;
 	private static GoodsDao goodsDao;
 	private static CustomerDao customerDao;
 	private static BasketDao basketDao;
 	private static OrderDao orderDao;
-	private static DataSource dataSource;
 	private static GroupDao groupDao;
 	private static Catalog catalog;
 	
@@ -36,38 +37,28 @@ public class Service {
 		log.info("Create Service instance");
 	}
 	
-	private static void initDataSource() {
-		if (dataSource == null) {
-			try {
-				InitialContext context = new InitialContext();
-				dataSource = (DataSource) context.lookup("java:comp/env/jdbc/Internetshop");
-			} catch (NamingException e) {
-				e.printStackTrace();
-			}
-		}
-	}
-
 // instance classes logic
 	public static Service getInstance() {
 		if (service == null) {
 			service = new Service();
-			initDataSource();
+			context = new ClassPathXmlApplicationContext("Spring-Module.xml");
+			goodsDao = (GoodsDao) context.getBean("goodsDaoBean");
+			customerDao = (CustomerDao) context.getBean("customerDaoBean");
+			basketDao = (BasketDao) context.getBean("basketDaoBean");
+			orderDao = (OrderDao) context.getBean("orderDaoBean");
+			groupDao = (GroupDao) context.getBean("groupDaoBean");
+			basketDao.setGoodsDao(goodsDao);
+			basketDao.setCustomerDao(customerDao);
+			orderDao.setCustomerDao(customerDao);
 		}
 		return service;
 	}
 	
 	public static Service getInstanceForTest() {
-		if (service == null) {
-			service = new Service();
-		}
 		return service;
 	}
 	
 	public static GoodsDao getGoodsDao() {
-		if (goodsDao == null) {
-			goodsDao = new GoodsDao();
-			goodsDao.setDataSource(dataSource);
-		}
 		return goodsDao;
 	}
 	
@@ -75,12 +66,7 @@ public class Service {
 		goodsDao = gd;
 	}
 	
-	
 	public static CustomerDao getCustomerDao() {
-		if (customerDao == null) {
-			customerDao = new CustomerDao();
-			customerDao.setDataSource(dataSource);
-		}
 		return customerDao;
 	}
 	
@@ -89,29 +75,14 @@ public class Service {
 	}
 	
 	public static BasketDao getBasketDao() {
-		if (basketDao == null) {
-			basketDao = new BasketDao();
-			basketDao.setDataSource(dataSource);
-			basketDao.setGoodsDao(getGoodsDao());
-			basketDao.setCustomerDao(getCustomerDao());
-		}
 		return basketDao;
 	}
 	
 	public static OrderDao getOrderDao() {
-		if (orderDao == null) {
-			orderDao = new OrderDao();
-			orderDao.setDataSource(dataSource);
-			orderDao.setCustomerDao(getCustomerDao());
-		}
 		return orderDao;
 	}
 	
 	public static GroupDao getGroupDao() {
-		if (groupDao == null) {
-			groupDao = new GroupDao();
-//			groupDao.setDataSource(dataSource);
-		}
 		return groupDao;
 	}
 	

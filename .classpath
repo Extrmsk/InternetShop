@@ -12,6 +12,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar" sourcepath="/onlineshop/lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="lib/postgresql-9.4.1211.jar"/>
 	<classpathentry kind="con" path="oracle.eclipse.tools.glassfish.lib.system">
