@@ -10,6 +10,8 @@ import java.util.List;
 
 import javax.sql.DataSource;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.lemanov.internetshop.domain.Customer;
 import com.lemanov.internetshop.domain.Goods;
@@ -17,11 +19,14 @@ import com.lemanov.internetshop.domain.Order;
 import com.lemanov.internetshop.domain.OrderStatus;
 import com.lemanov.internetshop.domain.ShippingType;
 
+@Component
 public class OrderDao {
 	
-	private static Logger log = Logger.getLogger(OrderDao.class.getName());
-	private static DataSource dataSource;
-	private static CustomerDao customerDao;
+	@Autowired
+	private DataSource dataSource;
+	
+	private CustomerDao customerDao;
+	private Logger log = Logger.getLogger(OrderDao.class.getName());
 	
 	public Order addOrder(int customerID, String address, ShippingType shipType, OrderStatus status) throws DAOException {
 		log.trace("Creating new order customerID=" + customerID);
@@ -106,9 +111,9 @@ public class OrderDao {
 		return tempOrders;
 	}
 	
-	public void setDataSource(DataSource ds) {
-		dataSource = ds;
-	}
+//	public void setDataSource(DataSource ds) {
+//		dataSource = ds;
+//	}
 	
 	public void setCustomerDao(CustomerDao cd) {
 		customerDao = cd;

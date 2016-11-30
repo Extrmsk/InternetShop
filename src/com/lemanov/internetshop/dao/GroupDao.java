@@ -11,15 +11,20 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.lemanov.internetshop.domain.Goods;
 import com.lemanov.internetshop.domain.Group;
 import com.lemanov.internetshop.domain.Service;
 
+@Component
 public class GroupDao {
+
+	@Autowired
+	private DataSource dataSource;
 	
-	private static Logger log = Logger.getLogger(GroupDao.class.getName());
-	private static DataSource dataSource;
+	private Logger log = Logger.getLogger(GroupDao.class.getName());
 	
 	public Group addGroup(String name, int parentID) throws DAOException {
 		log.trace("Get parameters: name=" + name + ",parentID=" + parentID);
@@ -108,7 +113,7 @@ public class GroupDao {
 		return tempChildrens;
 	}
 	
-	public static void setDataSource(DataSource dataSource) {
-		GroupDao.dataSource = dataSource;
-	}
+//	public void setDataSource(DataSource dataSource) {
+//		this.dataSource = dataSource;
+//	}
 }

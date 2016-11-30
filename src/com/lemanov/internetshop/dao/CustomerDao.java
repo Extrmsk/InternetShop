@@ -6,15 +6,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.lemanov.internetshop.domain.Customer;
 
+@Component
 public class CustomerDao {
 	
-	private static Logger log = Logger.getLogger(CustomerDao.class.getName());
-	private static DataSource dataSource;
+	private Logger log = Logger.getLogger(CustomerDao.class.getName());
+	
+	@Autowired
+	private DataSource dataSource;
 	
 	public Customer create(String login, String passwd, String name, String email) throws DAOException {
 		log.info("Creating new customer with login=" + login);
@@ -88,6 +95,7 @@ public class CustomerDao {
 		ResultSet resSet = null;
 		try {
 			log.trace("Open connection");
+			System.out.println("isDataSourceNull=" + (dataSource == null));
 			conn = dataSource.getConnection();
 			try {
 				log.trace("Create prepared statement");
@@ -269,8 +277,8 @@ public class CustomerDao {
 		return customer;
 	}
 
-	public void setDataSource(DataSource dataSource) {
-		this.dataSource = dataSource;
-	}
+//	public void setDataSource(DataSource dataSource) {
+//		this.dataSource = dataSource;
+//	}
 
 }

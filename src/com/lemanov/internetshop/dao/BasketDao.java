@@ -11,17 +11,22 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.lemanov.internetshop.domain.Basket;
 import com.lemanov.internetshop.domain.Goods;
 import com.lemanov.internetshop.domain.OrderLine;
 
+@Component
 public class BasketDao {
 	
-	private static Logger log = Logger.getLogger(BasketDao.class.getName());
-	private static GoodsDao goodsDao;
-	private static CustomerDao customerDao;
-	private static DataSource dataSource;
+	private Logger log = Logger.getLogger(BasketDao.class.getName());
+	private GoodsDao goodsDao;
+	private CustomerDao customerDao;
+	
+	@Autowired
+	private DataSource dataSource;
 	
 	public int getGoodsItemAmount(int customerID, int goodsID) throws DAOException {
 		log.trace("Prepearing to get goods amount. GoodsID=" + goodsID + ", customerID=" + customerID);
@@ -404,9 +409,9 @@ public class BasketDao {
 		log.trace("Basket for customerID=" + customerID + " is moved to orderLines. OrderID=" + orderID);
 	}
 	
-	public void setDataSource(DataSource ds) {
-		dataSource = ds;
-	}
+//	public void setDataSource(DataSource ds) {
+//		dataSource = ds;
+//	}
 	
 	public void setGoodsDao(GoodsDao gd) {
 		goodsDao = gd;

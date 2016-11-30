@@ -13,13 +13,18 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.lemanov.internetshop.domain.Goods;
 
+@Component
 public class GoodsDao {
 	
-	private static Logger log = Logger.getLogger(GoodsDao.class.getName());
-	private static DataSource dataSource;
+	@Autowired
+	private DataSource dataSource;
+	
+	private Logger log = Logger.getLogger(GoodsDao.class.getName());
 	
 	public Goods addGoodsItem(String name, int price, int groupID, int amount) throws DAOException {
 		log.trace("Get parameters: name=" + name + ", price=" + price + ", groupID=" + groupID + ", amount=" + amount);
@@ -38,8 +43,8 @@ public class GoodsDao {
 				prst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 				prst.setString(1, name);
 				prst.setInt(2, price);
-				prst.setInt(3, groupID);
-				prst.setInt(4, amount);
+				prst.setInt(3, amount);
+				prst.setInt(4, groupID);
 				prst.execute();
 				try {
 					log.trace("Get result set");
@@ -438,7 +443,7 @@ public class GoodsDao {
 		}
 	}
 	
-	public void setDataSource(DataSource ds) {
-		dataSource = ds;
-	}
+//	public void setDataSource(DataSource ds) {
+//		dataSource = ds;
+//	}
 }

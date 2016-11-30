@@ -42,11 +42,11 @@ public class Service {
 		if (service == null) {
 			service = new Service();
 			context = new ClassPathXmlApplicationContext("Spring-Module.xml");
-			goodsDao = (GoodsDao) context.getBean("goodsDaoBean");
-			customerDao = (CustomerDao) context.getBean("customerDaoBean");
-			basketDao = (BasketDao) context.getBean("basketDaoBean");
-			orderDao = (OrderDao) context.getBean("orderDaoBean");
-			groupDao = (GroupDao) context.getBean("groupDaoBean");
+			goodsDao = (GoodsDao) context.getBean("goodsDao");
+			customerDao = (CustomerDao) context.getBean("customerDao");
+			basketDao = (BasketDao) context.getBean("basketDao");
+			orderDao = (OrderDao) context.getBean("orderDao");
+			groupDao = (GroupDao) context.getBean("groupDao");
 			basketDao.setGoodsDao(goodsDao);
 			basketDao.setCustomerDao(customerDao);
 			orderDao.setCustomerDao(customerDao);
